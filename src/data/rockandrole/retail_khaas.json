@@ -1,0 +1,176 @@
+{
+  "industry": "Retail",
+  "bucketId": "retail_khaas",
+  "theme": "⭐ KHAAS",
+  "themeDescription": "VIP shoppers, high-value purchases & personal styling",
+  "challenges": [
+    {
+      "id": "KHAAS-01",
+      "industry": "Retail",
+      "bucketId": "retail_khaas",
+      "title": "VIP Diamond Tier Lounge & Private Styling",
+      "shortDescription": "Deliver an elevated luxury experience for a high-spending customer seeking wardrobe curation with refreshments.",
+      "staffRole": "luxury client advisor",
+      "guestRole": "platinum card VIP patron",
+      "mission": "Welcome into the private salon, offer premium beverages, understand aesthetic goals, and curate an exclusive collection.",
+      "scenarioContext": {
+        "startingSituation": "Good afternoon. I have a gala dinner in Singapore next weekend and need a complete couture wardrobe. I called ahead for the private styling suite—is everything set up?"
+      },
+      "guestProfile": {
+        "personality": "sophisticated, demanding, cultured",
+        "approximateAgeGroup": "adult 35–55",
+        "communicationStyle": "refined, polite, expects high polish",
+        "emotionalState": "Discerning & Confident",
+        "whatTheGuestCaresAboutMost": "exclusivity, impeccable taste, seamless personal attention"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "refined",
+          "resistance": "low",
+          "pressure": "moderate",
+          "guestBehaviour": "Expects tailored recommendations without browsing public racks.",
+          "hiddenObjectives": [
+            "Greet by name warmly",
+            "Escort to private suite with refreshments",
+            "Present curated preview pieces with designer story"
+          ],
+          "possibleSolutions": [
+            "Tailored bespoke consultation",
+            "Private fitting with head stylist"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "KHAAS-02",
+      "industry": "Retail",
+      "bucketId": "retail_khaas",
+      "title": "Bridal Jewellery Custom Order & Security Escort",
+      "shortDescription": "Handle high-stakes bridal purchase consultations, payment security verifications, and insured home delivery logistics.",
+      "staffRole": "senior bridal jewellery consultant",
+      "guestRole": "bride and mother-in-law",
+      "mission": "Maintain warmth across generational dynamics, present hallmarked heritage pieces, and coordinate secure delivery.",
+      "scenarioContext": {
+        "startingSituation": "We are selecting the full bridal gold and polki set for my daughter. Our budget is around 8 to 10 lakhs. We need custom necklace sizing and guaranteed delivery before the Mehendi next Friday."
+      },
+      "guestProfile": {
+        "personality": "family matriarch",
+        "approximateAgeGroup": "adult 50–65",
+        "communicationStyle": "authoritative, meticulous about purity and auspicious timings",
+        "emotionalState": "High-stakes investment mindset",
+        "whatTheGuestCaresAboutMost": "authenticity certificates, punctuality, family prestige"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "meticulous",
+          "resistance": "medium",
+          "pressure": "high",
+          "guestBehaviour": "Asks detailed questions on hallmark, karatage, making charges, and delivery guarantee.",
+          "hiddenObjectives": [
+            "Provide certified purity documentation",
+            "Commit to written timeline with senior artisan",
+            "Arrange insured vault delivery"
+          ],
+          "possibleSolutions": [
+            "Dedicated artisan consultation",
+            "Insured vehicle delivery protocol"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "KHAAS-03",
+      "industry": "Retail",
+      "bucketId": "retail_khaas",
+      "title": "Urgent Corporate Gifting for 50 Executives",
+      "shortDescription": "Coordinate bulk corporate customization, logo embossing timelines, and invoice clearance with corporate sales.",
+      "staffRole": "corporate accounts manager",
+      "guestRole": "corporate HR director",
+      "mission": "Provide volume discount structure, sample presentation, GST invoicing, and strict 48-hour delivery commitment.",
+      "scenarioContext": {
+        "startingSituation": "Our company annual leadership summit is on Thursday. I need 50 premium leather laptop bags with our company logo embossed on the luggage tag. Can you fulfill this in 48 hours?"
+      },
+      "guestProfile": {
+        "personality": "results-driven corporate executive",
+        "approximateAgeGroup": "adult 35–50",
+        "communicationStyle": "direct, deadline-oriented",
+        "emotionalState": "Under Executive Pressure",
+        "whatTheGuestCaresAboutMost": "quality consistency and on-time delivery for summit"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "direct",
+          "resistance": "medium",
+          "pressure": "high",
+          "guestBehaviour": "Demands clear SLAs and sample inspection.",
+          "hiddenObjectives": [
+            "Confirm warehouse inventory of 50 units",
+            "Verify embossing machine turnaround time",
+            "Generate formal GST proforma invoice"
+          ],
+          "possibleSolutions": [
+            "Expedited workshop priority run",
+            "Complete delivery with corporate discount"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "KHAAS-04",
+      "industry": "Retail",
+      "bucketId": "retail_khaas",
+      "title": "Holding Limited Edition Runway Piece Without Deposit",
+      "shortDescription": "Balance strict store hold policies with VIP client relationship management without alienating the customer.",
+      "staffRole": "flagship boutique manager",
+      "guestRole": "celebrity stylist",
+      "mission": "Honor client VIP standing while adhering to company inventory rules, offering a complimentary hold window or digital token reservation.",
+      "scenarioContext": {
+        "startingSituation": "I'm styling a major film actress for the Filmfare red carpet tomorrow. This silk brocade cape is the only piece in India. Hold it for me until 2 PM tomorrow without a deposit while the director approves the look."
+      },
+      "guestProfile": {
+        "personality": "high-profile industry insider",
+        "approximateAgeGroup": "adult 28–45",
+        "communicationStyle": "glamorous, fast-talking, name-dropping",
+        "emotionalState": "Entitled & Rushed",
+        "whatTheGuestCaresAboutMost": "securing the exclusive outfit immediately"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "expectant",
+          "resistance": "high",
+          "pressure": "moderate",
+          "guestBehaviour": "Relies on social clout to bypass standard 10% holding deposit rule.",
+          "hiddenObjectives": [
+            "Acknowledge the prestigious styling occasion",
+            "Offer a courtesy 4-hour hold with direct stylist manager liaison",
+            "Secure manager sign-off on temporary VIP hold"
+          ],
+          "possibleSolutions": [
+            "Official 4-hour VIP hold window",
+            "Digital zero-charge reservation link"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    }
+  ]
+}

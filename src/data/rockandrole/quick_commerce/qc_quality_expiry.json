@@ -1,0 +1,176 @@
+{
+  "industry": "Supply Chain",
+  "bucketId": "qc_quality_expiry",
+  "theme": "🥦 QUALITY & FRESHNESS",
+  "themeDescription": "Bruised produce, near-expiry dairy & cold-chain lapses",
+  "challenges": [
+    {
+      "id": "QC-QUAL-01",
+      "industry": "Supply Chain",
+      "bucketId": "qc_quality_expiry",
+      "title": "Bruised, Soft & Leaking Country Tomatoes",
+      "shortDescription": "Assess customer complaint over substandard grading and issue instant quality refund.",
+      "staffRole": "produce quality coordinator",
+      "guestRole": "disappointed home cook",
+      "mission": "Acknowledge farm-fresh grading failure, validate customer photo, and refund immediately while noting vendor quality defect.",
+      "scenarioContext": {
+        "startingSituation": "Look at these 'Farm Fresh' tomatoes you just sent me! Three out of the six are squishy, bruised black, and leaking juice inside the net! Would anyone in your dark store feed this to their family?!"
+      },
+      "guestProfile": {
+        "personality": "health-conscious and quality-driven",
+        "approximateAgeGroup": "adult 28–60",
+        "communicationStyle": "firm, passionate about food standards",
+        "emotionalState": "Indignant",
+        "whatTheGuestCaresAboutMost": "hygienic, unblemished cooking produce"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "indignant",
+          "resistance": "medium",
+          "pressure": "moderate",
+          "guestBehaviour": "Demands accountability on how quality checkers let rotten fruit pass.",
+          "hiddenObjectives": [
+            "Review uploaded image",
+            "Issue instant no-questions-asked refund for produce",
+            "Log dark store batch audit ticket to quarantine bad crate"
+          ],
+          "possibleSolutions": [
+            "Instant UPI/wallet refund",
+            "Complimentary fresh batch express delivery"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-QUAL-02",
+      "industry": "Supply Chain",
+      "bucketId": "qc_quality_expiry",
+      "title": "Fresh Milk Delivered with Expiry of Today",
+      "shortDescription": "Enforce freshness guarantee policy, replace with next-day date batch, and log warehouse batch audit.",
+      "staffRole": "dairy and chilled inventory agent",
+      "guestRole": "family parent purchasing weekly groceries",
+      "mission": "Enforce minimum 48-hour shelf-life guarantee on dairy, replace pouch with fresh stock, and credit customer.",
+      "scenarioContext": {
+        "startingSituation": "I bought two liters of milk for my kids, and the use-by date stamped on both packets is TODAY! It expires in 8 hours! Your app promises minimum 48 hours shelf life on dairy! Why are you dumping expiring stock on us?"
+      },
+      "guestProfile": {
+        "personality": "vigilant parent",
+        "approximateAgeGroup": "adult 30–50",
+        "communicationStyle": "sharp, holding company to published promises",
+        "emotionalState": "Skeptical of Ethical Practices",
+        "whatTheGuestCaresAboutMost": "fresh, safe food for children"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "skeptical",
+          "resistance": "medium",
+          "pressure": "medium",
+          "guestBehaviour": "Quotes the app 48-hour freshness pledge.",
+          "hiddenObjectives": [
+            "Apologize for breach of dairy freshness SLA",
+            "Send priority replacement packets stamped with 3-day shelf life",
+            "Refund the original cost in full"
+          ],
+          "possibleSolutions": [
+            "Fresh replacement packets dispatched immediately",
+            "Full refund on dairy items"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-QUAL-03",
+      "industry": "Supply Chain",
+      "bucketId": "qc_quality_expiry",
+      "title": "Sour Paneer Caused by Cold-Chain Temperature Abuse",
+      "shortDescription": "Address cold-chain breakdown complaint, offer replacement from active chilling unit, and record vendor issue.",
+      "staffRole": "food safety assurance lead",
+      "guestRole": "dinner host making paneer butter masala",
+      "mission": "Understand the seriousness of dairy spoilage, validate cold-chain lapse, and offer replacement or refund.",
+      "scenarioContext": {
+        "startingSituation": "I just cut open the vacuum seal of this 200g Malai Paneer and a sour smell hit my face! It is slimy and completely curdled! Your delivery bag had zero ice packs! Someone could get food poisoning!"
+      },
+      "guestProfile": {
+        "personality": "health and safety conscious",
+        "approximateAgeGroup": "adult 25–50",
+        "communicationStyle": "serious, stern, highlighting health risk",
+        "emotionalState": "Alarmed by Food Safety",
+        "whatTheGuestCaresAboutMost": "preventing foodborne illness and getting fresh ingredients"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "alarmed",
+          "resistance": "low",
+          "pressure": "high",
+          "guestBehaviour": "Warns about regulatory standards and customer health.",
+          "hiddenObjectives": [
+            "Take safety complaint with highest priority",
+            "Instruct customer to discard product safely",
+            "Issue immediate full refund and voucher for dinner disruption"
+          ],
+          "possibleSolutions": [
+            "Instant refund + safety report filed",
+            "Fresh chilled block delivered with dry ice pack"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-QUAL-04",
+      "industry": "Supply Chain",
+      "bucketId": "qc_quality_expiry",
+      "title": "Unripe Rock-Hard Avocados for Tonight Salad",
+      "shortDescription": "Explain warehouse ripening cycles and offer suitable culinary alternatives or immediate credit.",
+      "staffRole": "quick commerce grocery advisor",
+      "guestRole": "dinner host with guests arriving",
+      "mission": "Explain avocado grading logistics sympathetically, offer immediate alternatives or refund.",
+      "scenarioContext": {
+        "startingSituation": "I ordered two Hass avocados for guacamole for a Mexican dinner party tonight. These avocados are hard as baseballs! You can't even cut them with a knife! How am I supposed to serve guacamole in one hour?!"
+      },
+      "guestProfile": {
+        "personality": "enthusiastic entertainer",
+        "approximateAgeGroup": "adult 24–42",
+        "communicationStyle": "animated, disappointed",
+        "emotionalState": "Disappointed Host",
+        "whatTheGuestCaresAboutMost": "a culinary rescue for dinner party"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "disappointed",
+          "resistance": "low",
+          "pressure": "moderate",
+          "guestBehaviour": "Explains party timeline and asks what can be done.",
+          "hiddenObjectives": [
+            "Acknowledge that avocados need 3 days to ripen",
+            "Check dark store inventory for ready-to-eat Haas or ready guacamole dip",
+            "Refund the avocados immediately to wallet"
+          ],
+          "possibleSolutions": [
+            "Refund + suggestion of chilled salsa/dip dispatch",
+            "Quick brown-paper-bag microwave ripening tip if usable"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    }
+  ]
+}

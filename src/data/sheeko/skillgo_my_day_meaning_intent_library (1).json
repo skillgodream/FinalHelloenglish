@@ -1,0 +1,1146 @@
+{
+  "libraryName": "SkillGo My Day Meaning and Intent Library",
+  "version": "1.0",
+  "purpose": "Deterministic mapping from matched reference patterns to broad meaning and intent",
+  "examples_are_reference_only": true,
+  "never_treat_examples_as_runtime_facts": true,
+  "never_hardcode_people_from_examples": true,
+  "never_invent_missing_information": true,
+  "recordCount": 81,
+  "records": [
+    {
+      "id": "MEANING_0001",
+      "category": "DAILY",
+      "patternKey": "morning_routine",
+      "meaning": "daily morning activities",
+      "intent": "REPORT_DAY_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0002",
+      "category": "DAILY",
+      "patternKey": "food",
+      "meaning": "eating or preparing food",
+      "intent": "REPORT_DAY_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0003",
+      "category": "DAILY",
+      "patternKey": "cooking",
+      "meaning": "preparing a meal",
+      "intent": "REPORT_DAY_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0004",
+      "category": "DAILY",
+      "patternKey": "shopping",
+      "meaning": "buying items from a shop or market",
+      "intent": "REPORT_DAY_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0005",
+      "category": "DAILY",
+      "patternKey": "groceries",
+      "meaning": "buying household food items",
+      "intent": "REPORT_DAY_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0006",
+      "category": "DAILY",
+      "patternKey": "family",
+      "meaning": "activity involving a family member",
+      "intent": "REPORT_FAMILY_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0007",
+      "category": "DAILY",
+      "patternKey": "parents",
+      "meaning": "talking to or helping parents",
+      "intent": "REPORT_FAMILY_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0008",
+      "category": "DAILY",
+      "patternKey": "children",
+      "meaning": "caring for or helping children",
+      "intent": "REPORT_FAMILY_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0009",
+      "category": "DAILY",
+      "patternKey": "health",
+      "meaning": "describing health or feeling unwell",
+      "intent": "REPORT_HEALTH_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0010",
+      "category": "DAILY",
+      "patternKey": "medicine",
+      "meaning": "taking, buying or discussing medicine",
+      "intent": "REPORT_HEALTH_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0011",
+      "category": "DAILY",
+      "patternKey": "travel",
+      "meaning": "moving from one place to another",
+      "intent": "REPORT_TRAVEL_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0012",
+      "category": "DAILY",
+      "patternKey": "banking",
+      "meaning": "bank or account activity",
+      "intent": "REPORT_FINANCE_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0013",
+      "category": "DAILY",
+      "patternKey": "bill_payment",
+      "meaning": "paying a household or service bill",
+      "intent": "REPORT_FINANCE_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0014",
+      "category": "DAILY",
+      "patternKey": "finance",
+      "meaning": "receiving, transferring or managing money",
+      "intent": "REPORT_FINANCE_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0015",
+      "category": "DAILY",
+      "patternKey": "house_cleaning",
+      "meaning": "cleaning or arranging the home",
+      "intent": "REPORT_HOME_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0016",
+      "category": "DAILY",
+      "patternKey": "laundry",
+      "meaning": "washing, drying or folding clothes",
+      "intent": "REPORT_HOME_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0017",
+      "category": "DAILY",
+      "patternKey": "home_repair",
+      "meaning": "repairing or arranging repair of something at home",
+      "intent": "REPORT_HOME_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0018",
+      "category": "DAILY",
+      "patternKey": "exercise",
+      "meaning": "walking, stretching or exercising",
+      "intent": "REPORT_HEALTH_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0019",
+      "category": "DAILY",
+      "patternKey": "hobby",
+      "meaning": "doing a personal hobby",
+      "intent": "REPORT_FREE_TIME_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0020",
+      "category": "DAILY",
+      "patternKey": "entertainment",
+      "meaning": "watching, listening or other entertainment",
+      "intent": "REPORT_FREE_TIME_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0021",
+      "category": "DAILY",
+      "patternKey": "visitor",
+      "meaning": "receiving or meeting a visitor at home",
+      "intent": "REPORT_SOCIAL_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0022",
+      "category": "DAILY",
+      "patternKey": "errand",
+      "meaning": "completing a small necessary outside task",
+      "intent": "REPORT_DAY_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0023",
+      "category": "DAILY",
+      "patternKey": "problem",
+      "meaning": "describing a daily-life problem and response",
+      "intent": "REPORT_PROBLEM",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0024",
+      "category": "DAILY",
+      "patternKey": "emotion",
+      "meaning": "describing a feeling or reaction",
+      "intent": "REPORT_EMOTION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0025",
+      "category": "DAILY",
+      "patternKey": "communication",
+      "meaning": "calling, messaging or talking to someone",
+      "intent": "REPORT_COMMUNICATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0026",
+      "category": "DAILY",
+      "patternKey": "documents",
+      "meaning": "finding, carrying or organizing documents",
+      "intent": "REPORT_DAY_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0027",
+      "category": "DAILY",
+      "patternKey": "sleep",
+      "meaning": "preparing for or going to sleep",
+      "intent": "REPORT_DAY_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0028",
+      "category": "DAILY",
+      "patternKey": "weather",
+      "meaning": "describing weather affecting an activity",
+      "intent": "REPORT_DAY_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0029",
+      "category": "FRIENDS",
+      "patternKey": "meeting",
+      "meaning": "meeting a friend or group",
+      "intent": "REPORT_SOCIAL_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0030",
+      "category": "FRIENDS",
+      "patternKey": "call",
+      "meaning": "calling or speaking with a friend",
+      "intent": "REPORT_SOCIAL_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0031",
+      "category": "FRIENDS",
+      "patternKey": "visit",
+      "meaning": "visiting a friend",
+      "intent": "REPORT_SOCIAL_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0032",
+      "category": "FRIENDS",
+      "patternKey": "outing",
+      "meaning": "going out with friends",
+      "intent": "REPORT_SOCIAL_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0033",
+      "category": "FRIENDS",
+      "patternKey": "food",
+      "meaning": "eating or having tea with friends",
+      "intent": "REPORT_SOCIAL_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0034",
+      "category": "FRIENDS",
+      "patternKey": "sports",
+      "meaning": "playing or discussing sport with friends",
+      "intent": "REPORT_SOCIAL_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0035",
+      "category": "FRIENDS",
+      "patternKey": "job",
+      "meaning": "talking about work or jobs with a friend",
+      "intent": "REPORT_SOCIAL_CONVERSATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0036",
+      "category": "FRIENDS",
+      "patternKey": "money",
+      "meaning": "talking about money or expenses with a friend",
+      "intent": "REPORT_SOCIAL_CONVERSATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0037",
+      "category": "FRIENDS",
+      "patternKey": "travel",
+      "meaning": "planning or discussing travel with friends",
+      "intent": "REPORT_SOCIAL_CONVERSATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0038",
+      "category": "FRIENDS",
+      "patternKey": "support",
+      "meaning": "helping or encouraging a friend",
+      "intent": "REPORT_SOCIAL_SUPPORT",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0039",
+      "category": "FRIENDS",
+      "patternKey": "good_news",
+      "meaning": "sharing or hearing positive news",
+      "intent": "REPORT_SOCIAL_CONVERSATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0040",
+      "category": "FRIENDS",
+      "patternKey": "bad_news",
+      "meaning": "sharing or hearing difficult news",
+      "intent": "REPORT_SOCIAL_CONVERSATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0041",
+      "category": "FRIENDS",
+      "patternKey": "disagreement",
+      "meaning": "having or resolving a disagreement",
+      "intent": "REPORT_SOCIAL_CONVERSATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0042",
+      "category": "FRIENDS",
+      "patternKey": "plan",
+      "meaning": "making or changing a plan with friends",
+      "intent": "REPORT_SOCIAL_PLANNING",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0043",
+      "category": "FRIENDS",
+      "patternKey": "group_chat",
+      "meaning": "messaging in a group",
+      "intent": "REPORT_SOCIAL_COMMUNICATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0044",
+      "category": "FRIENDS",
+      "patternKey": "celebration",
+      "meaning": "celebrating with friends",
+      "intent": "REPORT_SOCIAL_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0045",
+      "category": "FRIENDS",
+      "patternKey": "advice",
+      "meaning": "giving or receiving advice",
+      "intent": "REPORT_SOCIAL_SUPPORT",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0046",
+      "category": "FRIENDS",
+      "patternKey": "apology",
+      "meaning": "apologizing or resolving a misunderstanding",
+      "intent": "REPORT_SOCIAL_CONVERSATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0047",
+      "category": "FRIENDS",
+      "patternKey": "memory",
+      "meaning": "talking about past memories",
+      "intent": "REPORT_SOCIAL_CONVERSATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0048",
+      "category": "WORK",
+      "patternKey": "commute",
+      "meaning": "travelling to or from work",
+      "intent": "REPORT_WORK_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0049",
+      "category": "WORK",
+      "patternKey": "inbound",
+      "meaning": "receiving incoming goods",
+      "intent": "REPORT_WORK_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0050",
+      "category": "WORK",
+      "patternKey": "outbound",
+      "meaning": "preparing outgoing goods",
+      "intent": "REPORT_WORK_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0051",
+      "category": "WORK",
+      "patternKey": "inventory",
+      "meaning": "checking or updating stock",
+      "intent": "REPORT_WORK_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0052",
+      "category": "WORK",
+      "patternKey": "picking",
+      "meaning": "selecting items for an order",
+      "intent": "REPORT_WORK_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0053",
+      "category": "WORK",
+      "patternKey": "packing",
+      "meaning": "packing items for an order",
+      "intent": "REPORT_WORK_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0054",
+      "category": "WORK",
+      "patternKey": "quality",
+      "meaning": "checking product or packing quality",
+      "intent": "REPORT_WORK_QUALITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0055",
+      "category": "WORK",
+      "patternKey": "loading",
+      "meaning": "loading goods into a vehicle",
+      "intent": "REPORT_WORK_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0056",
+      "category": "WORK",
+      "patternKey": "unloading",
+      "meaning": "unloading goods from a vehicle",
+      "intent": "REPORT_WORK_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0057",
+      "category": "WORK",
+      "patternKey": "dispatch",
+      "meaning": "preparing or sending shipments",
+      "intent": "REPORT_WORK_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0058",
+      "category": "WORK",
+      "patternKey": "delay",
+      "meaning": "describing a work delay",
+      "intent": "REPORT_WORK_PROBLEM",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0059",
+      "category": "WORK",
+      "patternKey": "mistake",
+      "meaning": "describing a work mistake and correction",
+      "intent": "REPORT_WORK_PROBLEM",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0060",
+      "category": "WORK",
+      "patternKey": "target",
+      "meaning": "describing work targets or completion",
+      "intent": "REPORT_WORK_PERFORMANCE",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0061",
+      "category": "WORK",
+      "patternKey": "meeting",
+      "meaning": "participating in a work meeting",
+      "intent": "REPORT_WORK_COMMUNICATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0062",
+      "category": "WORK",
+      "patternKey": "instruction",
+      "meaning": "receiving or giving a work instruction",
+      "intent": "REPORT_WORK_COMMUNICATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0063",
+      "category": "WORK",
+      "patternKey": "training",
+      "meaning": "teaching or learning a work process",
+      "intent": "REPORT_WORK_TRAINING",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0064",
+      "category": "WORK",
+      "patternKey": "helping",
+      "meaning": "helping a colleague",
+      "intent": "REPORT_WORK_SUPPORT",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0065",
+      "category": "WORK",
+      "patternKey": "safety",
+      "meaning": "reporting or responding to a safety issue",
+      "intent": "REPORT_WORK_SAFETY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0066",
+      "category": "WORK",
+      "patternKey": "equipment",
+      "meaning": "using or reporting an equipment issue",
+      "intent": "REPORT_WORK_PROBLEM",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0067",
+      "category": "WORK",
+      "patternKey": "vendor",
+      "meaning": "communicating about vendor goods or delivery",
+      "intent": "REPORT_WORK_COMMUNICATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0068",
+      "category": "WORK",
+      "patternKey": "supervisor",
+      "meaning": "communicating with a supervisor",
+      "intent": "REPORT_WORK_COMMUNICATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0069",
+      "category": "WORK",
+      "patternKey": "manager",
+      "meaning": "communicating with a manager",
+      "intent": "REPORT_WORK_COMMUNICATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0070",
+      "category": "WORK",
+      "patternKey": "stock",
+      "meaning": "checking stock levels",
+      "intent": "REPORT_WORK_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0071",
+      "category": "WORK",
+      "patternKey": "reporting",
+      "meaning": "reporting work status or a problem",
+      "intent": "REPORT_WORK_REPORTING",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0072",
+      "category": "WORK",
+      "patternKey": "attendance",
+      "meaning": "arriving, marking attendance or starting shift",
+      "intent": "REPORT_WORK_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0073",
+      "category": "WORK",
+      "patternKey": "break",
+      "meaning": "taking or returning from a work break",
+      "intent": "REPORT_WORK_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0074",
+      "category": "WORK",
+      "patternKey": "pressure",
+      "meaning": "describing work pressure",
+      "intent": "REPORT_WORK_EMOTION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0075",
+      "category": "WORK",
+      "patternKey": "customer",
+      "meaning": "handling a customer/order issue",
+      "intent": "REPORT_WORK_PROBLEM",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0076",
+      "category": "WORK",
+      "patternKey": "feedback",
+      "meaning": "receiving or discussing feedback",
+      "intent": "REPORT_WORK_COMMUNICATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0077",
+      "category": "WORK",
+      "patternKey": "handover",
+      "meaning": "handing over or receiving pending work",
+      "intent": "REPORT_WORK_COMMUNICATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0078",
+      "category": "WORK",
+      "patternKey": "cleaning",
+      "meaning": "cleaning the work area",
+      "intent": "REPORT_WORK_ACTIVITY",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0079",
+      "category": "WORK",
+      "patternKey": "system",
+      "meaning": "using or reporting a work-system issue",
+      "intent": "REPORT_WORK_PROBLEM",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0080",
+      "category": "WORK",
+      "patternKey": "communication",
+      "meaning": "communicating about a work task",
+      "intent": "REPORT_WORK_COMMUNICATION",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "MEANING_0081",
+      "category": "WORK",
+      "patternKey": "achievement",
+      "meaning": "describing successful work completion",
+      "intent": "REPORT_WORK_PERFORMANCE",
+      "matchingFields": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "sourceType": "MEANING_PATTERN",
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,1083 @@
+{
+  "libraryName": "SkillGo My Day Vocabulary and Grammar Correction Library",
+  "version": "1.0",
+  "purpose": "Deterministic correction of common understandable learner-style English patterns",
+  "examples_are_reference_only": true,
+  "never_treat_examples_as_runtime_facts": true,
+  "never_hardcode_people_from_examples": true,
+  "never_invent_missing_information": true,
+  "recordCount": 119,
+  "records": [
+    {
+      "id": "VOCAB_0001",
+      "inputPattern": "go market",
+      "correctForm": "go to the market",
+      "correctionType": "MISSING_PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0002",
+      "inputPattern": "go office",
+      "correctForm": "go to the office",
+      "correctionType": "MISSING_PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0003",
+      "inputPattern": "go home",
+      "correctForm": "go home",
+      "correctionType": "NO_CHANGE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0004",
+      "inputPattern": "come home",
+      "correctForm": "come home",
+      "correctionType": "NO_CHANGE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0005",
+      "inputPattern": "in morning",
+      "correctForm": "in the morning",
+      "correctionType": "MISSING_ARTICLE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0006",
+      "inputPattern": "in evening",
+      "correctForm": "in the evening",
+      "correctionType": "MISSING_ARTICLE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0007",
+      "inputPattern": "in night",
+      "correctForm": "at night",
+      "correctionType": "PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0008",
+      "inputPattern": "today morning",
+      "correctForm": "this morning",
+      "correctionType": "TIME_EXPRESSION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0009",
+      "inputPattern": "today evening",
+      "correctForm": "this evening",
+      "correctionType": "TIME_EXPRESSION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0010",
+      "inputPattern": "yesterday morning",
+      "correctForm": "yesterday morning",
+      "correctionType": "NO_CHANGE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0011",
+      "inputPattern": "yesterday i go",
+      "correctForm": "yesterday I went",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0012",
+      "inputPattern": "yesterday i come",
+      "correctForm": "yesterday I came",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0013",
+      "inputPattern": "yesterday i buy",
+      "correctForm": "yesterday I bought",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0014",
+      "inputPattern": "yesterday i take",
+      "correctForm": "yesterday I took",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0015",
+      "inputPattern": "yesterday i meet",
+      "correctForm": "yesterday I met",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0016",
+      "inputPattern": "yesterday i call",
+      "correctForm": "yesterday I called",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0017",
+      "inputPattern": "yesterday i visit",
+      "correctForm": "yesterday I visited",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0018",
+      "inputPattern": "yesterday i play",
+      "correctForm": "yesterday I played",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0019",
+      "inputPattern": "i did mistake",
+      "correctForm": "I made a mistake",
+      "correctionType": "WORD_CHOICE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0020",
+      "inputPattern": "i make mistake",
+      "correctForm": "I made a mistake",
+      "correctionType": "WORD_CHOICE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0021",
+      "inputPattern": "manager give me",
+      "correctForm": "the manager gave me",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0022",
+      "inputPattern": "supervisor give me",
+      "correctForm": "the supervisor gave me",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0023",
+      "inputPattern": "supervisor tell me",
+      "correctForm": "the supervisor told me",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0024",
+      "inputPattern": "manager tell me",
+      "correctForm": "the manager told me",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0025",
+      "inputPattern": "he give me",
+      "correctForm": "he gave me",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0026",
+      "inputPattern": "she give me",
+      "correctForm": "she gave me",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0027",
+      "inputPattern": "i go",
+      "correctForm": "I went",
+      "correctionType": "CONTEXT_DEPENDENT_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0028",
+      "inputPattern": "i come",
+      "correctForm": "I came",
+      "correctionType": "CONTEXT_DEPENDENT_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0029",
+      "inputPattern": "i buy",
+      "correctForm": "I bought",
+      "correctionType": "CONTEXT_DEPENDENT_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0030",
+      "inputPattern": "i take",
+      "correctForm": "I took",
+      "correctionType": "CONTEXT_DEPENDENT_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0031",
+      "inputPattern": "i see",
+      "correctForm": "I saw",
+      "correctionType": "CONTEXT_DEPENDENT_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0032",
+      "inputPattern": "i meet",
+      "correctForm": "I met",
+      "correctionType": "CONTEXT_DEPENDENT_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0033",
+      "inputPattern": "i eat",
+      "correctForm": "I ate",
+      "correctionType": "CONTEXT_DEPENDENT_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0034",
+      "inputPattern": "i drink",
+      "correctForm": "I drank",
+      "correctionType": "CONTEXT_DEPENDENT_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0035",
+      "inputPattern": "i make",
+      "correctForm": "I made",
+      "correctionType": "CONTEXT_DEPENDENT_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0036",
+      "inputPattern": "i forget",
+      "correctForm": "I forgot",
+      "correctionType": "CONTEXT_DEPENDENT_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0037",
+      "inputPattern": "i find",
+      "correctForm": "I found",
+      "correctionType": "CONTEXT_DEPENDENT_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0038",
+      "inputPattern": "i feel",
+      "correctForm": "I felt",
+      "correctionType": "CONTEXT_DEPENDENT_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0039",
+      "inputPattern": "come late",
+      "correctForm": "came late",
+      "correctionType": "CONTEXT_DEPENDENT_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0040",
+      "inputPattern": "reach late",
+      "correctForm": "reached late",
+      "correctionType": "CONTEXT_DEPENDENT_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0041",
+      "inputPattern": "did mistake and fix",
+      "correctForm": "made a mistake and fixed it",
+      "correctionType": "WORD_CHOICE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0042",
+      "inputPattern": "give tea",
+      "correctForm": "offer tea",
+      "correctionType": "WORD_CHOICE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0043",
+      "inputPattern": "give money",
+      "correctForm": "give money",
+      "correctionType": "NO_CHANGE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0044",
+      "inputPattern": "discuss about",
+      "correctForm": "discuss",
+      "correctionType": "UNNECESSARY_PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0045",
+      "inputPattern": "return back",
+      "correctForm": "return",
+      "correctionType": "REDUNDANT_WORD",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0046",
+      "inputPattern": "repeat again",
+      "correctForm": "repeat",
+      "correctionType": "REDUNDANT_WORD",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0047",
+      "inputPattern": "more better",
+      "correctForm": "better",
+      "correctionType": "DOUBLE_COMPARATIVE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0048",
+      "inputPattern": "very tired today",
+      "correctForm": "very tired today",
+      "correctionType": "NO_CHANGE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0049",
+      "inputPattern": "one friend",
+      "correctForm": "a friend",
+      "correctionType": "ARTICLE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0050",
+      "inputPattern": "one problem",
+      "correctForm": "a problem",
+      "correctionType": "ARTICLE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0051",
+      "inputPattern": "go to market",
+      "correctForm": "go to the market",
+      "correctionType": "ARTICLE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0052",
+      "inputPattern": "go to shop",
+      "correctForm": "go to the shop",
+      "correctionType": "ARTICLE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0053",
+      "inputPattern": "go to bank",
+      "correctForm": "go to the bank",
+      "correctionType": "ARTICLE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0054",
+      "inputPattern": "go to clinic",
+      "correctForm": "go to the clinic",
+      "correctionType": "ARTICLE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0055",
+      "inputPattern": "at home",
+      "correctForm": "at home",
+      "correctionType": "NO_CHANGE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0056",
+      "inputPattern": "at office",
+      "correctForm": "at the office",
+      "correctionType": "ARTICLE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0057",
+      "inputPattern": "at warehouse",
+      "correctForm": "at the warehouse",
+      "correctionType": "ARTICLE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0058",
+      "inputPattern": "in warehouse",
+      "correctForm": "in the warehouse",
+      "correctionType": "ARTICLE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0059",
+      "inputPattern": "in bus",
+      "correctForm": "on the bus",
+      "correctionType": "PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0060",
+      "inputPattern": "in train",
+      "correctForm": "on the train",
+      "correctionType": "PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0061",
+      "inputPattern": "on bike",
+      "correctForm": "on a bike",
+      "correctionType": "ARTICLE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0062",
+      "inputPattern": "by walk",
+      "correctForm": "on foot",
+      "correctionType": "WORD_CHOICE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0063",
+      "inputPattern": "by bus",
+      "correctForm": "by bus",
+      "correctionType": "NO_CHANGE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0064",
+      "inputPattern": "phone me",
+      "correctForm": "call me",
+      "correctionType": "WORD_CHOICE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0065",
+      "inputPattern": "call to me",
+      "correctForm": "call me",
+      "correctionType": "UNNECESSARY_PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0066",
+      "inputPattern": "tell to me",
+      "correctForm": "tell me",
+      "correctionType": "UNNECESSARY_PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0067",
+      "inputPattern": "explain me",
+      "correctForm": "explain to me",
+      "correctionType": "PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0068",
+      "inputPattern": "ask to him",
+      "correctForm": "ask him",
+      "correctionType": "PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0069",
+      "inputPattern": "say to him",
+      "correctForm": "say to him",
+      "correctionType": "NO_CHANGE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0070",
+      "inputPattern": "listen music",
+      "correctForm": "listen to music",
+      "correctionType": "MISSING_PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0071",
+      "inputPattern": "listen my friend",
+      "correctForm": "listen to my friend",
+      "correctionType": "MISSING_PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0072",
+      "inputPattern": "wait bus",
+      "correctForm": "wait for the bus",
+      "correctionType": "MISSING_PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0073",
+      "inputPattern": "wait for bus",
+      "correctForm": "wait for the bus",
+      "correctionType": "ARTICLE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0074",
+      "inputPattern": "help to me",
+      "correctForm": "help me",
+      "correctionType": "UNNECESSARY_PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0075",
+      "inputPattern": "helped to me",
+      "correctForm": "helped me",
+      "correctionType": "UNNECESSARY_PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0076",
+      "inputPattern": "married with",
+      "correctForm": "married to",
+      "correctionType": "PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0077",
+      "inputPattern": "good in English",
+      "correctForm": "good at English",
+      "correctionType": "PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0078",
+      "inputPattern": "interested on",
+      "correctForm": "interested in",
+      "correctionType": "PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0079",
+      "inputPattern": "angry on him",
+      "correctForm": "angry with him",
+      "correctionType": "PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0080",
+      "inputPattern": "late because traffic",
+      "correctForm": "late because of traffic",
+      "correctionType": "PREPOSITION",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0081",
+      "inputPattern": "stuck in traffic",
+      "correctForm": "stuck in traffic",
+      "correctionType": "NO_CHANGE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0082",
+      "inputPattern": "traffic is heavy",
+      "correctForm": "the traffic is heavy",
+      "correctionType": "ARTICLE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0083",
+      "inputPattern": "many work",
+      "correctForm": "a lot of work",
+      "correctionType": "QUANTITY",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0084",
+      "inputPattern": "much works",
+      "correctForm": "a lot of work",
+      "correctionType": "NUMBER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0085",
+      "inputPattern": "many information",
+      "correctForm": "a lot of information",
+      "correctionType": "NUMBER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0086",
+      "inputPattern": "two advice",
+      "correctForm": "two pieces of advice",
+      "correctionType": "NUMBER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0087",
+      "inputPattern": "one informations",
+      "correctForm": "one piece of information",
+      "correctionType": "NUMBER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0088",
+      "inputPattern": "informations",
+      "correctForm": "information",
+      "correctionType": "NUMBER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0089",
+      "inputPattern": "advices",
+      "correctForm": "advice",
+      "correctionType": "NUMBER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0090",
+      "inputPattern": "equipments",
+      "correctForm": "equipment",
+      "correctionType": "NUMBER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0091",
+      "inputPattern": "furnitures",
+      "correctForm": "furniture",
+      "correctionType": "NUMBER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0092",
+      "inputPattern": "vegetable",
+      "correctForm": "vegetables",
+      "correctionType": "NUMBER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0093",
+      "inputPattern": "one vegetables",
+      "correctForm": "one vegetable",
+      "correctionType": "NUMBER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0094",
+      "inputPattern": "childrens",
+      "correctForm": "children",
+      "correctionType": "IRREGULAR_PLURAL",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0095",
+      "inputPattern": "peoples",
+      "correctForm": "people",
+      "correctionType": "IRREGULAR_PLURAL",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0096",
+      "inputPattern": "mens",
+      "correctForm": "men",
+      "correctionType": "IRREGULAR_PLURAL",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0097",
+      "inputPattern": "womans",
+      "correctForm": "women",
+      "correctionType": "IRREGULAR_PLURAL",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0098",
+      "inputPattern": "my friend come",
+      "correctForm": "my friend came",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0099",
+      "inputPattern": "my friend call",
+      "correctForm": "my friend called",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0100",
+      "inputPattern": "my friend help",
+      "correctForm": "my friend helped",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0101",
+      "inputPattern": "they was",
+      "correctForm": "they were",
+      "correctionType": "SUBJECT_VERB_AGREEMENT",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0102",
+      "inputPattern": "we was",
+      "correctForm": "we were",
+      "correctionType": "SUBJECT_VERB_AGREEMENT",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0103",
+      "inputPattern": "he were",
+      "correctForm": "he was",
+      "correctionType": "SUBJECT_VERB_AGREEMENT",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0104",
+      "inputPattern": "she were",
+      "correctForm": "she was",
+      "correctionType": "SUBJECT_VERB_AGREEMENT",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0105",
+      "inputPattern": "i is",
+      "correctForm": "I am",
+      "correctionType": "SUBJECT_VERB_AGREEMENT",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0106",
+      "inputPattern": "i am went",
+      "correctForm": "I went",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0107",
+      "inputPattern": "i am go",
+      "correctForm": "I am going",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0108",
+      "inputPattern": "i was go",
+      "correctForm": "I was going",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0109",
+      "inputPattern": "he is go",
+      "correctForm": "he is going",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0110",
+      "inputPattern": "she is go",
+      "correctForm": "she is going",
+      "correctionType": "WRONG_TENSE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0111",
+      "inputPattern": "what you doing",
+      "correctForm": "what are you doing",
+      "correctionType": "WORD_ORDER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0112",
+      "inputPattern": "where you going",
+      "correctForm": "where are you going",
+      "correctionType": "WORD_ORDER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0113",
+      "inputPattern": "why you late",
+      "correctForm": "why are you late",
+      "correctionType": "WORD_ORDER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0114",
+      "inputPattern": "when you come",
+      "correctForm": "when are you coming",
+      "correctionType": "WORD_ORDER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0115",
+      "inputPattern": "how you manage",
+      "correctForm": "how do you manage",
+      "correctionType": "WORD_ORDER",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0116",
+      "inputPattern": "what happened there",
+      "correctForm": "what happened there",
+      "correctionType": "NO_CHANGE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0117",
+      "inputPattern": "then after that",
+      "correctForm": "after that",
+      "correctionType": "REDUNDANT_SEQUENCE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0118",
+      "inputPattern": "after then",
+      "correctForm": "after that",
+      "correctionType": "SEQUENCE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    },
+    {
+      "id": "VOCAB_0119",
+      "inputPattern": "before that then",
+      "correctForm": "before that",
+      "correctionType": "REDUNDANT_SEQUENCE",
+      "usageNote": "Apply only when the surrounding sentence meaning and tense support this correction.",
+      "sourceType": "LEARNER_LANGUAGE_PATTERN",
+      "confidence": 0.9
+    }
+  ]
+}

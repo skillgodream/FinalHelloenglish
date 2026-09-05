@@ -1,0 +1,7 @@
+{
+  "name": "HELLO ENGLISH",
+  "description": "Mobile-first AI English-speaking coach with Coach Neha for Indian entry-level and frontline learners.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

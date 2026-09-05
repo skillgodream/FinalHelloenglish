@@ -1,0 +1,1005 @@
+{
+  "version": "1.0.0",
+  "records": [
+    {
+      "id": "REP_0001",
+      "patternId": "REF_0001",
+      "category": "DAILY",
+      "matchedMeaning": "morning routine",
+      "rephraseTemplate": "I woke up early and got ready for the day.",
+      "rephraseMeaning": "Completed morning routine"
+    },
+    {
+      "id": "REP_0002",
+      "patternId": "REF_0002",
+      "category": "WORK",
+      "matchedMeaning": "commute to work",
+      "rephraseTemplate": "I reached work on time and started my shift.",
+      "rephraseMeaning": "Arrived at workplace"
+    },
+    {
+      "id": "REP_0003",
+      "patternId": "REF_0006",
+      "category": "DAILY",
+      "matchedMeaning": "day was not good",
+      "rephraseTemplate": "My day was not good today.",
+      "rephraseMeaning": "Expressing a difficult day"
+    },
+    {
+      "id": "REP_0004",
+      "patternId": "REF_0007",
+      "category": "DAILY",
+      "matchedMeaning": "had food",
+      "rephraseTemplate": "I have already had my food.",
+      "rephraseMeaning": "Meal completed"
+    },
+    {
+      "id": "REP_0005",
+      "patternId": "REF_0008",
+      "category": "FRIENDS",
+      "matchedMeaning": "did not play",
+      "rephraseTemplate": "I didn't go out to play sports today.",
+      "rephraseMeaning": "Skipped playing"
+    },
+    {
+      "id": "REP_0006",
+      "patternId": "REF_0009",
+      "category": "DAILY",
+      "matchedMeaning": "tired",
+      "rephraseTemplate": "I was exhausted after a long day.",
+      "rephraseMeaning": "Fatigue expression"
+    },
+    {
+      "id": "VOCAB_0001",
+      "patternId": "REF_VG_1",
+      "category": "DAILY",
+      "matchedMeaning": "go market",
+      "rephraseTemplate": "go to the market",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0002",
+      "patternId": "REF_VG_2",
+      "category": "DAILY",
+      "matchedMeaning": "go office",
+      "rephraseTemplate": "go to the office",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0003",
+      "patternId": "REF_VG_3",
+      "category": "DAILY",
+      "matchedMeaning": "go home",
+      "rephraseTemplate": "go home",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0004",
+      "patternId": "REF_VG_4",
+      "category": "DAILY",
+      "matchedMeaning": "come home",
+      "rephraseTemplate": "come home",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0005",
+      "patternId": "REF_VG_5",
+      "category": "DAILY",
+      "matchedMeaning": "in morning",
+      "rephraseTemplate": "in the morning",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0006",
+      "patternId": "REF_VG_6",
+      "category": "DAILY",
+      "matchedMeaning": "in evening",
+      "rephraseTemplate": "in the evening",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0007",
+      "patternId": "REF_VG_7",
+      "category": "DAILY",
+      "matchedMeaning": "in night",
+      "rephraseTemplate": "at night",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0008",
+      "patternId": "REF_VG_8",
+      "category": "DAILY",
+      "matchedMeaning": "today morning",
+      "rephraseTemplate": "this morning",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0009",
+      "patternId": "REF_VG_9",
+      "category": "DAILY",
+      "matchedMeaning": "today evening",
+      "rephraseTemplate": "this evening",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0010",
+      "patternId": "REF_VG_10",
+      "category": "DAILY",
+      "matchedMeaning": "yesterday morning",
+      "rephraseTemplate": "yesterday morning",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0011",
+      "patternId": "REF_VG_11",
+      "category": "DAILY",
+      "matchedMeaning": "yesterday i go",
+      "rephraseTemplate": "yesterday I went",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0012",
+      "patternId": "REF_VG_12",
+      "category": "DAILY",
+      "matchedMeaning": "yesterday i come",
+      "rephraseTemplate": "yesterday I came",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0013",
+      "patternId": "REF_VG_13",
+      "category": "DAILY",
+      "matchedMeaning": "yesterday i buy",
+      "rephraseTemplate": "yesterday I bought",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0014",
+      "patternId": "REF_VG_14",
+      "category": "DAILY",
+      "matchedMeaning": "yesterday i take",
+      "rephraseTemplate": "yesterday I took",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0015",
+      "patternId": "REF_VG_15",
+      "category": "DAILY",
+      "matchedMeaning": "yesterday i meet",
+      "rephraseTemplate": "yesterday I met",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0016",
+      "patternId": "REF_VG_16",
+      "category": "DAILY",
+      "matchedMeaning": "yesterday i call",
+      "rephraseTemplate": "yesterday I called",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0017",
+      "patternId": "REF_VG_17",
+      "category": "DAILY",
+      "matchedMeaning": "yesterday i visit",
+      "rephraseTemplate": "yesterday I visited",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0018",
+      "patternId": "REF_VG_18",
+      "category": "DAILY",
+      "matchedMeaning": "yesterday i play",
+      "rephraseTemplate": "yesterday I played",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0019",
+      "patternId": "REF_VG_19",
+      "category": "DAILY",
+      "matchedMeaning": "i did mistake",
+      "rephraseTemplate": "I made a mistake",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0020",
+      "patternId": "REF_VG_20",
+      "category": "DAILY",
+      "matchedMeaning": "i make mistake",
+      "rephraseTemplate": "I made a mistake",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0021",
+      "patternId": "REF_VG_21",
+      "category": "DAILY",
+      "matchedMeaning": "manager give me",
+      "rephraseTemplate": "the manager gave me",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0022",
+      "patternId": "REF_VG_22",
+      "category": "DAILY",
+      "matchedMeaning": "supervisor give me",
+      "rephraseTemplate": "the supervisor gave me",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0023",
+      "patternId": "REF_VG_23",
+      "category": "DAILY",
+      "matchedMeaning": "supervisor tell me",
+      "rephraseTemplate": "the supervisor told me",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0024",
+      "patternId": "REF_VG_24",
+      "category": "DAILY",
+      "matchedMeaning": "manager tell me",
+      "rephraseTemplate": "the manager told me",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0025",
+      "patternId": "REF_VG_25",
+      "category": "DAILY",
+      "matchedMeaning": "he give me",
+      "rephraseTemplate": "he gave me",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0026",
+      "patternId": "REF_VG_26",
+      "category": "DAILY",
+      "matchedMeaning": "she give me",
+      "rephraseTemplate": "she gave me",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0027",
+      "patternId": "REF_VG_27",
+      "category": "DAILY",
+      "matchedMeaning": "i go",
+      "rephraseTemplate": "I went",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0028",
+      "patternId": "REF_VG_28",
+      "category": "DAILY",
+      "matchedMeaning": "i come",
+      "rephraseTemplate": "I came",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0029",
+      "patternId": "REF_VG_29",
+      "category": "DAILY",
+      "matchedMeaning": "i buy",
+      "rephraseTemplate": "I bought",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0030",
+      "patternId": "REF_VG_30",
+      "category": "DAILY",
+      "matchedMeaning": "i take",
+      "rephraseTemplate": "I took",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0031",
+      "patternId": "REF_VG_31",
+      "category": "DAILY",
+      "matchedMeaning": "i see",
+      "rephraseTemplate": "I saw",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0032",
+      "patternId": "REF_VG_32",
+      "category": "DAILY",
+      "matchedMeaning": "i meet",
+      "rephraseTemplate": "I met",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0033",
+      "patternId": "REF_VG_33",
+      "category": "DAILY",
+      "matchedMeaning": "i eat",
+      "rephraseTemplate": "I ate",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0034",
+      "patternId": "REF_VG_34",
+      "category": "DAILY",
+      "matchedMeaning": "i drink",
+      "rephraseTemplate": "I drank",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0035",
+      "patternId": "REF_VG_35",
+      "category": "DAILY",
+      "matchedMeaning": "i make",
+      "rephraseTemplate": "I made",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0036",
+      "patternId": "REF_VG_36",
+      "category": "DAILY",
+      "matchedMeaning": "i forget",
+      "rephraseTemplate": "I forgot",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0037",
+      "patternId": "REF_VG_37",
+      "category": "DAILY",
+      "matchedMeaning": "i find",
+      "rephraseTemplate": "I found",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0038",
+      "patternId": "REF_VG_38",
+      "category": "DAILY",
+      "matchedMeaning": "i feel",
+      "rephraseTemplate": "I felt",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0039",
+      "patternId": "REF_VG_39",
+      "category": "DAILY",
+      "matchedMeaning": "come late",
+      "rephraseTemplate": "came late",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0040",
+      "patternId": "REF_VG_40",
+      "category": "DAILY",
+      "matchedMeaning": "reach late",
+      "rephraseTemplate": "reached late",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0041",
+      "patternId": "REF_VG_41",
+      "category": "DAILY",
+      "matchedMeaning": "did mistake and fix",
+      "rephraseTemplate": "made a mistake and fixed it",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0042",
+      "patternId": "REF_VG_42",
+      "category": "DAILY",
+      "matchedMeaning": "give tea",
+      "rephraseTemplate": "offer tea",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0043",
+      "patternId": "REF_VG_43",
+      "category": "DAILY",
+      "matchedMeaning": "give money",
+      "rephraseTemplate": "give money",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0044",
+      "patternId": "REF_VG_44",
+      "category": "DAILY",
+      "matchedMeaning": "discuss about",
+      "rephraseTemplate": "discuss",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0045",
+      "patternId": "REF_VG_45",
+      "category": "DAILY",
+      "matchedMeaning": "return back",
+      "rephraseTemplate": "return",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0046",
+      "patternId": "REF_VG_46",
+      "category": "DAILY",
+      "matchedMeaning": "repeat again",
+      "rephraseTemplate": "repeat",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0047",
+      "patternId": "REF_VG_47",
+      "category": "DAILY",
+      "matchedMeaning": "more better",
+      "rephraseTemplate": "better",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0048",
+      "patternId": "REF_VG_48",
+      "category": "DAILY",
+      "matchedMeaning": "very tired today",
+      "rephraseTemplate": "very tired today",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0049",
+      "patternId": "REF_VG_49",
+      "category": "DAILY",
+      "matchedMeaning": "one friend",
+      "rephraseTemplate": "a friend",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0050",
+      "patternId": "REF_VG_50",
+      "category": "DAILY",
+      "matchedMeaning": "one problem",
+      "rephraseTemplate": "a problem",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0051",
+      "patternId": "REF_VG_51",
+      "category": "DAILY",
+      "matchedMeaning": "go to market",
+      "rephraseTemplate": "go to the market",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0052",
+      "patternId": "REF_VG_52",
+      "category": "DAILY",
+      "matchedMeaning": "go to shop",
+      "rephraseTemplate": "go to the shop",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0053",
+      "patternId": "REF_VG_53",
+      "category": "DAILY",
+      "matchedMeaning": "go to bank",
+      "rephraseTemplate": "go to the bank",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0054",
+      "patternId": "REF_VG_54",
+      "category": "DAILY",
+      "matchedMeaning": "go to clinic",
+      "rephraseTemplate": "go to the clinic",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0055",
+      "patternId": "REF_VG_55",
+      "category": "DAILY",
+      "matchedMeaning": "at home",
+      "rephraseTemplate": "at home",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0056",
+      "patternId": "REF_VG_56",
+      "category": "DAILY",
+      "matchedMeaning": "at office",
+      "rephraseTemplate": "at the office",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0057",
+      "patternId": "REF_VG_57",
+      "category": "DAILY",
+      "matchedMeaning": "at warehouse",
+      "rephraseTemplate": "at the warehouse",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0058",
+      "patternId": "REF_VG_58",
+      "category": "DAILY",
+      "matchedMeaning": "in warehouse",
+      "rephraseTemplate": "in the warehouse",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0059",
+      "patternId": "REF_VG_59",
+      "category": "DAILY",
+      "matchedMeaning": "in bus",
+      "rephraseTemplate": "on the bus",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0060",
+      "patternId": "REF_VG_60",
+      "category": "DAILY",
+      "matchedMeaning": "in train",
+      "rephraseTemplate": "on the train",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0061",
+      "patternId": "REF_VG_61",
+      "category": "DAILY",
+      "matchedMeaning": "on bike",
+      "rephraseTemplate": "on a bike",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0062",
+      "patternId": "REF_VG_62",
+      "category": "DAILY",
+      "matchedMeaning": "by walk",
+      "rephraseTemplate": "on foot",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0063",
+      "patternId": "REF_VG_63",
+      "category": "DAILY",
+      "matchedMeaning": "by bus",
+      "rephraseTemplate": "by bus",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0064",
+      "patternId": "REF_VG_64",
+      "category": "DAILY",
+      "matchedMeaning": "phone me",
+      "rephraseTemplate": "call me",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0065",
+      "patternId": "REF_VG_65",
+      "category": "DAILY",
+      "matchedMeaning": "call to me",
+      "rephraseTemplate": "call me",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0066",
+      "patternId": "REF_VG_66",
+      "category": "DAILY",
+      "matchedMeaning": "tell to me",
+      "rephraseTemplate": "tell me",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0067",
+      "patternId": "REF_VG_67",
+      "category": "DAILY",
+      "matchedMeaning": "explain me",
+      "rephraseTemplate": "explain to me",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0068",
+      "patternId": "REF_VG_68",
+      "category": "DAILY",
+      "matchedMeaning": "ask to him",
+      "rephraseTemplate": "ask him",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0069",
+      "patternId": "REF_VG_69",
+      "category": "DAILY",
+      "matchedMeaning": "say to him",
+      "rephraseTemplate": "say to him",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0070",
+      "patternId": "REF_VG_70",
+      "category": "DAILY",
+      "matchedMeaning": "listen music",
+      "rephraseTemplate": "listen to music",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0071",
+      "patternId": "REF_VG_71",
+      "category": "DAILY",
+      "matchedMeaning": "listen my friend",
+      "rephraseTemplate": "listen to my friend",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0072",
+      "patternId": "REF_VG_72",
+      "category": "DAILY",
+      "matchedMeaning": "wait bus",
+      "rephraseTemplate": "wait for the bus",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0073",
+      "patternId": "REF_VG_73",
+      "category": "DAILY",
+      "matchedMeaning": "wait for bus",
+      "rephraseTemplate": "wait for the bus",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0074",
+      "patternId": "REF_VG_74",
+      "category": "DAILY",
+      "matchedMeaning": "help to me",
+      "rephraseTemplate": "help me",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0075",
+      "patternId": "REF_VG_75",
+      "category": "DAILY",
+      "matchedMeaning": "helped to me",
+      "rephraseTemplate": "helped me",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0076",
+      "patternId": "REF_VG_76",
+      "category": "DAILY",
+      "matchedMeaning": "married with",
+      "rephraseTemplate": "married to",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0077",
+      "patternId": "REF_VG_77",
+      "category": "DAILY",
+      "matchedMeaning": "good in English",
+      "rephraseTemplate": "good at English",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0078",
+      "patternId": "REF_VG_78",
+      "category": "DAILY",
+      "matchedMeaning": "interested on",
+      "rephraseTemplate": "interested in",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0079",
+      "patternId": "REF_VG_79",
+      "category": "DAILY",
+      "matchedMeaning": "angry on him",
+      "rephraseTemplate": "angry with him",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0080",
+      "patternId": "REF_VG_80",
+      "category": "DAILY",
+      "matchedMeaning": "late because traffic",
+      "rephraseTemplate": "late because of traffic",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0081",
+      "patternId": "REF_VG_81",
+      "category": "DAILY",
+      "matchedMeaning": "stuck in traffic",
+      "rephraseTemplate": "stuck in traffic",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0082",
+      "patternId": "REF_VG_82",
+      "category": "DAILY",
+      "matchedMeaning": "traffic is heavy",
+      "rephraseTemplate": "the traffic is heavy",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0083",
+      "patternId": "REF_VG_83",
+      "category": "DAILY",
+      "matchedMeaning": "many work",
+      "rephraseTemplate": "a lot of work",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0084",
+      "patternId": "REF_VG_84",
+      "category": "DAILY",
+      "matchedMeaning": "much works",
+      "rephraseTemplate": "a lot of work",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0085",
+      "patternId": "REF_VG_85",
+      "category": "DAILY",
+      "matchedMeaning": "many information",
+      "rephraseTemplate": "a lot of information",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0086",
+      "patternId": "REF_VG_86",
+      "category": "DAILY",
+      "matchedMeaning": "two advice",
+      "rephraseTemplate": "two pieces of advice",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0087",
+      "patternId": "REF_VG_87",
+      "category": "DAILY",
+      "matchedMeaning": "one informations",
+      "rephraseTemplate": "one piece of information",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0088",
+      "patternId": "REF_VG_88",
+      "category": "DAILY",
+      "matchedMeaning": "informations",
+      "rephraseTemplate": "information",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0089",
+      "patternId": "REF_VG_89",
+      "category": "DAILY",
+      "matchedMeaning": "advices",
+      "rephraseTemplate": "advice",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0090",
+      "patternId": "REF_VG_90",
+      "category": "DAILY",
+      "matchedMeaning": "equipments",
+      "rephraseTemplate": "equipment",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0091",
+      "patternId": "REF_VG_91",
+      "category": "DAILY",
+      "matchedMeaning": "furnitures",
+      "rephraseTemplate": "furniture",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0092",
+      "patternId": "REF_VG_92",
+      "category": "DAILY",
+      "matchedMeaning": "vegetable",
+      "rephraseTemplate": "vegetables",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0093",
+      "patternId": "REF_VG_93",
+      "category": "DAILY",
+      "matchedMeaning": "one vegetables",
+      "rephraseTemplate": "one vegetable",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0094",
+      "patternId": "REF_VG_94",
+      "category": "DAILY",
+      "matchedMeaning": "childrens",
+      "rephraseTemplate": "children",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0095",
+      "patternId": "REF_VG_95",
+      "category": "DAILY",
+      "matchedMeaning": "peoples",
+      "rephraseTemplate": "people",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0096",
+      "patternId": "REF_VG_96",
+      "category": "DAILY",
+      "matchedMeaning": "mens",
+      "rephraseTemplate": "men",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0097",
+      "patternId": "REF_VG_97",
+      "category": "DAILY",
+      "matchedMeaning": "womans",
+      "rephraseTemplate": "women",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0098",
+      "patternId": "REF_VG_98",
+      "category": "DAILY",
+      "matchedMeaning": "my friend come",
+      "rephraseTemplate": "my friend came",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0099",
+      "patternId": "REF_VG_99",
+      "category": "DAILY",
+      "matchedMeaning": "my friend call",
+      "rephraseTemplate": "my friend called",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0100",
+      "patternId": "REF_VG_100",
+      "category": "DAILY",
+      "matchedMeaning": "my friend help",
+      "rephraseTemplate": "my friend helped",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0101",
+      "patternId": "REF_VG_101",
+      "category": "DAILY",
+      "matchedMeaning": "they was",
+      "rephraseTemplate": "they were",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0102",
+      "patternId": "REF_VG_102",
+      "category": "DAILY",
+      "matchedMeaning": "we was",
+      "rephraseTemplate": "we were",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0103",
+      "patternId": "REF_VG_103",
+      "category": "DAILY",
+      "matchedMeaning": "he were",
+      "rephraseTemplate": "he was",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0104",
+      "patternId": "REF_VG_104",
+      "category": "DAILY",
+      "matchedMeaning": "she were",
+      "rephraseTemplate": "she was",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0105",
+      "patternId": "REF_VG_105",
+      "category": "DAILY",
+      "matchedMeaning": "i is",
+      "rephraseTemplate": "I am",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0106",
+      "patternId": "REF_VG_106",
+      "category": "DAILY",
+      "matchedMeaning": "i am went",
+      "rephraseTemplate": "I went",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0107",
+      "patternId": "REF_VG_107",
+      "category": "DAILY",
+      "matchedMeaning": "i am go",
+      "rephraseTemplate": "I am going",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0108",
+      "patternId": "REF_VG_108",
+      "category": "DAILY",
+      "matchedMeaning": "i was go",
+      "rephraseTemplate": "I was going",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0109",
+      "patternId": "REF_VG_109",
+      "category": "DAILY",
+      "matchedMeaning": "he is go",
+      "rephraseTemplate": "he is going",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0110",
+      "patternId": "REF_VG_110",
+      "category": "DAILY",
+      "matchedMeaning": "she is go",
+      "rephraseTemplate": "she is going",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0111",
+      "patternId": "REF_VG_111",
+      "category": "DAILY",
+      "matchedMeaning": "what you doing",
+      "rephraseTemplate": "what are you doing",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0112",
+      "patternId": "REF_VG_112",
+      "category": "DAILY",
+      "matchedMeaning": "where you going",
+      "rephraseTemplate": "where are you going",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0113",
+      "patternId": "REF_VG_113",
+      "category": "DAILY",
+      "matchedMeaning": "why you late",
+      "rephraseTemplate": "why are you late",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0114",
+      "patternId": "REF_VG_114",
+      "category": "DAILY",
+      "matchedMeaning": "when you come",
+      "rephraseTemplate": "when are you coming",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0115",
+      "patternId": "REF_VG_115",
+      "category": "DAILY",
+      "matchedMeaning": "how you manage",
+      "rephraseTemplate": "how do you manage",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0116",
+      "patternId": "REF_VG_116",
+      "category": "DAILY",
+      "matchedMeaning": "what happened there",
+      "rephraseTemplate": "what happened there",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0117",
+      "patternId": "REF_VG_117",
+      "category": "DAILY",
+      "matchedMeaning": "then after that",
+      "rephraseTemplate": "after that",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0118",
+      "patternId": "REF_VG_118",
+      "category": "DAILY",
+      "matchedMeaning": "after then",
+      "rephraseTemplate": "after that",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    },
+    {
+      "id": "VOCAB_0119",
+      "patternId": "REF_VG_119",
+      "category": "DAILY",
+      "matchedMeaning": "before that then",
+      "rephraseTemplate": "before that",
+      "rephraseMeaning": "Apply only when the surrounding sentence meaning and tense support this correction."
+    }
+  ]
+}

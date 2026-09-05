@@ -1,0 +1,579 @@
+{
+  "libraryName": "SkillGo My Day Time and Sequence Library",
+  "version": "1.0",
+  "purpose": "Deterministic recognition of time, order, overlap, duration and frequency expressions",
+  "examples_are_reference_only": true,
+  "never_treat_examples_as_runtime_facts": true,
+  "never_hardcode_people_from_examples": true,
+  "never_invent_missing_information": true,
+  "recordCount": 63,
+  "records": [
+    {
+      "id": "TIME_0001",
+      "pattern": "today",
+      "normalizedValue": "today",
+      "type": "DAY_RELATIVE",
+      "meaning": "current day reference",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0002",
+      "pattern": "yesterday",
+      "normalizedValue": "yesterday",
+      "type": "DAY_RELATIVE",
+      "meaning": "previous day reference",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0003",
+      "pattern": "tomorrow",
+      "normalizedValue": "tomorrow",
+      "type": "DAY_RELATIVE",
+      "meaning": "next day reference",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0004",
+      "pattern": "this morning",
+      "normalizedValue": "this morning",
+      "type": "TIME_OF_DAY",
+      "meaning": "morning of the current context",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0005",
+      "pattern": "today morning",
+      "normalizedValue": "this morning",
+      "type": "TIME_OF_DAY",
+      "meaning": "morning of the current context",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0006",
+      "pattern": "morning",
+      "normalizedValue": "morning",
+      "type": "TIME_OF_DAY",
+      "meaning": "morning",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0007",
+      "pattern": "in morning",
+      "normalizedValue": "morning",
+      "type": "TIME_OF_DAY",
+      "meaning": "morning",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0008",
+      "pattern": "early morning",
+      "normalizedValue": "morning",
+      "type": "TIME_OF_DAY",
+      "meaning": "morning",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0009",
+      "pattern": "afternoon",
+      "normalizedValue": "afternoon",
+      "type": "TIME_OF_DAY",
+      "meaning": "afternoon",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0010",
+      "pattern": "in afternoon",
+      "normalizedValue": "afternoon",
+      "type": "TIME_OF_DAY",
+      "meaning": "afternoon",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0011",
+      "pattern": "after lunch",
+      "normalizedValue": "afternoon",
+      "type": "TIME_OF_DAY",
+      "meaning": "afternoon",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0012",
+      "pattern": "evening",
+      "normalizedValue": "evening",
+      "type": "TIME_OF_DAY",
+      "meaning": "evening",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0013",
+      "pattern": "in evening",
+      "normalizedValue": "evening",
+      "type": "TIME_OF_DAY",
+      "meaning": "evening",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0014",
+      "pattern": "today evening",
+      "normalizedValue": "evening",
+      "type": "TIME_OF_DAY",
+      "meaning": "evening",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0015",
+      "pattern": "night",
+      "normalizedValue": "night",
+      "type": "TIME_OF_DAY",
+      "meaning": "night",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0016",
+      "pattern": "at night",
+      "normalizedValue": "night",
+      "type": "TIME_OF_DAY",
+      "meaning": "night",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0017",
+      "pattern": "last night",
+      "normalizedValue": "night",
+      "type": "TIME_OF_DAY",
+      "meaning": "night",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0018",
+      "pattern": "before",
+      "normalizedValue": "before",
+      "type": "SEQUENCE",
+      "meaning": "earlier than another event",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0019",
+      "pattern": "before that",
+      "normalizedValue": "before",
+      "type": "SEQUENCE",
+      "meaning": "earlier than another event",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0020",
+      "pattern": "before sleeping",
+      "normalizedValue": "before",
+      "type": "SEQUENCE",
+      "meaning": "earlier than another event",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0021",
+      "pattern": "before work",
+      "normalizedValue": "before",
+      "type": "SEQUENCE",
+      "meaning": "earlier than another event",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0022",
+      "pattern": "after",
+      "normalizedValue": "after",
+      "type": "SEQUENCE",
+      "meaning": "later than another event",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0023",
+      "pattern": "after that",
+      "normalizedValue": "after",
+      "type": "SEQUENCE",
+      "meaning": "later than another event",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0024",
+      "pattern": "after lunch",
+      "normalizedValue": "after",
+      "type": "SEQUENCE",
+      "meaning": "later than another event",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0025",
+      "pattern": "after dinner",
+      "normalizedValue": "after",
+      "type": "SEQUENCE",
+      "meaning": "later than another event",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0026",
+      "pattern": "then",
+      "normalizedValue": "then",
+      "type": "SEQUENCE",
+      "meaning": "next event",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0027",
+      "pattern": "and then",
+      "normalizedValue": "then",
+      "type": "SEQUENCE",
+      "meaning": "next event",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0028",
+      "pattern": "later",
+      "normalizedValue": "later",
+      "type": "SEQUENCE",
+      "meaning": "event occurring after an earlier event",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0029",
+      "pattern": "later that day",
+      "normalizedValue": "later",
+      "type": "SEQUENCE",
+      "meaning": "event occurring after an earlier event",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0030",
+      "pattern": "after some time",
+      "normalizedValue": "later",
+      "type": "SEQUENCE",
+      "meaning": "event occurring after an earlier event",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0031",
+      "pattern": "finally",
+      "normalizedValue": "finally",
+      "type": "SEQUENCE",
+      "meaning": "last event in a sequence",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0032",
+      "pattern": "at the end",
+      "normalizedValue": "finally",
+      "type": "SEQUENCE",
+      "meaning": "last event in a sequence",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0033",
+      "pattern": "first",
+      "normalizedValue": "first",
+      "type": "SEQUENCE",
+      "meaning": "first event in a sequence",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0034",
+      "pattern": "firstly",
+      "normalizedValue": "first",
+      "type": "SEQUENCE",
+      "meaning": "first event in a sequence",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0035",
+      "pattern": "at first",
+      "normalizedValue": "first",
+      "type": "SEQUENCE",
+      "meaning": "first event in a sequence",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0036",
+      "pattern": "while",
+      "normalizedValue": "while",
+      "type": "OVERLAP",
+      "meaning": "two activities overlap in time",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0037",
+      "pattern": "while i was",
+      "normalizedValue": "while",
+      "type": "OVERLAP",
+      "meaning": "two activities overlap in time",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0038",
+      "pattern": "while we were",
+      "normalizedValue": "while",
+      "type": "OVERLAP",
+      "meaning": "two activities overlap in time",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0039",
+      "pattern": "when",
+      "normalizedValue": "when",
+      "type": "TIME_LINK",
+      "meaning": "one event occurs at the time of another",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0040",
+      "pattern": "when i",
+      "normalizedValue": "when",
+      "type": "TIME_LINK",
+      "meaning": "one event occurs at the time of another",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0041",
+      "pattern": "when we",
+      "normalizedValue": "when",
+      "type": "TIME_LINK",
+      "meaning": "one event occurs at the time of another",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0042",
+      "pattern": "when he",
+      "normalizedValue": "when",
+      "type": "TIME_LINK",
+      "meaning": "one event occurs at the time of another",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0043",
+      "pattern": "when she",
+      "normalizedValue": "when",
+      "type": "TIME_LINK",
+      "meaning": "one event occurs at the time of another",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0044",
+      "pattern": "during",
+      "normalizedValue": "during",
+      "type": "TIME_LINK",
+      "meaning": "activity occurs within a period",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0045",
+      "pattern": "during work",
+      "normalizedValue": "during",
+      "type": "TIME_LINK",
+      "meaning": "activity occurs within a period",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0046",
+      "pattern": "during lunch",
+      "normalizedValue": "during",
+      "type": "TIME_LINK",
+      "meaning": "activity occurs within a period",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0047",
+      "pattern": "during the shift",
+      "normalizedValue": "during",
+      "type": "TIME_LINK",
+      "meaning": "activity occurs within a period",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0048",
+      "pattern": "until",
+      "normalizedValue": "until",
+      "type": "DURATION",
+      "meaning": "activity continues to a point",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0049",
+      "pattern": "till",
+      "normalizedValue": "until",
+      "type": "DURATION",
+      "meaning": "activity continues to a point",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0050",
+      "pattern": "up to",
+      "normalizedValue": "until",
+      "type": "DURATION",
+      "meaning": "activity continues to a point",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0051",
+      "pattern": "for some time",
+      "normalizedValue": "for",
+      "type": "DURATION",
+      "meaning": "duration",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0052",
+      "pattern": "for two hours",
+      "normalizedValue": "for",
+      "type": "DURATION",
+      "meaning": "duration",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0053",
+      "pattern": "for a while",
+      "normalizedValue": "for",
+      "type": "DURATION",
+      "meaning": "duration",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0054",
+      "pattern": "every day",
+      "normalizedValue": "every_day",
+      "type": "FREQUENCY",
+      "meaning": "repeated daily activity",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0055",
+      "pattern": "daily",
+      "normalizedValue": "every_day",
+      "type": "FREQUENCY",
+      "meaning": "repeated daily activity",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0056",
+      "pattern": "each day",
+      "normalizedValue": "every_day",
+      "type": "FREQUENCY",
+      "meaning": "repeated daily activity",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0057",
+      "pattern": "usually",
+      "normalizedValue": "usually",
+      "type": "FREQUENCY",
+      "meaning": "usual frequency",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0058",
+      "pattern": "normally",
+      "normalizedValue": "usually",
+      "type": "FREQUENCY",
+      "meaning": "usual frequency",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0059",
+      "pattern": "most days",
+      "normalizedValue": "usually",
+      "type": "FREQUENCY",
+      "meaning": "usual frequency",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0060",
+      "pattern": "sometimes",
+      "normalizedValue": "sometimes",
+      "type": "FREQUENCY",
+      "meaning": "occasional frequency",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0061",
+      "pattern": "some days",
+      "normalizedValue": "sometimes",
+      "type": "FREQUENCY",
+      "meaning": "occasional frequency",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0062",
+      "pattern": "again",
+      "normalizedValue": "again",
+      "type": "REPETITION",
+      "meaning": "repeated action",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    },
+    {
+      "id": "TIME_0063",
+      "pattern": "once again",
+      "normalizedValue": "again",
+      "type": "REPETITION",
+      "meaning": "repeated action",
+      "sourceType": "TIME_SEQUENCE_PATTERN",
+      "confidence": 0.95
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "industry": "Supply Chain",
+  "bucketId": "qc_hisab_refund",
+  "theme": "💳 BILLING & REFUND",
+  "themeDescription": "Double UPI deductions, surge fees & coupon disputes",
+  "challenges": [
+    {
+      "id": "QC-HISAB-01",
+      "industry": "Supply Chain",
+      "bucketId": "qc_hisab_refund",
+      "title": "Double UPI Deduction for Single 10-Minute Order",
+      "shortDescription": "Confirm payment gateway status, provide bank reference RRN, and assure auto-reversal timeline.",
+      "staffRole": "payments & finance support executive",
+      "guestRole": "alarmed account holder",
+      "mission": "Check payment gateway logs, confirm only one order was captured, and furnish bank RRN reference for instant relief.",
+      "scenarioContext": {
+        "startingSituation": "I placed a grocery order for 680 rupees and approved the UPI pin on Google Pay. The app said 'Processing' so I tapped again. Now my bank account shows two debits of 680 rupees! Reverse the second charge immediately!"
+      },
+      "guestProfile": {
+        "personality": "financially prudent and anxious",
+        "approximateAgeGroup": "adult 22–50",
+        "communicationStyle": "firm, providing transaction IDs",
+        "emotionalState": "Anxious & Protective of Money",
+        "whatTheGuestCaresAboutMost": "guarantee of second deduction reversal"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "anxious",
+          "resistance": "medium",
+          "pressure": "high",
+          "guestBehaviour": "Presents both UPI UTR numbers and demands instant reversal.",
+          "hiddenObjectives": [
+            "Verify merchant payment gateway ledger",
+            "Confirm duplicate transaction automatically bounced into settlement refund",
+            "Provide Bank UTR reference code and 2-4 hour reversal timeline SLA"
+          ],
+          "possibleSolutions": [
+            "Official bank reversal confirmation reference",
+            "Instant wallet credit advance if bank takes longer"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-HISAB-02",
+      "industry": "Supply Chain",
+      "bucketId": "qc_hisab_refund",
+      "title": "Unexpected Monsoon Surge Fee Protest",
+      "shortDescription": "Transparently explain rider weather incentive policy while honoring first-time waiver if appropriate.",
+      "staffRole": "customer experience specialist",
+      "guestRole": "price-sensitive consumer",
+      "mission": "Explain the purpose of rider monsoon hardship allowance respectfully, and offer a goodwill coupon.",
+      "scenarioContext": {
+        "startingSituation": "Why was I charged a 45 rupee 'Rain Surge Fee' on a 150 rupee milk order? It drizzled for five minutes! A 30% surge on daily essentials is pure price gouging!"
+      },
+      "guestProfile": {
+        "personality": "value-focused and vocal",
+        "approximateAgeGroup": "adult 28–55",
+        "communicationStyle": "principled, argumentative",
+        "emotionalState": "Indignant at Hidden Charges",
+        "whatTheGuestCaresAboutMost": "fairness and transparency in pricing"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "argumentative",
+          "resistance": "medium",
+          "pressure": "moderate",
+          "guestBehaviour": "Questions corporate surge policies on essentials.",
+          "hiddenObjectives": [
+            "Explain 100% of rain surge goes directly to delivery partners braving storm",
+            "Acknowledge impact on small cart size",
+            "Provide one-time courtesy discount voucher of ₹45 for next order"
+          ],
+          "possibleSolutions": [
+            "Courteous explanation of rider safety bonus",
+            "One-time fee credit voucher"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-HISAB-03",
+      "industry": "Supply Chain",
+      "bucketId": "qc_hisab_refund",
+      "title": "Refund Credited to App Wallet Instead of Source Bank",
+      "shortDescription": "Re-route refund from digital wallet back to original credit card or bank account.",
+      "staffRole": "billing operations agent",
+      "guestRole": "frustrated banking customer",
+      "mission": "Process a wallet-to-source-bank refund transfer and verify banking transaction receipt.",
+      "scenarioContext": {
+        "startingSituation": "You cancelled my order because the store was closed, and instead of refunding my credit card, you dumped 1,200 rupees into your proprietary app wallet! I don't want app currency, I want my money back in my bank!"
+      },
+      "guestProfile": {
+        "personality": "independent and privacy-conscious",
+        "approximateAgeGroup": "adult 30–65",
+        "communicationStyle": "assertive, regulatory-aware",
+        "emotionalState": "Resentful of Forced Wallet Retention",
+        "whatTheGuestCaresAboutMost": "money returned to original payment source"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "assertive",
+          "resistance": "low",
+          "pressure": "moderate",
+          "guestBehaviour": "Insists on banking compliance standards.",
+          "hiddenObjectives": [
+            "Acknowledge customer right to source refund under RBI regulations",
+            "Initiate 1-click transfer from app wallet to original credit card",
+            "Share bank refund tracking link instantly"
+          ],
+          "possibleSolutions": [
+            "Immediate source bank refund initiation",
+            "Confirmation SMS sent to registered mobile"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-HISAB-04",
+      "industry": "Supply Chain",
+      "bucketId": "qc_hisab_refund",
+      "title": "Promo Code \"FIRST100\" Failed at Checkout Glitch",
+      "shortDescription": "Validate promo eligibility conditions and retroactively credit the discount value to customer account.",
+      "staffRole": "promotions and marketing resolution rep",
+      "guestRole": "first-time quick commerce user",
+      "mission": "Verify coupon eligibility criteria, apologize for system checkout glitch, and credit the 100 rupee discount value.",
+      "scenarioContext": {
+        "startingSituation": "I registered as a new user because of your big banner advertising 'FLAT ₹100 OFF with code FIRST100'. I typed the code, it said 'Applied', but on my final invoice I was billed the full amount! This is false advertising!"
+      },
+      "guestProfile": {
+        "personality": "first-time buyer testing the service",
+        "approximateAgeGroup": "adult 19–35",
+        "communicationStyle": "disillusioned, cynical",
+        "emotionalState": "Distrustful New User",
+        "whatTheGuestCaresAboutMost": "the promised 100 rupee welcome discount"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "distrustful",
+          "resistance": "medium",
+          "pressure": "low to moderate",
+          "guestBehaviour": "Expresses cynicism about marketing gimmicks.",
+          "hiddenObjectives": [
+            "Verify user is indeed a first-time account holder",
+            "Confirm promo code technical timeout during checkout gateway transition",
+            "Instantly credit ₹100 cash refund directly to their account"
+          ],
+          "possibleSolutions": [
+            "Direct ₹100 cashback credit",
+            "Welcome gift promo extension"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    }
+  ]
+}

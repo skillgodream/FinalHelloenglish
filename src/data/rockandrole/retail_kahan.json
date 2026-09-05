@@ -1,0 +1,176 @@
+{
+  "industry": "Retail",
+  "bucketId": "retail_kahan",
+  "theme": "🔍 KAHAN?",
+  "themeDescription": "Lost items, inventory search & store navigation",
+  "challenges": [
+    {
+      "id": "KAHAN-01",
+      "industry": "Retail",
+      "bucketId": "retail_kahan",
+      "title": "Navigating a 4-Story Mega Department Store",
+      "shortDescription": "Enthusiastically guide a bewildered customer directly to the specialty ethnic section on the 3rd floor mezzanine.",
+      "staffRole": "greeter and floor guide",
+      "guestRole": "overwhelmed shopper",
+      "mission": "Provide clear, memorable directions or personally escort the customer to the escalator, pointing out key landmarks.",
+      "scenarioContext": {
+        "startingSituation": "I've been walking in circles for fifteen minutes! Where is your plus-size women's ethnic kurta section? Your directories only say 'Apparel', but this floor only has men's suits!"
+      },
+      "guestProfile": {
+        "personality": "tired and confused",
+        "approximateAgeGroup": "adult 35–60",
+        "communicationStyle": "flustered, weary",
+        "emotionalState": "Disoriented",
+        "whatTheGuestCaresAboutMost": "reaching the right rack without climbing more stairs needlessly"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "tired",
+          "resistance": "low",
+          "pressure": "low",
+          "guestBehaviour": "Asks for directions and expresses fatigue.",
+          "hiddenObjectives": [
+            "Provide clear landmark directions (take central lift to 3rd floor, right past cosmetics)",
+            "Offer to walk them to the elevator",
+            "Introduce floor associate"
+          ],
+          "possibleSolutions": [
+            "Personal escort to elevator",
+            "Clear step-by-step guidance"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "KAHAN-02",
+      "industry": "Retail",
+      "bucketId": "retail_kahan",
+      "title": "App Displays In-Stock But Shelf Is Empty",
+      "shortDescription": "Check backend inventory, backroom storage boxes, and mannequin displays for a sought-after designer blazer.",
+      "staffRole": "fashion retail associate",
+      "guestRole": "frustrated mobile app shopper",
+      "mission": "Check inventory handheld scanner, verify backroom unboxed deliveries, or check styling displays.",
+      "scenarioContext": {
+        "startingSituation": "Your brand app says there are two units of this Navy Slim Blazer size 42 right here at this store. I searched this entire rack three times and there is not a single one. Can someone actually check your stockroom?"
+      },
+      "guestProfile": {
+        "personality": "tech-savvy and persistent",
+        "approximateAgeGroup": "adult 24–40",
+        "communicationStyle": "confident, showing mobile screen",
+        "emotionalState": "Skeptical of store staff",
+        "whatTheGuestCaresAboutMost": "finding the blazer or getting an honest answer"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "skeptical",
+          "resistance": "medium",
+          "pressure": "medium",
+          "guestBehaviour": "Shows the app product SKU and demands someone check the back.",
+          "hiddenObjectives": [
+            "Scan barcode on store handheld system",
+            "Check visual merchandising mannequin and fitting room returns",
+            "Retrieve from stockroom or arrange reserve from nearby branch"
+          ],
+          "possibleSolutions": [
+            "Found in morning replenishment cart",
+            "Hold for delivery from nearby flagship"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "KAHAN-03",
+      "industry": "Retail",
+      "bucketId": "retail_kahan",
+      "title": "Left Behind Prescription Glasses in Trial Room",
+      "shortDescription": "Securely retrieve and verify lost personal belongings left in a fitting room during afternoon peak hours.",
+      "staffRole": "fitting room attendant",
+      "guestRole": "anxious customer who lost eyeglasses",
+      "mission": "Check the lost-and-found security protocol, verify trial room cubicles, and safely restore the belonging to the rightful owner.",
+      "scenarioContext": {
+        "startingSituation": "Oh goodness, I tried on five dresses in Room 3 about twenty minutes ago, and I think I took off my gold-framed prescription glasses and left them on the side bench! Without them I cannot drive home!"
+      },
+      "guestProfile": {
+        "personality": "flustered and self-blaming",
+        "approximateAgeGroup": "adult 45–70",
+        "communicationStyle": "shaky, concerned",
+        "emotionalState": "Anxious",
+        "whatTheGuestCaresAboutMost": "recovering expensive vision glasses safely"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "anxious",
+          "resistance": "low",
+          "pressure": "moderate",
+          "guestBehaviour": "Describes the glasses and seeks immediate inspection of the room.",
+          "hiddenObjectives": [
+            "Calm customer panic",
+            "Inspect trial room 3 and attendant lost-property locker",
+            "Verify description and hand back safely"
+          ],
+          "possibleSolutions": [
+            "Retrieved from attendant secure drawer",
+            "Logged in lost & found ledger"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "KAHAN-04",
+      "industry": "Retail",
+      "bucketId": "retail_kahan",
+      "title": "Elderly Shopper Searching for Diabetic Food Section",
+      "shortDescription": "Patiently accompany a senior citizen through reorganized grocery aisles to locate organic low-glycemic staples.",
+      "staffRole": "supermarket floor associate",
+      "guestRole": "senior citizen shopper",
+      "mission": "Offer physical assistance, walk alongside the shopper, read ingredient labels if requested, and provide thoughtful care.",
+      "scenarioContext": {
+        "startingSituation": "Beta, you people rearranged the whole store last week! I used to find the sugar-free biscuits and diabetic oats right by the front door, but now there are just potato chips here. Where have you hidden them?"
+      },
+      "guestProfile": {
+        "personality": "gentle but frail",
+        "approximateAgeGroup": "senior 65+",
+        "communicationStyle": "warm, slow, relying on assistance",
+        "emotionalState": "Confused by new store layout",
+        "whatTheGuestCaresAboutMost": "finding health groceries without straining"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "gentle",
+          "resistance": "low",
+          "pressure": "low",
+          "guestBehaviour": "Walks slowly with a trolley and asks for guidance.",
+          "hiddenObjectives": [
+            "Greet with respect and warmth",
+            "Personally walk alongside to Aisle 4B health food section",
+            "Offer to place heavier items in their trolley"
+          ],
+          "possibleSolutions": [
+            "Personal shopping accompaniment",
+            "Handing items from high shelves"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    }
+  ]
+}

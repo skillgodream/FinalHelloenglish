@@ -1,0 +1,176 @@
+{
+  "industry": "Retail",
+  "bucketId": "retail_hisab",
+  "theme": "💸 HISAB",
+  "themeDescription": "Billing errors, discount disputes & price tags",
+  "challenges": [
+    {
+      "id": "HISAB-01",
+      "industry": "Retail",
+      "bucketId": "retail_hisab",
+      "title": "Promotional Shelf Price Tag Mismatch",
+      "shortDescription": "Resolve a dispute where an expired promotional shelf sign misled a customer at the checkout counter.",
+      "staffRole": "cashier & floor associate",
+      "guestRole": "bargain shopper",
+      "mission": "Verify the shelf pricing label, honor the customer-facing advertised price if appropriate, and maintain transparency.",
+      "scenarioContext": {
+        "startingSituation": "Excuse me! Your aisle display banner clearly says 'Flat 40% OFF on all cookware', but your billing computer is charging me the full MRP of 2,499 rupees! Why are you misleading customers?"
+      },
+      "guestProfile": {
+        "personality": "detail-oriented and vigilant",
+        "approximateAgeGroup": "adult 35–65",
+        "communicationStyle": "firm, pointing out rules",
+        "emotionalState": "Distrustful",
+        "whatTheGuestCaresAboutMost": "paying the price displayed on the shelf"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "distrustful",
+          "resistance": "medium",
+          "pressure": "medium",
+          "guestBehaviour": "Insists on having the item at the displayed 40% discount.",
+          "hiddenObjectives": [
+            "Verify shelf signage tag",
+            "Honor advertised shelf price under consumer guidelines",
+            "Remove expired signage immediately"
+          ],
+          "possibleSolutions": [
+            "Price override at register",
+            "Manager price adjustment"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "HISAB-02",
+      "industry": "Retail",
+      "bucketId": "retail_hisab",
+      "title": "Double Card Swipe EDC Deduction Alarm",
+      "shortDescription": "Calm an alarmed shopper whose banking app shows two deductions of ₹4,200 while POS shows only one approved bill.",
+      "staffRole": "head cashier",
+      "guestRole": "shocked cardholder",
+      "mission": "Explain bank authorization hold versus settled batch transaction, provide EDC slip, and furnish merchant charge slip proof.",
+      "scenarioContext": {
+        "startingSituation": "Look at my phone! My bank sent two SMS alerts for 4,200 rupees each within 30 seconds! You swiped my card twice when the machine paper jammed! I need my money reversed right now!"
+      },
+      "guestProfile": {
+        "personality": "worried about bank fraud",
+        "approximateAgeGroup": "adult 25–60",
+        "communicationStyle": "alarmed, urgent",
+        "emotionalState": "Anxious & Protective of Funds",
+        "whatTheGuestCaresAboutMost": "confirmation that second transaction is voided"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "panicked",
+          "resistance": "medium",
+          "pressure": "high",
+          "guestBehaviour": "Shows bank notification SMS and refuses to leave until assured.",
+          "hiddenObjectives": [
+            "Print EDC batch settlement and audit log",
+            "Explain auto-reversal of interrupted swipe",
+            "Hand official stamped duplicate slip with contact number"
+          ],
+          "possibleSolutions": [
+            "Provide printed void slip",
+            "Store manager confirmation letter"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "HISAB-03",
+      "industry": "Retail",
+      "bucketId": "retail_hisab",
+      "title": "Loyalty Reward Points Deducted But Discount Failed",
+      "shortDescription": "Troubleshoot a loyalty transaction where 1,500 points disappeared without applying the ₹750 credit.",
+      "staffRole": "customer service desk specialist",
+      "guestRole": "long-time loyalty member",
+      "mission": "Check loyalty CRM backend ledger, locate the pending points reservation, and manually apply equivalent bill discount.",
+      "scenarioContext": {
+        "startingSituation": "I redeemed 1,500 loyalty points for a 750 rupee discount, and my membership app shows the points were deducted, but the final invoice still shows the full total! Where did my points go?"
+      },
+      "guestProfile": {
+        "personality": "methodical and loyal",
+        "approximateAgeGroup": "adult 30–60",
+        "communicationStyle": "calm but demanding justice",
+        "emotionalState": "Annoyed by technical glitch",
+        "whatTheGuestCaresAboutMost": "not losing points earned over months"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "annoyed",
+          "resistance": "low",
+          "pressure": "low to moderate",
+          "guestBehaviour": "Shows the loyalty app account history and the printed bill.",
+          "hiddenObjectives": [
+            "Verify phone number on loyalty ledger",
+            "Confirm OTP transaction failure",
+            "Apply instant manual promotional credit of 750"
+          ],
+          "possibleSolutions": [
+            "Manual cashier discount credit",
+            "Restore points on system"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "HISAB-04",
+      "industry": "Retail",
+      "bucketId": "retail_hisab",
+      "title": "'Buy 2 Get 1 Free' Cheapest Item Rule Dispute",
+      "shortDescription": "Clarify the B2G1 pricing logic politely to a shopper who expected the free item to be of equal value.",
+      "staffRole": "apparel department associate",
+      "guestRole": "confused sale shopper",
+      "mission": "Explain standard retail promotion terms warmly, demonstrate the bill calculations, and suggest pairing items of similar value to maximize savings.",
+      "scenarioContext": {
+        "startingSituation": "Your banner says Buy 2 Get 1 Free! I picked shirts priced at 2,500, 2,200, and a t-shirt at 600. Your computer made the 600 t-shirt free! That's unfair, you should give me 2,200 off!"
+      },
+      "guestProfile": {
+        "personality": "shrewd shopper",
+        "approximateAgeGroup": "adult 20–45",
+        "communicationStyle": "argumentative, bargaining",
+        "emotionalState": "Feeling Shortchanged",
+        "whatTheGuestCaresAboutMost": "maximizing value for money"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "argumentative",
+          "resistance": "medium",
+          "pressure": "low",
+          "guestBehaviour": "Challenges the fairness of retail promotion systems.",
+          "hiddenObjectives": [
+            "Explain lowest priced item condition gracefully",
+            "Suggest selecting a third item closer to 2,500 to maximize savings",
+            "Maintain cheerful and patient demeanor"
+          ],
+          "possibleSolutions": [
+            "Offer customer time to swap t-shirt for higher value shirt",
+            "Walk customer to rack to find matching value piece"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    }
+  ]
+}

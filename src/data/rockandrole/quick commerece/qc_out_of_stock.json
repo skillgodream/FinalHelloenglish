@@ -1,0 +1,176 @@
+{
+  "industry": "Supply Chain",
+  "bucketId": "qc_out_of_stock",
+  "theme": "🔄 STOCKOUT & REPLACEMENT",
+  "themeDescription": "Micro-fulfillment stockouts, item substitutions & upgrades",
+  "challenges": [
+    {
+      "id": "QC-OOS-01",
+      "industry": "Supply Chain",
+      "bucketId": "qc_out_of_stock",
+      "title": "Artisan Roast Coffee Out of Stock Post-Payment",
+      "shortDescription": "Suggest comparable premium roast blend or provide immediate one-click refund before dispatch.",
+      "staffRole": "inventory and substitution coordinator",
+      "guestRole": "morning coffee enthusiast",
+      "mission": "Notify customer immediately of stock mismatch, recommend an equivalent or higher-grade blend, and waive price gap.",
+      "scenarioContext": {
+        "startingSituation": "I just got a notification saying my Blue Tokai Vienna Roast coffee pouch was cancelled because your hub ran out of stock! That was the only reason I placed this order! What else do you have?"
+      },
+      "guestProfile": {
+        "personality": "particular about brand preferences",
+        "approximateAgeGroup": "adult 25–48",
+        "communicationStyle": "discerning, inquisitive",
+        "emotionalState": "Disappointed Morning Routine",
+        "whatTheGuestCaresAboutMost": "quality morning coffee"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "disappointed",
+          "resistance": "low",
+          "pressure": "low to moderate",
+          "guestBehaviour": "Asks what alternative dark roast beans are available.",
+          "hiddenObjectives": [
+            "Offer premium French Roast or Attikan Estate as seamless swap",
+            "Waive the 40 rupee price difference as courtesy",
+            "Confirm swap before rider leaves hub"
+          ],
+          "possibleSolutions": [
+            "Free upgrade to premium alternative",
+            "Instant refund to payment source"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-OOS-02",
+      "industry": "Supply Chain",
+      "bucketId": "qc_out_of_stock",
+      "title": "Essential Diaper Brand Size Unavailable for Infant",
+      "shortDescription": "Consult customer on approved hypoallergenic alternative size or neighboring dark store dispatch.",
+      "staffRole": "parent & baby care support specialist",
+      "guestRole": "anxious young mother",
+      "mission": "Handle diaper brand sensitivity with care, verify dermatological equivalency, and ensure baby essentials reach quickly.",
+      "scenarioContext": {
+        "startingSituation": "Your app cancelled the Pampers Premium Care Pants Size M from my order! My baby has very sensitive skin and gets rashes from regular brands. Is there any nearby dark store that has them in stock?"
+      },
+      "guestProfile": {
+        "personality": "caring and cautious parent",
+        "approximateAgeGroup": "adult 24–35",
+        "communicationStyle": "anxious, protective",
+        "emotionalState": "Worried",
+        "whatTheGuestCaresAboutMost": "baby skin safety and proper diaper fit"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "worried",
+          "resistance": "medium",
+          "pressure": "moderate",
+          "guestBehaviour": "Hesitates to accept unknown brand substitutes.",
+          "hiddenObjectives": [
+            "Check cross-hub inventory in secondary dark store 3 km away",
+            "Suggest dermatologist-certified bamboo organic alternative",
+            "Arrange priority cross-dock transfer within 20 minutes"
+          ],
+          "possibleSolutions": [
+            "Secondary hub express routing",
+            "Hypoallergenic certified substitute"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-OOS-03",
+      "industry": "Supply Chain",
+      "bucketId": "qc_out_of_stock",
+      "title": "Fresh Coriander & Mint Missing for Biryani Cooking",
+      "shortDescription": "Inform customer before bag dispatch, waive delivery fee, and send nearest micro-hub alternative.",
+      "staffRole": "fresh replenishment supervisor",
+      "guestRole": "sunday family cook",
+      "mission": "Acknowledge kitchen emergency, check surrounding fulfillment nodes, and ensure transparent communication.",
+      "scenarioContext": {
+        "startingSituation": "I ordered chicken, rice, ghee, and fresh mint-coriander. Your app just dropped the coriander and mint! You can't make Biryani without fresh herbs! Why did you accept the order if you didn't have it?!"
+      },
+      "guestProfile": {
+        "personality": "traditional culinary purist",
+        "approximateAgeGroup": "adult 32–60",
+        "communicationStyle": "expressive, passionate",
+        "emotionalState": "Exasperated Cook",
+        "whatTheGuestCaresAboutMost": "authenticity of Sunday feast"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "exasperated",
+          "resistance": "low",
+          "pressure": "moderate",
+          "guestBehaviour": "Explains the culinary tragedy of missing aromatics.",
+          "hiddenObjectives": [
+            "Apologize for last-second bin stockout",
+            "Arrange an auxiliary rider pickup from sister hub 1.5 km away",
+            "Waive the additional delivery charges"
+          ],
+          "possibleSolutions": [
+            "Auxiliary express delivery of herbs",
+            "Instant refund + kitchen credit voucher"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-OOS-04",
+      "industry": "Supply Chain",
+      "bucketId": "qc_out_of_stock",
+      "title": "Chilled Can Stockout - Free Upgrade to 500ml Bottle",
+      "shortDescription": "Proactively inform customer of free upgrade to avoid customer disappointment.",
+      "staffRole": "fulfillment lead",
+      "guestRole": "thirst-quenched customer",
+      "mission": "Turn potential stockout into a delightful customer experience by upgrading volume at zero additional cost.",
+      "scenarioContext": {
+        "startingSituation": "I see my Diet Coke 330ml can is out of stock on my screen right now. I hope you aren't going to just cancel it and deliver only my sandwich!"
+      },
+      "guestProfile": {
+        "personality": "casual shopper",
+        "approximateAgeGroup": "adult 18–35",
+        "communicationStyle": "casual, expectant",
+        "emotionalState": "Anticipating Disappointment",
+        "whatTheGuestCaresAboutMost": "having a cold drink with their meal"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "skeptical",
+          "resistance": "low",
+          "pressure": "low",
+          "guestBehaviour": "Expects standard automated cancellation.",
+          "hiddenObjectives": [
+            "Proactively inform customer of complimentary upgrade to 500ml chilled bottle",
+            "Confirm bottle is ice-cold from chiller",
+            "Deliver seamless positive surprise"
+          ],
+          "possibleSolutions": [
+            "Free volume upgrade confirmed",
+            "Immediate dispatch on schedule"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    }
+  ]
+}

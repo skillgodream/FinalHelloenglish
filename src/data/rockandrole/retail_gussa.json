@@ -1,0 +1,182 @@
+{
+  "industry": "Retail",
+  "bucketId": "retail_gussa",
+  "theme": "😤 GUSSA",
+  "themeDescription": "Angry & complaining customers",
+  "challenges": [
+    {
+      "id": "GUSSA-01",
+      "industry": "Retail",
+      "bucketId": "retail_gussa",
+      "title": "Defective Electronics & Demanded Cash Refund",
+      "shortDescription": "De-escalate an upset shopper demanding an immediate cash refund for a malfunctioning item.",
+      "staffRole": "retail sales associate",
+      "guestRole": "frustrated retail customer",
+      "mission": "Listen calmly, acknowledge the customer frustration, inspect the product or receipt, and offer a valid store policy resolution.",
+      "scenarioContext": {
+        "startingSituation": "I bought this wireless speaker yesterday for my anniversary party tonight, and the charging port is completely broken! I don't want an exchange, I want my 4,000 rupees back in cash right now!"
+      },
+      "guestProfile": {
+        "personality": "aggressive and impatient",
+        "approximateAgeGroup": "adult 30–50",
+        "communicationStyle": "loud, direct, demanding",
+        "emotionalState": "Angry",
+        "whatTheGuestCaresAboutMost": "getting a quick refund or replacement without hassle"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "angry",
+          "resistance": "medium",
+          "pressure": "high",
+          "guestBehaviour": "Expresses strong anger about the defective product.",
+          "hiddenObjectives": [
+            "Acknowledge frustration",
+            "Check receipt/item",
+            "Offer policy solution"
+          ],
+          "possibleSolutions": [
+            "Exchange item",
+            "Store credit",
+            "Manager review"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ],
+          "unacceptablePromises": [
+            "Do not promise cash refund without receipt if policy forbids it."
+          ]
+        }
+      }
+    },
+    {
+      "id": "GUSSA-02",
+      "industry": "Retail",
+      "bucketId": "retail_gussa",
+      "title": "Tailoring Disaster 3 Hours Before Wedding",
+      "shortDescription": "A furious customer discovers tailored trousers were cut 2 inches too short right before a family wedding.",
+      "staffRole": "senior department associate",
+      "guestRole": "distressed groom brother",
+      "mission": "Empathize with the time-critical emergency, assess alteration options or arrange emergency off-the-rack styling.",
+      "scenarioContext": {
+        "startingSituation": "Look at these trousers! Your master tailor cut them two inches above my ankles! My brother's wedding reception is in three hours! What on earth am I supposed to wear?!"
+      },
+      "guestProfile": {
+        "personality": "panicked and furious",
+        "approximateAgeGroup": "adult 25–35",
+        "communicationStyle": "frantic, accusatory",
+        "emotionalState": "Extremely Anxious & Angry",
+        "whatTheGuestCaresAboutMost": "immediate wearable solution before 6 PM"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "panicked",
+          "resistance": "high",
+          "pressure": "critical",
+          "guestBehaviour": "Demands an immediate solution while rejecting slow apologies.",
+          "hiddenObjectives": [
+            "Calm customer panic",
+            "Inspect alteration margin",
+            "Offer instant replacement from floor"
+          ],
+          "possibleSolutions": [
+            "Express steam alter ready-stock pair",
+            "Release turn-up hem if margin exists"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "GUSSA-03",
+      "industry": "Retail",
+      "bucketId": "retail_gussa",
+      "title": "Humiliating Security Sensor False Alarm",
+      "shortDescription": "Handle a humiliated regular customer stopped loudly by security after a cashier missed a security tag.",
+      "staffRole": "customer service desk lead",
+      "guestRole": "embarrassed long-time customer",
+      "mission": "Restore customer dignity, apologize sincerely for the cashier oversight, quickly remove the tag, and offer a courtesy gesture.",
+      "scenarioContext": {
+        "startingSituation": "The exit alarm went off and your security guards treated me like a shoplifter in front of fifty people! I've been shopping here for seven years! Your cashier forgot to remove this security tag!"
+      },
+      "guestProfile": {
+        "personality": "deeply insulted and proud",
+        "approximateAgeGroup": "adult 40–60",
+        "communicationStyle": "indignant, hurt, commanding respect",
+        "emotionalState": "Deeply Offended",
+        "whatTheGuestCaresAboutMost": "public vindication and genuine acknowledgment of disrespect"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "indignant",
+          "resistance": "medium",
+          "pressure": "moderate",
+          "guestBehaviour": "Demands an apology and an explanation of why staff were negligent.",
+          "hiddenObjectives": [
+            "Apologize immediately",
+            "De-tag garment",
+            "Offer loyalty courtesy compensation"
+          ],
+          "possibleSolutions": [
+            "Instant de-tagging",
+            "Store discount voucher",
+            "Store manager personal apology"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "GUSSA-04",
+      "industry": "Retail",
+      "bucketId": "retail_gussa",
+      "title": "Rude Cashier Complaint During Festival Rush",
+      "shortDescription": "Pacify an insulted customer claiming the billing clerk rolled eyes and tossed their shopping bags.",
+      "staffRole": "floor supervisor",
+      "guestRole": "disrespected shopper",
+      "mission": "Listen attentively to the behavioral complaint, validate the customer feelings without throwing colleagues under the bus, and ensure smooth checkout.",
+      "scenarioContext": {
+        "startingSituation": "Your billing clerk at counter 4 just rolled his eyes at me and literally threw my dress into the carry bag because I asked for a split payment! I demand to speak to whoever is in charge!"
+      },
+      "guestProfile": {
+        "personality": "firm and intolerant of poor service",
+        "approximateAgeGroup": "adult 30–55",
+        "communicationStyle": "firm, stern, articulate",
+        "emotionalState": "Resentful",
+        "whatTheGuestCaresAboutMost": "staff accountability and professional respect"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "stern",
+          "resistance": "medium",
+          "pressure": "moderate",
+          "guestBehaviour": "Expects swift leadership intervention and respectful closure.",
+          "hiddenObjectives": [
+            "Listen without interrupting",
+            "Take personal charge of billing",
+            "Assure corrective coaching"
+          ],
+          "possibleSolutions": [
+            "Take over transaction",
+            "Offer complimentary shopping bag",
+            "Document feedback"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    }
+  ]
+}

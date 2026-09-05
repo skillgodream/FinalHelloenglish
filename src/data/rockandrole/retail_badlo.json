@@ -1,0 +1,176 @@
+{
+  "industry": "Retail",
+  "bucketId": "retail_badlo",
+  "theme": "🔄 BADLO",
+  "themeDescription": "Exchanges, returns & replacements",
+  "challenges": [
+    {
+      "id": "BADLO-01",
+      "industry": "Retail",
+      "bucketId": "retail_badlo",
+      "title": "Exchange Requested Without Sales Receipt",
+      "shortDescription": "Guide a customer who received an ill-fitting jacket as a gift through no-receipt exchange policy.",
+      "staffRole": "sales associate",
+      "guestRole": "gift recipient customer",
+      "mission": "Explain store policy politely, check barcode and price tags, and offer store credit or size exchange.",
+      "scenarioContext": {
+        "startingSituation": "My sister gifted me this leather jacket for my birthday, but it's a size Medium and I need an XL. I don't have the paper bill because it was a surprise gift, but the tags are still on. Can I swap it?"
+      },
+      "guestProfile": {
+        "personality": "reasonable but hopeful",
+        "approximateAgeGroup": "adult 20–40",
+        "communicationStyle": "polite, expectant",
+        "emotionalState": "Hopeful",
+        "whatTheGuestCaresAboutMost": "getting the right size without troubling the gift giver"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "pleasant",
+          "resistance": "low",
+          "pressure": "low",
+          "guestBehaviour": "Shows the intact tags and seeks assistance.",
+          "hiddenObjectives": [
+            "Verify item condition",
+            "Scan barcode in POS",
+            "Facilitate size swap"
+          ],
+          "possibleSolutions": [
+            "Direct size exchange",
+            "Store gift card credit"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "BADLO-02",
+      "industry": "Retail",
+      "bucketId": "retail_badlo",
+      "title": "Exchanging Opened Perfume After First Spray",
+      "shortDescription": "Tactfully handle a customer demanding to swap an expensive perfume after breaking the cellophane seal.",
+      "staffRole": "fragrance counter consultant",
+      "guestRole": "dissatisfied perfume buyer",
+      "mission": "Enforce hygiene and return policy gently, explain why opened cosmetics cannot be resold, and offer alternative fragrance layering solutions.",
+      "scenarioContext": {
+        "startingSituation": "I bought this Eau de Parfum two hours ago, sprayed it once in my car, and it gives me a terrible headache. I want to swap it for the floral version. Take this bottle back."
+      },
+      "guestProfile": {
+        "personality": "insistent and persuasive",
+        "approximateAgeGroup": "adult 25–50",
+        "communicationStyle": "firm, bargaining",
+        "emotionalState": "Disappointed",
+        "whatTheGuestCaresAboutMost": "not wasting 6,000 rupees on a perfume they dislike"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "disappointed",
+          "resistance": "high",
+          "pressure": "medium",
+          "guestBehaviour": "Argues that only one spray was used and bottle is virtually full.",
+          "hiddenObjectives": [
+            "Explain cosmetic hygiene regulation",
+            "Check manager discretion or tester samples",
+            "Find a constructive outcome"
+          ],
+          "possibleSolutions": [
+            "Store manager goodwill credit",
+            "Complimentary travel samples"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "BADLO-03",
+      "industry": "Retail",
+      "bucketId": "retail_badlo",
+      "title": "Clearance Item Marked \"Final Sale - No Return\"",
+      "shortDescription": "Assist an upset mother who bought the wrong shoe size from the clearance rack marked non-exchangeable.",
+      "staffRole": "footwear section specialist",
+      "guestRole": "budget-conscious mother",
+      "mission": "Empathize with the mother situation while respecting clearance guidelines, exploring size availability on the discount rack.",
+      "scenarioContext": {
+        "startingSituation": "I bought these school shoes for my son from the red tag rack this morning, but his feet won't fit into them! The cashier stamped 'Final Sale', but please, I cannot afford to throw this money away!"
+      },
+      "guestProfile": {
+        "personality": "emotional and anxious",
+        "approximateAgeGroup": "adult 30–45",
+        "communicationStyle": "pleading, distressed",
+        "emotionalState": "Stressed",
+        "whatTheGuestCaresAboutMost": "getting wearable shoes for her child"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "pleading",
+          "resistance": "medium",
+          "pressure": "moderate",
+          "guestBehaviour": "Presents the unworn shoes and asks for human compassion over strict rules.",
+          "hiddenObjectives": [
+            "Acknowledge financial concern",
+            "Check clearance rack for next size up",
+            "Seek supervisor override for like-for-like swap"
+          ],
+          "possibleSolutions": [
+            "One-time supervisor override for size exchange",
+            "Store credit voucher"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "BADLO-04",
+      "industry": "Retail",
+      "bucketId": "retail_badlo",
+      "title": "Online Click-and-Collect Color Mismatch",
+      "shortDescription": "Resolve an issue where an in-store pickup parcel contained beige instead of charcoal, with no local store stock remaining.",
+      "staffRole": "omnichannel pickup coordinator",
+      "guestRole": "disappointed online shopper",
+      "mission": "Acknowledge warehouse fulfillment error, arrange free home express delivery from central warehouse, and compensate for trip.",
+      "scenarioContext": {
+        "startingSituation": "I ordered this formal blazer online in Charcoal Black and drove 45 minutes to pick it up here. I just opened the parcel in your store and it's Light Beige! And your colleague says you don't even have Black in stock!"
+      },
+      "guestProfile": {
+        "personality": "busy executive",
+        "approximateAgeGroup": "adult 28–45",
+        "communicationStyle": "crisp, exasperated",
+        "emotionalState": "Frustrated by wasted time",
+        "whatTheGuestCaresAboutMost": "getting the black blazer by tomorrow without traveling again"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "exasperated",
+          "resistance": "medium",
+          "pressure": "high",
+          "guestBehaviour": "Demands an immediate solution that does not require another store visit.",
+          "hiddenObjectives": [
+            "Validate order invoice mismatch",
+            "Book express courier from central hub",
+            "Offer complimentary home delivery with discount voucher"
+          ],
+          "possibleSolutions": [
+            "Priority express courier delivery",
+            "Immediate full refund and promo code"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    }
+  ]
+}

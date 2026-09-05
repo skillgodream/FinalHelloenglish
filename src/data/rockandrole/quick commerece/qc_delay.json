@@ -1,0 +1,176 @@
+{
+  "industry": "Supply Chain",
+  "bucketId": "qc_jaldi_delay",
+  "theme": "⏱️ 10-MIN DELAY",
+  "themeDescription": "Delivery delays, dark store packing queues & traffic bottlenecks",
+  "challenges": [
+    {
+      "id": "QC-DELAY-01",
+      "industry": "Supply Chain",
+      "bucketId": "qc_jaldi_delay",
+      "title": "Monsoon Rain & Waterlogged Delivery Route",
+      "shortDescription": "Address a customer furious that dinner preparation is halted while the delivery rider navigates flooded city roads.",
+      "staffRole": "quick commerce support partner",
+      "guestRole": "dinner host waiting for cooking groceries",
+      "mission": "Acknowledge rider weather constraints with empathy, provide accurate live tracking, and issue a late delivery goodwill voucher.",
+      "scenarioContext": {
+        "startingSituation": "Your app advertises 'Delivery in 10 Minutes'! It has been 35 minutes since I paid! My stove is on, onions are burning, and your rider is standing under a flyover according to the map! Where are my groceries?!"
+      },
+      "guestProfile": {
+        "personality": "stressed and under time crunch",
+        "approximateAgeGroup": "adult 25–45",
+        "communicationStyle": "frustrated, impatient",
+        "emotionalState": "High Stress",
+        "whatTheGuestCaresAboutMost": "accurate ETA and timely food preparation"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "frustrated",
+          "resistance": "medium",
+          "pressure": "high",
+          "guestBehaviour": "Questions the legitimacy of the 10-minute promise during rain.",
+          "hiddenObjectives": [
+            "Check rider GPS and safety status",
+            "Explain flash monsoon waterlogging respectfully",
+            "Provide real-time revised ETA (7 mins) and credit delay compensation wallet coupon"
+          ],
+          "possibleSolutions": [
+            "Real-time rider update + 100 Rs delay voucher",
+            "Direct rider call connect"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-DELAY-02",
+      "industry": "Supply Chain",
+      "bucketId": "qc_jaldi_delay",
+      "title": "Dark Store Packing Queue Surge During Match",
+      "shortDescription": "Reassure an expectant sports fan waiting for party snacks whose order was held up by dark store order surges.",
+      "staffRole": "customer escalation executive",
+      "guestRole": "cricket fan hosting friends",
+      "mission": "Explain micro-fulfillment picker queue transparently, expedite packing with dark store lead, and track priority dispatch.",
+      "scenarioContext": {
+        "startingSituation": "The India vs Pakistan match started 20 minutes ago and our snacks and cold drinks are still stuck on 'Order Received / Packing in Hub'! All my friends are waiting! Why hasn't a rider even been assigned?!"
+      },
+      "guestProfile": {
+        "personality": "excited and impatient host",
+        "approximateAgeGroup": "adult 20–35",
+        "communicationStyle": "loud, energetic, demanding speed",
+        "emotionalState": "Restless",
+        "whatTheGuestCaresAboutMost": "getting drinks and chips before the first innings ends"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "impatient",
+          "resistance": "medium",
+          "pressure": "moderate",
+          "guestBehaviour": "Urges staff to bypass queue or call hub manager.",
+          "hiddenObjectives": [
+            "Ping hub captain for fast-track tote packing",
+            "Confirm rider standing by at bay",
+            "Provide updated dispatch confirmation within 3 minutes"
+          ],
+          "possibleSolutions": [
+            "Priority picker allocation",
+            "Complimentary snack voucher on next order"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-DELAY-03",
+      "industry": "Supply Chain",
+      "bucketId": "qc_jaldi_delay",
+      "title": "Rider Scooter Breakdown Mid-Transit with Ice Cream",
+      "shortDescription": "Coordinate immediate rider reassignment or instant fresh dispatch before premium ice cream tubs melt.",
+      "staffRole": "logistics dispatcher and support",
+      "guestRole": "expectant dessert customer",
+      "mission": "Detect rider standstill, take proactive initiative to dispatch duplicate order from cold storage or reroute nearest backup rider.",
+      "scenarioContext": {
+        "startingSituation": "Your rider's icon hasn't moved from the 100 Feet Road junction for twelve minutes. I ordered Belgian Chocolate ice cream tubs in this 38-degree summer heat! By the time he reaches, it will be liquid soup!"
+      },
+      "guestProfile": {
+        "personality": "observant and pragmatic",
+        "approximateAgeGroup": "adult 22–40",
+        "communicationStyle": "concerned, practical",
+        "emotionalState": "Disappointed Anticipation",
+        "whatTheGuestCaresAboutMost": "frozen, unmelted ice cream"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "concerned",
+          "resistance": "low",
+          "pressure": "high",
+          "guestBehaviour": "Points out ambient temperature and asks for immediate replacement.",
+          "hiddenObjectives": [
+            "Confirm rider scooter flat tyre",
+            "Initiate instant re-dispatch from dark store freezer bag",
+            "Guarantee replacement in insulated dry-ice tote"
+          ],
+          "possibleSolutions": [
+            "Instant replacement dispatch",
+            "Full order refund if melted upon arrival"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-DELAY-04",
+      "industry": "Supply Chain",
+      "bucketId": "qc_jaldi_delay",
+      "title": "Emergency Midnight Infant Formula Delay",
+      "shortDescription": "Treat an urgent baby milk powder order with high empathy, priority dark store rerouting, and real-time live support.",
+      "staffRole": "emergency quick commerce support officer",
+      "guestRole": "sleep-deprived parent",
+      "mission": "Recognize human urgency of infant nourishment, personally monitor rider route, and maintain continuous active status communication.",
+      "scenarioContext": {
+        "startingSituation": "It's 1:30 in the morning, my 6-month-old baby is crying from hunger because our formula can ran out, and your delivery was supposed to arrive at 1:15! Please tell me your rider is almost here!"
+      },
+      "guestProfile": {
+        "personality": "exhausted and anxious parent",
+        "approximateAgeGroup": "adult 26–36",
+        "communicationStyle": "emotional, trembling, urgent",
+        "emotionalState": "Severe Parental Anxiety",
+        "whatTheGuestCaresAboutMost": "baby formula delivered safely this second"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "exhausted & panicked",
+          "resistance": "low",
+          "pressure": "critical",
+          "guestBehaviour": "Pleads for real-time location update without scripted corporate delays.",
+          "hiddenObjectives": [
+            "Call rider directly to verify distance (200 meters away)",
+            "Guide rider through society entry intercom",
+            "Stay on chat until doorbell rings and formula is received"
+          ],
+          "possibleSolutions": [
+            "Real-time door-to-door coordination",
+            "Full refund courtesy for distress"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    }
+  ]
+}

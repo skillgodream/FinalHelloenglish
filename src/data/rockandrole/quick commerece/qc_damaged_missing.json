@@ -1,0 +1,176 @@
+{
+  "industry": "Supply Chain",
+  "bucketId": "qc_damaged_missing",
+  "theme": "📦 DAMAGED / MISSING",
+  "themeDescription": "Leaking pouches, crushed goods & missing items",
+  "challenges": [
+    {
+      "id": "QC-DMG-01",
+      "industry": "Supply Chain",
+      "bucketId": "qc_damaged_missing",
+      "title": "Milk Pouch Leak Ruined Fresh Bakery Items",
+      "shortDescription": "Immediately process photographic proof, arrange swift replacement dispatch, and credit wallet for ruined groceries.",
+      "staffRole": "quick commerce resolution agent",
+      "guestRole": "disgusted grocery buyer",
+      "mission": "Inspect customer upload photo of leaking milk pouch, apologize for packing negligence, and initiate instant replacement tote.",
+      "scenarioContext": {
+        "startingSituation": "I opened your kraft delivery bag and it was a complete disaster! The 1-litre milk pouch burst and soaked all my artisanal burger buns, croissants, and organic eggs! Everything is a soggy white mess!"
+      },
+      "guestProfile": {
+        "personality": "unimpressed and disgusted",
+        "approximateAgeGroup": "adult 24–50",
+        "communicationStyle": "blunt, descriptive, demanding cleanup",
+        "emotionalState": "Grossed Out & Annoyed",
+        "whatTheGuestCaresAboutMost": "immediate replacement of intact items and apology for poor packing"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "disgusted",
+          "resistance": "medium",
+          "pressure": "high",
+          "guestBehaviour": "Demands to know why heavy liquids were packed on top of bakery.",
+          "hiddenObjectives": [
+            "Acknowledge packaging standard violation",
+            "Issue instant full refund for contaminated items",
+            "Order immediate 10-minute re-dispatch of bakery goods in separate pouch"
+          ],
+          "possibleSolutions": [
+            "Immediate free re-order dispatch",
+            "100% wallet refund + apology voucher"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-DMG-02",
+      "industry": "Supply Chain",
+      "bucketId": "qc_damaged_missing",
+      "title": "Missing 1kg Basmati Rice from Sealed Delivery",
+      "shortDescription": "Verify dark store weight logs, apologize for the picking error, and initiate instant replacement or refund.",
+      "staffRole": "customer resolutions specialist",
+      "guestRole": "cooking enthusiast",
+      "mission": "Check tote packing scan logs, confirm 1 line item unfulfilled, and credit account without interrogating customer.",
+      "scenarioContext": {
+        "startingSituation": "I ordered 5 items. The invoice in the bag lists 1kg Daawat Basmati Rice for ₹210, but the bag only contains tomatoes, onions, and curd! The rice is completely missing! I cannot cook lunch without rice!"
+      },
+      "guestProfile": {
+        "personality": "systematic and annoyed",
+        "approximateAgeGroup": "adult 28–55",
+        "communicationStyle": "matter-of-fact, holding invoice",
+        "emotionalState": "Inconvenienced",
+        "whatTheGuestCaresAboutMost": "getting rice delivered immediately"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "annoyed",
+          "resistance": "low",
+          "pressure": "medium",
+          "guestBehaviour": "States facts clearly and expects zero friction resolution.",
+          "hiddenObjectives": [
+            "Verify electronic tote audit log",
+            "Apologize for picker packing slip omission",
+            "Dispatch standalone rider with rice pouch within 10 minutes"
+          ],
+          "possibleSolutions": [
+            "Express dispatch of missing rice",
+            "Instant UPI refund if customer prefers"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-DMG-03",
+      "industry": "Supply Chain",
+      "bucketId": "qc_damaged_missing",
+      "title": "Glass Olive Oil Bottle Smashed in Kraft Bag",
+      "shortDescription": "Instruct safe disposal without injury, verify safety precautions, and issue immediate priority reimbursement.",
+      "staffRole": "safety & claims specialist",
+      "guestRole": "alarmed customer with broken glass",
+      "mission": "Prioritize physical safety, advise careful disposal, instantly refund the damaged bottle and affected bag contents.",
+      "scenarioContext": {
+        "startingSituation": "Careful! The rider handed me the brown bag and glass shards literally poked through the bottom! Your 500ml extra virgin olive oil bottle completely shattered inside and oil is all over my floor!"
+      },
+      "guestProfile": {
+        "personality": "safety-conscious and alarmed",
+        "approximateAgeGroup": "adult 30–60",
+        "communicationStyle": "cautionary, alarmed, protective",
+        "emotionalState": "Alarmed by Safety Hazard",
+        "whatTheGuestCaresAboutMost": "avoiding cuts, cleaning the oil mess, getting refund"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "alarmed",
+          "resistance": "low",
+          "pressure": "high",
+          "guestBehaviour": "Warns about hazardous glass shards and stained entryway.",
+          "hiddenObjectives": [
+            "Advise customer not to reach inside bag bare-handed",
+            "Process instant 100% refund for bottle + spoiled items",
+            "Flag warehouse packing lead for lack of bubble-sleeve protection"
+          ],
+          "possibleSolutions": [
+            "Full refund + deep cleaning courtesy credit",
+            "Safety escalation incident log"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "QC-DMG-04",
+      "industry": "Supply Chain",
+      "bucketId": "qc_damaged_missing",
+      "title": "Crushed Egg Carton Smudged with Raw Yolk",
+      "shortDescription": "Resolve an egg carton transit damage complaint with instant partial refund and packing feedback log.",
+      "staffRole": "customer service rep",
+      "guestRole": "baking hobbyist",
+      "mission": "Verify egg carton damage, process swift per-unit reimbursement, and ensure customer satisfaction.",
+      "scenarioContext": {
+        "startingSituation": "I opened my 12-pack of organic brown eggs and six of them are crushed into yellow pulp! Raw yolk is all over my yogurt tubs and apples. Don't your riders use dividers in their delivery boxes?"
+      },
+      "guestProfile": {
+        "personality": "perfectionist baker",
+        "approximateAgeGroup": "adult 22–45",
+        "communicationStyle": "exasperated, direct",
+        "emotionalState": "Frustrated",
+        "whatTheGuestCaresAboutMost": "usable eggs for recipe today"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "frustrated",
+          "resistance": "medium",
+          "pressure": "moderate",
+          "guestBehaviour": "Shows photo of broken egg shells.",
+          "hiddenObjectives": [
+            "Validate egg damage via photo snapshot",
+            "Offer immediate fresh replacement carton with priority rider",
+            "Credit refund balance to user account"
+          ],
+          "possibleSolutions": [
+            "Priority dispatch of intact carton",
+            "Instant refund to payment source"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    }
+  ]
+}

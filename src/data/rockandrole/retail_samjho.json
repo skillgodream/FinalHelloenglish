@@ -1,0 +1,176 @@
+{
+  "industry": "Retail",
+  "bucketId": "retail_samjho",
+  "theme": "🤔 SAMJHO",
+  "themeDescription": "Confused customers, sizing ambiguity & product comparisons",
+  "challenges": [
+    {
+      "id": "SAMJHO-01",
+      "industry": "Retail",
+      "bucketId": "retail_samjho",
+      "title": "Active Skincare Ingredients: Retinol vs Peptides",
+      "shortDescription": "Demystify complex cosmetic active ingredients and recommend a gentle starter regimen for sensitive skin.",
+      "staffRole": "dermatological skincare advisor",
+      "guestRole": "cautious first-time skincare buyer",
+      "mission": "Break down skincare jargon into simple daily steps, perform patch-test check, and build confidence.",
+      "scenarioContext": {
+        "startingSituation": "I'm seeing fine lines under my eyes, but social media is so confusing! One influencer says use 1% retinol, another says it burns sensitive skin and to use peptides. I have no idea what to buy and I'm scared of damaging my face."
+      },
+      "guestProfile": {
+        "personality": "overwhelmed and cautious",
+        "approximateAgeGroup": "adult 28–45",
+        "communicationStyle": "hesitant, questioning",
+        "emotionalState": "Overwhelmed by skincare trends",
+        "whatTheGuestCaresAboutMost": "safety for sensitive skin and real results"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "hesitant",
+          "resistance": "low",
+          "pressure": "low",
+          "guestBehaviour": "Asks multiple questions about side effects and application order.",
+          "hiddenObjectives": [
+            "Assess skin type gently",
+            "Explain difference between peptides (nourishing barrier) and retinol (cell renewal)",
+            "Recommend beginner low-strength or peptide starter kit with SPF"
+          ],
+          "possibleSolutions": [
+            "Beginner peptide serum recommendation",
+            "Sample tester patch test"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SAMJHO-02",
+      "industry": "Retail",
+      "bucketId": "retail_samjho",
+      "title": "International Shoe Size Conversion Confusion",
+      "shortDescription": "Measure the customer foot using a Brannock device and explain brand-specific width and conversion variances.",
+      "staffRole": "footwear fit specialist",
+      "guestRole": "frustrated footwear buyer",
+      "mission": "Measure foot length and arch, explain differences between UK, US, and European sizing charts, and ensure comfortable fit.",
+      "scenarioContext": {
+        "startingSituation": "Why is footwear shopping so maddening? In Nike I wear a US 10, in Adidas an 8.5 UK, and in Zara a 43! I just want a comfortable running shoe that won't pinch my toes!"
+      },
+      "guestProfile": {
+        "personality": "practical and perplexed",
+        "approximateAgeGroup": "adult 22–50",
+        "communicationStyle": "candid, bewildered",
+        "emotionalState": "Perplexed",
+        "whatTheGuestCaresAboutMost": "accurate fit without return hassles"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "perplexed",
+          "resistance": "low",
+          "pressure": "low",
+          "guestBehaviour": "Compares different shoe boxes and expresses doubt.",
+          "hiddenObjectives": [
+            "Measure foot with size gauge",
+            "Explain foot width (wide toe box vs narrow heel)",
+            "Bring two adjacent sizes for direct walking trial"
+          ],
+          "possibleSolutions": [
+            "Side-by-side walk trial",
+            "Insole comfort fitting"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SAMJHO-03",
+      "industry": "Retail",
+      "bucketId": "retail_samjho",
+      "title": "Parent Choosing College Engineering Laptop",
+      "shortDescription": "Translate technical laptop specs into clear student benefits without pushing unnecessary expensive add-ons.",
+      "staffRole": "consumer electronics consultant",
+      "guestRole": "budget-conscious parent",
+      "mission": "Understand student college curriculum requirements (CAD/Coding), explain RAM and dedicated GPU simply, and recommend balanced value.",
+      "scenarioContext": {
+        "startingSituation": "My daughter is starting Computer Engineering next month. The sales boy in another shop told me I must spend 1.2 lakhs on an RTX graphics gaming laptop with 32GB RAM. Is that really necessary or was he just trying to fleece me?"
+      },
+      "guestProfile": {
+        "personality": "protective and financially cautious",
+        "approximateAgeGroup": "adult 45–60",
+        "communicationStyle": "protective, earnest, seeking honesty",
+        "emotionalState": "Cautious & Seeking Trustworthy Advice",
+        "whatTheGuestCaresAboutMost": "durability, coding compatibility, reasonable price"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "cautious",
+          "resistance": "medium",
+          "pressure": "low",
+          "guestBehaviour": "Shares course syllabus and budget constraints.",
+          "hiddenObjectives": [
+            "Demystify GPU and RAM requirements for student programming",
+            "Highlight 16GB RAM + strong CPU sweet spot around 65k-75k",
+            "Focus on battery life and student warranty"
+          ],
+          "possibleSolutions": [
+            "Practical student laptop recommendation with 3-year warranty",
+            "Honest comparison breakdown"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "SAMJHO-04",
+      "industry": "Retail",
+      "bucketId": "retail_samjho",
+      "title": "Pure Linen vs Wrinkle-Free Blend Comparison",
+      "shortDescription": "Guide a business traveler on fabric performance, breathability, and maintenance for hot humid travel destinations.",
+      "staffRole": "menswear fabric specialist",
+      "guestRole": "business traveler",
+      "mission": "Explain natural flax breathability versus wrinkle-resistant cotton blends, catering to the customer travel schedule.",
+      "scenarioContext": {
+        "startingSituation": "I have a 4-day conference in humid Mumbai. I love how pure linen looks on the mannequin, but I hate ironing in hotel rooms. Will I look like a crumpled mess after a 2-hour taxi ride?"
+      },
+      "guestProfile": {
+        "personality": "pragmatic professional",
+        "approximateAgeGroup": "adult 30–55",
+        "communicationStyle": "casual, realistic",
+        "emotionalState": "Inquisitive",
+        "whatTheGuestCaresAboutMost": "looking sharp without spending hours ironing"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "inquisitive",
+          "resistance": "low",
+          "pressure": "low",
+          "guestBehaviour": "Touches fabric samples and weighs pros and cons.",
+          "hiddenObjectives": [
+            "Explain linen natural crease characteristic",
+            "Present linen-cotton or easy-care travel blend alternative",
+            "Share travel garment steaming tips"
+          ],
+          "possibleSolutions": [
+            "Linen-cotton hybrid shirt suggestion",
+            "Wrinkle-resistant travel weave option"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "industry": "Retail",
+  "bucketId": "retail_jaldi",
+  "theme": "🏃 JALDI",
+  "themeDescription": "Rushed shoppers, queue jumping & express checkout",
+  "challenges": [
+    {
+      "id": "JALDI-01",
+      "industry": "Retail",
+      "bucketId": "retail_jaldi",
+      "title": "Express Gift Wrap for Birthday in 10 Minutes",
+      "shortDescription": "Expedite wrapping and personalized ribboning for an anxious parent on their way to a birthday party.",
+      "staffRole": "gift wrapping and checkout associate",
+      "guestRole": "rushed parent",
+      "mission": "Work swiftly, select pre-cut wrapping paper and quick stick bows, while maintaining quality presentation.",
+      "scenarioContext": {
+        "startingSituation": "Please! I am already 15 minutes late for my daughter's best friend's birthday party down the road! Can you wrap this doll set with a nice ribbon in literally two minutes?!"
+      },
+      "guestProfile": {
+        "personality": "stressed and hurried",
+        "approximateAgeGroup": "adult 28–42",
+        "communicationStyle": "rapid, urgent, fidgeting",
+        "emotionalState": "Stressed & Rushed",
+        "whatTheGuestCaresAboutMost": "speed without looking like a sloppy job"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "hurried",
+          "resistance": "low",
+          "pressure": "high",
+          "guestBehaviour": "Checks watch repeatedly and taps counter.",
+          "hiddenObjectives": [
+            "Take item immediately",
+            "Deploy fast pre-made wrap kit",
+            "Prepare gift tag and bill simultaneously"
+          ],
+          "possibleSolutions": [
+            "Express gift bag with tissue styling",
+            "Rapid fold wrapping with stick bow"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "JALDI-02",
+      "industry": "Retail",
+      "bucketId": "retail_jaldi",
+      "title": "Airport Transit Queue Jump Request",
+      "shortDescription": "Manage an airport mall traveler whose gate closes in 25 minutes wanting to bypass a long checkout line without offending others.",
+      "staffRole": "store cashier / line manager",
+      "guestRole": "traveler catching international flight",
+      "mission": "Address traveler panic, communicate respectfully with other queue members, or open an express terminal.",
+      "scenarioContext": {
+        "startingSituation": "Excuse me everyone! My flight to Dubai is boarding right now at Gate 14 and security takes 15 minutes! Can I please just buy this box of chocolates and skip the line? I'm begging you!"
+      },
+      "guestProfile": {
+        "personality": "panicked traveler",
+        "approximateAgeGroup": "adult 25–55",
+        "communicationStyle": "frantic, pleading to crowd",
+        "emotionalState": "High Anxiety",
+        "whatTheGuestCaresAboutMost": "making their flight boarding call"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "panicked",
+          "resistance": "high",
+          "pressure": "critical",
+          "guestBehaviour": "Attempts to push to front of queue while clutching boarding pass.",
+          "hiddenObjectives": [
+            "Direct traveler to auxiliary express terminal",
+            "Ask polite permission from next customer in line",
+            "Complete contactless tap payment in 15 seconds"
+          ],
+          "possibleSolutions": [
+            "Auxiliary register quick tap",
+            "Polite queue consensus"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "JALDI-03",
+      "industry": "Retail",
+      "bucketId": "retail_jaldi",
+      "title": "Closing Shutter Urgent Interview Shirt Need",
+      "shortDescription": "Assist an anxious job candidate arriving as store shutters are pulling down, needing a white shirt for an 8 AM interview tomorrow.",
+      "staffRole": "evening closing store staff",
+      "guestRole": "desperate job applicant",
+      "mission": "Show situational compassion, retrieve the correct size crisp white shirt quickly, and process a swift closing register transaction.",
+      "scenarioContext": {
+        "startingSituation": "Wait, please don't pull down the shutter! I spilled coffee all over my only formal shirt, and I have a dream job interview at 8 AM tomorrow! Just give me any white formal shirt in size 40, I have exact cash!"
+      },
+      "guestProfile": {
+        "personality": "desperate and sincere",
+        "approximateAgeGroup": "adult 21–28",
+        "communicationStyle": "pleading, earnest",
+        "emotionalState": "Vulnerable & Stressed",
+        "whatTheGuestCaresAboutMost": "getting a proper formal shirt tonight"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "desperate",
+          "resistance": "low",
+          "pressure": "moderate",
+          "guestBehaviour": "Begs for 2 minutes of staff time past official closing bell.",
+          "hiddenObjectives": [
+            "Demonstrate hospitality and customer-first service",
+            "Fetch standard size 40 white shirt in 30 seconds",
+            "Ring up transaction before registers shut down"
+          ],
+          "possibleSolutions": [
+            "Quick register ring-up",
+            "Pack garment neatly with hanger"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    },
+    {
+      "id": "JALDI-04",
+      "industry": "Retail",
+      "bucketId": "retail_jaldi",
+      "title": "Double-Parked High Street Shopper Demanding 60-Sec Billing",
+      "shortDescription": "Maintain accuracy, inventory scanning, and calm customer service while a driver urges staff to hurry before police tow their car.",
+      "staffRole": "front cash counter associate",
+      "guestRole": "stressed driver shopper",
+      "mission": "Maintain professional scanning rhythm, prevent bagging errors, and complete payment smoothly under high customer agitation.",
+      "scenarioContext": {
+        "startingSituation": "Brother, my car is double-parked on MG Road with hazard lights on! The traffic police tow truck is right behind! Scan these three items in ten seconds, please hurry hurry!"
+      },
+      "guestProfile": {
+        "personality": "hyper-rushed driver",
+        "approximateAgeGroup": "adult 30–50",
+        "communicationStyle": "rapid-fire, glancing outside through window",
+        "emotionalState": "Edgy & Nervous",
+        "whatTheGuestCaresAboutMost": "getting out before receiving a 1,500 rupee traffic fine"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "frantic",
+          "resistance": "medium",
+          "pressure": "high",
+          "guestBehaviour": "Throws items on counter and readies phone scanner.",
+          "hiddenObjectives": [
+            "Scan barcodes accurately without double-beeps",
+            "Prompt quick QR payment",
+            "Bag efficiently with handles ready"
+          ],
+          "possibleSolutions": [
+            "Instant UPI QR scan",
+            "Pre-bagged delivery handover"
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY",
+            "CUSTOMER_ACCEPTED"
+          ]
+        }
+      }
+    }
+  ]
+}

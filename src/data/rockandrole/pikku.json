@@ -1,0 +1,1390 @@
+{
+  "industry": "Hotel & Restaurant",
+  "bucketId": "pikku",
+  "theme": "PIKKU 😤",
+  "themeDescription": "Angry & Frustrated Customers",
+  "challenges": [
+    {
+      "id": "PIKKU-01",
+      "industry": "Hotel & Restaurant",
+      "bucketId": "pikku",
+      "title": "Room is not clean",
+      "shortDescription": "Handle a guest situation involving room is not clean through a natural workplace conversation.",
+      "staffRole": "front desk / guest-service staff",
+      "guestRole": "Hotel or restaurant guest/customer",
+      "mission": "Handle the room is not clean situation professionally, understand the guest's need, and move toward a realistic resolution without exceeding staff authority.",
+      "guestProfile": {
+        "personality": "frustrated",
+        "approximateAgeGroup": "adult 30–55",
+        "communicationStyle": "direct, expects action",
+        "emotionalState": "Their emotion is driven by the situation and should change in response to the learner's behaviour.",
+        "whatTheGuestCaresAboutMost": "a clean room and a credible next step"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "cooperative but concerned",
+          "resistance": "low; answers relevant questions and considers reasonable options",
+          "pressure": "low to moderate",
+          "guestBehaviour": "Clearly states the issue, answers focused questions, and considers a reasonable solution.",
+          "hiddenObjectives": [
+            "Identify the specific cleanliness failures and room areas affected.",
+            "Check whether the request has already been reported and what the guest needs most urgently.",
+            "Coordinate housekeeping or verify an authorised room alternative.",
+            "Set a truthful expectation and confirm the guest accepts the next step."
+          ],
+          "possibleSolutions": [
+            "Request the relevant housekeeping action and verify its availability/time.",
+            "If appropriate and authorised, check an available alternative room rather than promising a move.",
+            "Escalate if the problem remains unresolved or requires approval."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [],
+          "successCondition": "Have the cleanliness issue addressed or provide an authorised practical alternative, while setting a truthful expectation. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level2": {
+          "name": "MANAGE",
+          "customerMood": "frustrated and questioning",
+          "resistance": "medium; may withhold a useful detail, question the response, or reject the first option",
+          "pressure": "moderate; one realistic complication",
+          "guestBehaviour": "Shows visible frustration, gives information selectively, questions the staff member, and may reject the first solution before considering another.",
+          "hiddenObjectives": [
+            "Identify the specific cleanliness failures and room areas affected.",
+            "Check whether the request has already been reported and what the guest needs most urgently.",
+            "Coordinate housekeeping or verify an authorised room alternative.",
+            "Set a truthful expectation and confirm the guest accepts the next step.",
+            "Manage the guest's frustration while keeping the conversation focused on the practical resolution."
+          ],
+          "possibleSolutions": [
+            "Request the relevant housekeeping action and verify its availability/time.",
+            "If appropriate and authorised, check an available alternative room rather than promising a move.",
+            "Escalate if the problem remains unresolved or requires approval."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [
+            "The guest discovers that the bathroom has not been cleaned and says they have an important meeting soon."
+          ],
+          "successCondition": "Have the cleanliness issue addressed or provide an authorised practical alternative, while setting a truthful expectation. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level3": {
+          "name": "CONTROL",
+          "customerMood": "angry/demanding and high-pressure",
+          "resistance": "high; may interrupt, challenge explanations, reject the first option, or request a manager",
+          "pressure": "high; two realistic complications",
+          "guestBehaviour": "Applies pressure, challenges vague answers, may interrupt or ask for a manager, and introduces complications naturally while remaining believable.",
+          "hiddenObjectives": [
+            "Identify the specific cleanliness failures and room areas affected.",
+            "Check whether the request has already been reported and what the guest needs most urgently.",
+            "Coordinate housekeeping or verify an authorised room alternative.",
+            "Set a truthful expectation and confirm the guest accepts the next step.",
+            "Remain professional under pressure and decide when escalation is appropriate without promising an unauthorised outcome."
+          ],
+          "possibleSolutions": [
+            "Request the relevant housekeeping action and verify its availability/time.",
+            "If appropriate and authorised, check an available alternative room rather than promising a move.",
+            "Escalate if the problem remains unresolved or requires approval."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [
+            "The guest discovers that the bathroom has not been cleaned and says they have an important meeting soon.",
+            "The guest has already called housekeeping once and no one has arrived."
+          ],
+          "successCondition": "Have the cleanliness issue addressed or provide an authorised practical alternative, while setting a truthful expectation. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        }
+      },
+      "scenarioContext": {
+        "startingSituation": "The guest has entered a room that has not been cleaned to the expected standard.",
+        "knownFacts": [
+          "The guest has noticed cleanliness problems in the room.",
+          "The guest expects the room to be usable before settling in."
+        ],
+        "factsToDiscover": [
+          "which parts of the room are unclean",
+          "whether the guest has already contacted housekeeping",
+          "whether the guest is willing to wait for cleaning or needs another available option"
+        ],
+        "authorityBoundary": [
+          "Staff can report and coordinate housekeeping action.",
+          "A room change can only be offered if an appropriate room is actually available and the staff member is authorised to offer it.",
+          "Staff should not promise an exact cleaning or room-change time before checking."
+        ],
+        "resolutionTarget": "Have the cleanliness issue addressed or provide an authorised practical alternative, while setting a truthful expectation."
+      }
+    },
+    {
+      "id": "PIKKU-02",
+      "industry": "Hotel & Restaurant",
+      "bucketId": "pikku",
+      "title": "Confirmed room is unavailable",
+      "shortDescription": "Handle a guest situation involving confirmed room is unavailable through a natural workplace conversation.",
+      "staffRole": "front desk staff",
+      "guestRole": "Hotel or restaurant guest/customer",
+      "mission": "Handle the confirmed room is unavailable situation professionally, understand the guest's need, and move toward a realistic resolution without exceeding staff authority.",
+      "guestProfile": {
+        "personality": "frustrated",
+        "approximateAgeGroup": "adult 30–55",
+        "communicationStyle": "direct, questions alternatives",
+        "emotionalState": "Their emotion is driven by the situation and should change in response to the learner's behaviour.",
+        "whatTheGuestCaresAboutMost": "a usable room and honest options"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "cooperative but concerned",
+          "resistance": "low; answers relevant questions and considers reasonable options",
+          "pressure": "low to moderate",
+          "guestBehaviour": "Clearly states the issue, answers focused questions, and considers a reasonable solution.",
+          "hiddenObjectives": [
+            "Verify the booking and the exact room category expected.",
+            "Understand the guest's immediate timing constraint.",
+            "Present only confirmed room/waiting alternatives.",
+            "Escalate any exception requiring authority and confirm the guest's chosen next step."
+          ],
+          "possibleSolutions": [
+            "Check the reservation and current inventory.",
+            "Offer a confirmed alternative or practical waiting/luggage arrangement.",
+            "Escalate upgrades/compensation or unresolved inventory issues through the proper channel."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [],
+          "successCondition": "Verify the booking, explain the actual availability, and secure an authorised alternative or escalation. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level2": {
+          "name": "MANAGE",
+          "customerMood": "frustrated and questioning",
+          "resistance": "medium; may withhold a useful detail, question the response, or reject the first option",
+          "pressure": "moderate; one realistic complication",
+          "guestBehaviour": "Shows visible frustration, gives information selectively, questions the staff member, and may reject the first solution before considering another.",
+          "hiddenObjectives": [
+            "Verify the booking and the exact room category expected.",
+            "Understand the guest's immediate timing constraint.",
+            "Present only confirmed room/waiting alternatives.",
+            "Escalate any exception requiring authority and confirm the guest's chosen next step.",
+            "Manage the guest's frustration while keeping the conversation focused on the practical resolution."
+          ],
+          "possibleSolutions": [
+            "Check the reservation and current inventory.",
+            "Offer a confirmed alternative or practical waiting/luggage arrangement.",
+            "Escalate upgrades/compensation or unresolved inventory issues through the proper channel."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [
+            "The guest has an important meeting soon and cannot wait indefinitely."
+          ],
+          "successCondition": "Verify the booking, explain the actual availability, and secure an authorised alternative or escalation. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level3": {
+          "name": "CONTROL",
+          "customerMood": "angry/demanding and high-pressure",
+          "resistance": "high; may interrupt, challenge explanations, reject the first option, or request a manager",
+          "pressure": "high; two realistic complications",
+          "guestBehaviour": "Applies pressure, challenges vague answers, may interrupt or ask for a manager, and introduces complications naturally while remaining believable.",
+          "hiddenObjectives": [
+            "Verify the booking and the exact room category expected.",
+            "Understand the guest's immediate timing constraint.",
+            "Present only confirmed room/waiting alternatives.",
+            "Escalate any exception requiring authority and confirm the guest's chosen next step.",
+            "Remain professional under pressure and decide when escalation is appropriate without promising an unauthorised outcome."
+          ],
+          "possibleSolutions": [
+            "Check the reservation and current inventory.",
+            "Offer a confirmed alternative or practical waiting/luggage arrangement.",
+            "Escalate upgrades/compensation or unresolved inventory issues through the proper channel."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [
+            "The guest has an important meeting soon and cannot wait indefinitely.",
+            "The only immediately available room is a different category from the one booked and the guest has already unpacked some luggage."
+          ],
+          "successCondition": "Verify the booking, explain the actual availability, and secure an authorised alternative or escalation. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        }
+      },
+      "scenarioContext": {
+        "startingSituation": "The guest arrives expecting a confirmed room, but the expected room is not currently available for assignment.",
+        "knownFacts": [
+          "The guest has a booking/confirmation.",
+          "The expected room cannot be handed over immediately."
+        ],
+        "factsToDiscover": [
+          "booking details and room category",
+          "whether the guest has a time constraint",
+          "what alternative room or waiting option is actually available"
+        ],
+        "authorityBoundary": [
+          "Staff can verify the reservation and available inventory.",
+          "Staff must not promise an upgrade, compensation, or room availability without authorisation and confirmation."
+        ],
+        "resolutionTarget": "Verify the booking, explain the actual availability, and secure an authorised alternative or escalation."
+      }
+    },
+    {
+      "id": "PIKKU-03",
+      "industry": "Hotel & Restaurant",
+      "bucketId": "pikku",
+      "title": "AC is not working",
+      "shortDescription": "Handle a guest situation involving ac is not working through a natural workplace conversation.",
+      "staffRole": "front desk / guest-service staff",
+      "guestRole": "Hotel or restaurant guest/customer",
+      "mission": "Handle the ac is not working situation professionally, understand the guest's need, and move toward a realistic resolution without exceeding staff authority.",
+      "guestProfile": {
+        "personality": "frustrated",
+        "approximateAgeGroup": "adult 25–60",
+        "communicationStyle": "practical, focused on comfort",
+        "emotionalState": "Their emotion is driven by the situation and should change in response to the learner's behaviour.",
+        "whatTheGuestCaresAboutMost": "restored cooling or an acceptable alternative"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "cooperative but concerned",
+          "resistance": "low; answers relevant questions and considers reasonable options",
+          "pressure": "low to moderate",
+          "guestBehaviour": "Clearly states the issue, answers focused questions, and considers a reasonable solution.",
+          "hiddenObjectives": [
+            "Identify what the AC is doing and whether basic checks have been attempted.",
+            "Assess the guest's urgency and tolerance for maintenance.",
+            "Coordinate maintenance or verify an authorised alternative.",
+            "Give a realistic update without promising a repair time that is unconfirmed."
+          ],
+          "possibleSolutions": [
+            "Log/coordinate the maintenance request.",
+            "Check for an authorised room alternative if repair will not meet the guest's need.",
+            "Escalate if the room cannot reasonably be made usable."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [],
+          "successCondition": "Confirm the fault, arrange the appropriate maintenance response, and provide a verified alternative if one is authorised and available. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level2": {
+          "name": "MANAGE",
+          "customerMood": "frustrated and questioning",
+          "resistance": "medium; may withhold a useful detail, question the response, or reject the first option",
+          "pressure": "moderate; one realistic complication",
+          "guestBehaviour": "Shows visible frustration, gives information selectively, questions the staff member, and may reject the first solution before considering another.",
+          "hiddenObjectives": [
+            "Identify what the AC is doing and whether basic checks have been attempted.",
+            "Assess the guest's urgency and tolerance for maintenance.",
+            "Coordinate maintenance or verify an authorised alternative.",
+            "Give a realistic update without promising a repair time that is unconfirmed.",
+            "Manage the guest's frustration while keeping the conversation focused on the practical resolution."
+          ],
+          "possibleSolutions": [
+            "Log/coordinate the maintenance request.",
+            "Check for an authorised room alternative if repair will not meet the guest's need.",
+            "Escalate if the room cannot reasonably be made usable."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [
+            "The room is becoming uncomfortable and the guest has an appointment soon."
+          ],
+          "successCondition": "Confirm the fault, arrange the appropriate maintenance response, and provide a verified alternative if one is authorised and available. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level3": {
+          "name": "CONTROL",
+          "customerMood": "angry/demanding and high-pressure",
+          "resistance": "high; may interrupt, challenge explanations, reject the first option, or request a manager",
+          "pressure": "high; two realistic complications",
+          "guestBehaviour": "Applies pressure, challenges vague answers, may interrupt or ask for a manager, and introduces complications naturally while remaining believable.",
+          "hiddenObjectives": [
+            "Identify what the AC is doing and whether basic checks have been attempted.",
+            "Assess the guest's urgency and tolerance for maintenance.",
+            "Coordinate maintenance or verify an authorised alternative.",
+            "Give a realistic update without promising a repair time that is unconfirmed.",
+            "Remain professional under pressure and decide when escalation is appropriate without promising an unauthorised outcome."
+          ],
+          "possibleSolutions": [
+            "Log/coordinate the maintenance request.",
+            "Check for an authorised room alternative if repair will not meet the guest's need.",
+            "Escalate if the room cannot reasonably be made usable."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [
+            "The room is becoming uncomfortable and the guest has an appointment soon.",
+            "The maintenance team says the fault may take longer than expected, while another suitable room may be available."
+          ],
+          "successCondition": "Confirm the fault, arrange the appropriate maintenance response, and provide a verified alternative if one is authorised and available. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        }
+      },
+      "scenarioContext": {
+        "startingSituation": "The guest reports that the air conditioner in the assigned room is not working properly.",
+        "knownFacts": [
+          "The room has an AC problem.",
+          "The guest expects a comfortable room."
+        ],
+        "factsToDiscover": [
+          "what the AC is doing or not doing",
+          "whether basic controls have already been checked",
+          "whether the guest can wait for maintenance or needs another authorised option"
+        ],
+        "authorityBoundary": [
+          "Staff can log and coordinate maintenance.",
+          "Staff should not promise a repair time or room change without confirmation."
+        ],
+        "resolutionTarget": "Confirm the fault, arrange the appropriate maintenance response, and provide a verified alternative if one is authorised and available."
+      }
+    },
+    {
+      "id": "PIKKU-04",
+      "industry": "Hotel & Restaurant",
+      "bucketId": "pikku",
+      "title": "Check-in is taking too long",
+      "shortDescription": "Handle a guest situation involving check-in is taking too long through a natural workplace conversation.",
+      "staffRole": "front desk staff",
+      "guestRole": "Hotel or restaurant guest/customer",
+      "mission": "Handle the check-in is taking too long situation professionally, understand the guest's need, and move toward a realistic resolution without exceeding staff authority.",
+      "guestProfile": {
+        "personality": "impatient",
+        "approximateAgeGroup": "adult 25–55",
+        "communicationStyle": "short, time-conscious",
+        "emotionalState": "Their emotion is driven by the situation and should change in response to the learner's behaviour.",
+        "whatTheGuestCaresAboutMost": "speed and a clear reason for the delay"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "cooperative but concerned",
+          "resistance": "low; answers relevant questions and considers reasonable options",
+          "pressure": "low to moderate",
+          "guestBehaviour": "Clearly states the issue, answers focused questions, and considers a reasonable solution.",
+          "hiddenObjectives": [
+            "Find the actual pending step causing the check-in delay.",
+            "Acknowledge the guest's time pressure without inventing a reason.",
+            "Complete or coordinate the next authorised step efficiently.",
+            "Give a clear status and confirm what remains."
+          ],
+          "possibleSolutions": [
+            "Verify booking, documents, payment, or room status.",
+            "Complete the pending step or involve the responsible team.",
+            "Provide a truthful progress update and escalate only if needed."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [],
+          "successCondition": "Identify the real cause of the delay, take the next authorised action, and give the guest a clear truthful update. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level2": {
+          "name": "MANAGE",
+          "customerMood": "frustrated and questioning",
+          "resistance": "medium; may withhold a useful detail, question the response, or reject the first option",
+          "pressure": "moderate; one realistic complication",
+          "guestBehaviour": "Shows visible frustration, gives information selectively, questions the staff member, and may reject the first solution before considering another.",
+          "hiddenObjectives": [
+            "Find the actual pending step causing the check-in delay.",
+            "Acknowledge the guest's time pressure without inventing a reason.",
+            "Complete or coordinate the next authorised step efficiently.",
+            "Give a clear status and confirm what remains.",
+            "Manage the guest's frustration while keeping the conversation focused on the practical resolution."
+          ],
+          "possibleSolutions": [
+            "Verify booking, documents, payment, or room status.",
+            "Complete the pending step or involve the responsible team.",
+            "Provide a truthful progress update and escalate only if needed."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [
+            "The guest has transport waiting outside and needs a clear update."
+          ],
+          "successCondition": "Identify the real cause of the delay, take the next authorised action, and give the guest a clear truthful update. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level3": {
+          "name": "CONTROL",
+          "customerMood": "angry/demanding and high-pressure",
+          "resistance": "high; may interrupt, challenge explanations, reject the first option, or request a manager",
+          "pressure": "high; two realistic complications",
+          "guestBehaviour": "Applies pressure, challenges vague answers, may interrupt or ask for a manager, and introduces complications naturally while remaining believable.",
+          "hiddenObjectives": [
+            "Find the actual pending step causing the check-in delay.",
+            "Acknowledge the guest's time pressure without inventing a reason.",
+            "Complete or coordinate the next authorised step efficiently.",
+            "Give a clear status and confirm what remains.",
+            "Remain professional under pressure and decide when escalation is appropriate without promising an unauthorised outcome."
+          ],
+          "possibleSolutions": [
+            "Verify booking, documents, payment, or room status.",
+            "Complete the pending step or involve the responsible team.",
+            "Provide a truthful progress update and escalate only if needed."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [
+            "The guest has transport waiting outside and needs a clear update.",
+            "The delay is connected to a booking/payment verification step that cannot simply be skipped."
+          ],
+          "successCondition": "Identify the real cause of the delay, take the next authorised action, and give the guest a clear truthful update. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        }
+      },
+      "scenarioContext": {
+        "startingSituation": "The guest has been waiting longer than expected for check-in to be completed.",
+        "knownFacts": [
+          "The guest is still waiting to complete check-in.",
+          "The guest wants a clear explanation and progress."
+        ],
+        "factsToDiscover": [
+          "which part of check-in is delayed",
+          "whether documents/payment/booking verification are pending",
+          "the guest's immediate time constraint"
+        ],
+        "authorityBoundary": [
+          "Staff can check the booking and explain the actual pending step.",
+          "Staff must not invent a reason or promise an exact completion time without checking."
+        ],
+        "resolutionTarget": "Identify the real cause of the delay, take the next authorised action, and give the guest a clear truthful update."
+      }
+    },
+    {
+      "id": "PIKKU-05",
+      "industry": "Hotel & Restaurant",
+      "bucketId": "pikku",
+      "title": "Excessive room noise",
+      "shortDescription": "Handle a guest situation involving excessive room noise through a natural workplace conversation.",
+      "staffRole": "front desk / guest-service staff",
+      "guestRole": "Hotel or restaurant guest/customer",
+      "mission": "Handle the excessive room noise situation professionally, understand the guest's need, and move toward a realistic resolution without exceeding staff authority.",
+      "guestProfile": {
+        "personality": "frustrated",
+        "approximateAgeGroup": "adult 25–60",
+        "communicationStyle": "firm, describes disruption",
+        "emotionalState": "Their emotion is driven by the situation and should change in response to the learner's behaviour.",
+        "whatTheGuestCaresAboutMost": "quiet and a prompt plan"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "cooperative but concerned",
+          "resistance": "low; answers relevant questions and considers reasonable options",
+          "pressure": "low to moderate",
+          "guestBehaviour": "Clearly states the issue, answers focused questions, and considers a reasonable solution.",
+          "hiddenObjectives": [
+            "Identify the source, timing, and impact of the noise.",
+            "Acknowledge the disruption and avoid blaming another guest without evidence.",
+            "Coordinate the appropriate response and check alternatives if necessary.",
+            "Confirm whether the guest can rest with the proposed action."
+          ],
+          "possibleSolutions": [
+            "Contact the responsible team/security process as appropriate.",
+            "Check an authorised room alternative if the disturbance cannot be controlled.",
+            "Document/escalate a persistent issue when required."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [],
+          "successCondition": "Identify and address the noise through the appropriate process, or provide an authorised alternative if available. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level2": {
+          "name": "MANAGE",
+          "customerMood": "frustrated and questioning",
+          "resistance": "medium; may withhold a useful detail, question the response, or reject the first option",
+          "pressure": "moderate; one realistic complication",
+          "guestBehaviour": "Shows visible frustration, gives information selectively, questions the staff member, and may reject the first solution before considering another.",
+          "hiddenObjectives": [
+            "Identify the source, timing, and impact of the noise.",
+            "Acknowledge the disruption and avoid blaming another guest without evidence.",
+            "Coordinate the appropriate response and check alternatives if necessary.",
+            "Confirm whether the guest can rest with the proposed action.",
+            "Manage the guest's frustration while keeping the conversation focused on the practical resolution."
+          ],
+          "possibleSolutions": [
+            "Contact the responsible team/security process as appropriate.",
+            "Check an authorised room alternative if the disturbance cannot be controlled.",
+            "Document/escalate a persistent issue when required."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [
+            "The noise is preventing the guest from sleeping."
+          ],
+          "successCondition": "Identify and address the noise through the appropriate process, or provide an authorised alternative if available. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level3": {
+          "name": "CONTROL",
+          "customerMood": "angry/demanding and high-pressure",
+          "resistance": "high; may interrupt, challenge explanations, reject the first option, or request a manager",
+          "pressure": "high; two realistic complications",
+          "guestBehaviour": "Applies pressure, challenges vague answers, may interrupt or ask for a manager, and introduces complications naturally while remaining believable.",
+          "hiddenObjectives": [
+            "Identify the source, timing, and impact of the noise.",
+            "Acknowledge the disruption and avoid blaming another guest without evidence.",
+            "Coordinate the appropriate response and check alternatives if necessary.",
+            "Confirm whether the guest can rest with the proposed action.",
+            "Remain professional under pressure and decide when escalation is appropriate without promising an unauthorised outcome."
+          ],
+          "possibleSolutions": [
+            "Contact the responsible team/security process as appropriate.",
+            "Check an authorised room alternative if the disturbance cannot be controlled.",
+            "Document/escalate a persistent issue when required."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [
+            "The noise is preventing the guest from sleeping.",
+            "The noise source is in a nearby room and a move would require checking another room's availability."
+          ],
+          "successCondition": "Identify and address the noise through the appropriate process, or provide an authorised alternative if available. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        }
+      },
+      "scenarioContext": {
+        "startingSituation": "The guest reports excessive noise affecting the room.",
+        "knownFacts": [
+          "Noise is disturbing the guest.",
+          "The guest expects a reasonable chance to rest."
+        ],
+        "factsToDiscover": [
+          "source and timing of the noise",
+          "whether it is ongoing",
+          "whether the guest has already reported it",
+          "whether an authorised room alternative is available"
+        ],
+        "authorityBoundary": [
+          "Staff can contact the responsible team or address the reported disturbance through normal hotel procedures.",
+          "Staff should not accuse another guest or promise a room move without checking."
+        ],
+        "resolutionTarget": "Identify and address the noise through the appropriate process, or provide an authorised alternative if available."
+      }
+    },
+    {
+      "id": "PIKKU-06",
+      "industry": "Hotel & Restaurant",
+      "bucketId": "pikku",
+      "title": "Wrong room assigned",
+      "shortDescription": "Handle a guest situation involving wrong room assigned through a natural workplace conversation.",
+      "staffRole": "front desk staff",
+      "guestRole": "Hotel or restaurant guest/customer",
+      "mission": "Handle the wrong room assigned situation professionally, understand the guest's need, and move toward a realistic resolution without exceeding staff authority.",
+      "guestProfile": {
+        "personality": "frustrated",
+        "approximateAgeGroup": "adult 25–60",
+        "communicationStyle": "fact-focused, compares booking details",
+        "emotionalState": "Their emotion is driven by the situation and should change in response to the learner's behaviour.",
+        "whatTheGuestCaresAboutMost": "the room category/location they booked or a fair authorised alternative"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "cooperative but concerned",
+          "resistance": "low; answers relevant questions and considers reasonable options",
+          "pressure": "low to moderate",
+          "guestBehaviour": "Clearly states the issue, answers focused questions, and considers a reasonable solution.",
+          "hiddenObjectives": [
+            "Compare the assigned room with the booking details.",
+            "Understand whether the guest has already unpacked or has another constraint.",
+            "Correct the assignment or offer a confirmed alternative.",
+            "Confirm the guest understands the final arrangement."
+          ],
+          "possibleSolutions": [
+            "Verify the reservation and room assignment records.",
+            "Arrange the booked room if available or another authorised solution.",
+            "Escalate a true discrepancy that cannot be resolved at the current level."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [],
+          "successCondition": "Verify the discrepancy and correct the assignment or arrange an authorised alternative without unnecessary disruption. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level2": {
+          "name": "MANAGE",
+          "customerMood": "frustrated and questioning",
+          "resistance": "medium; may withhold a useful detail, question the response, or reject the first option",
+          "pressure": "moderate; one realistic complication",
+          "guestBehaviour": "Shows visible frustration, gives information selectively, questions the staff member, and may reject the first solution before considering another.",
+          "hiddenObjectives": [
+            "Compare the assigned room with the booking details.",
+            "Understand whether the guest has already unpacked or has another constraint.",
+            "Correct the assignment or offer a confirmed alternative.",
+            "Confirm the guest understands the final arrangement.",
+            "Manage the guest's frustration while keeping the conversation focused on the practical resolution."
+          ],
+          "possibleSolutions": [
+            "Verify the reservation and room assignment records.",
+            "Arrange the booked room if available or another authorised solution.",
+            "Escalate a true discrepancy that cannot be resolved at the current level."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [
+            "The guest shows a booking confirmation with a different room category."
+          ],
+          "successCondition": "Verify the discrepancy and correct the assignment or arrange an authorised alternative without unnecessary disruption. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level3": {
+          "name": "CONTROL",
+          "customerMood": "angry/demanding and high-pressure",
+          "resistance": "high; may interrupt, challenge explanations, reject the first option, or request a manager",
+          "pressure": "high; two realistic complications",
+          "guestBehaviour": "Applies pressure, challenges vague answers, may interrupt or ask for a manager, and introduces complications naturally while remaining believable.",
+          "hiddenObjectives": [
+            "Compare the assigned room with the booking details.",
+            "Understand whether the guest has already unpacked or has another constraint.",
+            "Correct the assignment or offer a confirmed alternative.",
+            "Confirm the guest understands the final arrangement.",
+            "Remain professional under pressure and decide when escalation is appropriate without promising an unauthorised outcome."
+          ],
+          "possibleSolutions": [
+            "Verify the reservation and room assignment records.",
+            "Arrange the booked room if available or another authorised solution.",
+            "Escalate a true discrepancy that cannot be resolved at the current level."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [
+            "The guest shows a booking confirmation with a different room category.",
+            "The guest has already unpacked and wants to avoid moving unless the discrepancy is confirmed."
+          ],
+          "successCondition": "Verify the discrepancy and correct the assignment or arrange an authorised alternative without unnecessary disruption. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        }
+      },
+      "scenarioContext": {
+        "startingSituation": "The guest believes the assigned room does not match the room details in the booking.",
+        "knownFacts": [
+          "The guest has booking information showing a room expectation.",
+          "The currently assigned room is being questioned."
+        ],
+        "factsToDiscover": [
+          "booked room category/details",
+          "assigned room details",
+          "whether the guest has already unpacked",
+          "what correction is possible in current inventory"
+        ],
+        "authorityBoundary": [
+          "Staff can verify reservation and assignment records.",
+          "Any room change, upgrade, or compensation must follow actual availability and authority."
+        ],
+        "resolutionTarget": "Verify the discrepancy and correct the assignment or arrange an authorised alternative without unnecessary disruption."
+      }
+    },
+    {
+      "id": "PIKKU-07",
+      "industry": "Hotel & Restaurant",
+      "bucketId": "pikku",
+      "title": "Housekeeping request was missed",
+      "shortDescription": "Handle a guest situation involving housekeeping request was missed through a natural workplace conversation.",
+      "staffRole": "guest-service / front desk staff",
+      "guestRole": "Hotel or restaurant guest/customer",
+      "mission": "Handle the housekeeping request was missed situation professionally, understand the guest's need, and move toward a realistic resolution without exceeding staff authority.",
+      "guestProfile": {
+        "personality": "frustrated",
+        "approximateAgeGroup": "adult 25–60",
+        "communicationStyle": "specific, refers to earlier request",
+        "emotionalState": "Their emotion is driven by the situation and should change in response to the learner's behaviour.",
+        "whatTheGuestCaresAboutMost": "the missed request being handled promptly"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "cooperative but concerned",
+          "resistance": "low; answers relevant questions and considers reasonable options",
+          "pressure": "low to moderate",
+          "guestBehaviour": "Clearly states the issue, answers focused questions, and considers a reasonable solution.",
+          "hiddenObjectives": [
+            "Identify exactly what housekeeping request was missed and when it was made.",
+            "Verify whether the request is recorded and why it has not been completed.",
+            "Coordinate the service or an authorised alternative.",
+            "Give a realistic update and confirm the guest's next step."
+          ],
+          "possibleSolutions": [
+            "Verify the request and contact housekeeping.",
+            "Use another approved service route if the normal route is unavailable.",
+            "Escalate repeated failure when the guest's need cannot be met promptly."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [],
+          "successCondition": "Confirm the missed request, coordinate the service, and give a realistic update or authorised alternative. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level2": {
+          "name": "MANAGE",
+          "customerMood": "frustrated and questioning",
+          "resistance": "medium; may withhold a useful detail, question the response, or reject the first option",
+          "pressure": "moderate; one realistic complication",
+          "guestBehaviour": "Shows visible frustration, gives information selectively, questions the staff member, and may reject the first solution before considering another.",
+          "hiddenObjectives": [
+            "Identify exactly what housekeeping request was missed and when it was made.",
+            "Verify whether the request is recorded and why it has not been completed.",
+            "Coordinate the service or an authorised alternative.",
+            "Give a realistic update and confirm the guest's next step.",
+            "Manage the guest's frustration while keeping the conversation focused on the practical resolution."
+          ],
+          "possibleSolutions": [
+            "Verify the request and contact housekeeping.",
+            "Use another approved service route if the normal route is unavailable.",
+            "Escalate repeated failure when the guest's need cannot be met promptly."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [
+            "The request was made earlier that day and the guest is leaving the room soon."
+          ],
+          "successCondition": "Confirm the missed request, coordinate the service, and give a realistic update or authorised alternative. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level3": {
+          "name": "CONTROL",
+          "customerMood": "angry/demanding and high-pressure",
+          "resistance": "high; may interrupt, challenge explanations, reject the first option, or request a manager",
+          "pressure": "high; two realistic complications",
+          "guestBehaviour": "Applies pressure, challenges vague answers, may interrupt or ask for a manager, and introduces complications naturally while remaining believable.",
+          "hiddenObjectives": [
+            "Identify exactly what housekeeping request was missed and when it was made.",
+            "Verify whether the request is recorded and why it has not been completed.",
+            "Coordinate the service or an authorised alternative.",
+            "Give a realistic update and confirm the guest's next step.",
+            "Remain professional under pressure and decide when escalation is appropriate without promising an unauthorised outcome."
+          ],
+          "possibleSolutions": [
+            "Verify the request and contact housekeeping.",
+            "Use another approved service route if the normal route is unavailable.",
+            "Escalate repeated failure when the guest's need cannot be met promptly."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [
+            "The request was made earlier that day and the guest is leaving the room soon.",
+            "The requested item is temporarily unavailable from the first department contacted, so another authorised option must be checked."
+          ],
+          "successCondition": "Confirm the missed request, coordinate the service, and give a realistic update or authorised alternative. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        }
+      },
+      "scenarioContext": {
+        "startingSituation": "The guest says a housekeeping request made earlier has not been completed.",
+        "knownFacts": [
+          "A housekeeping request was expected.",
+          "The guest says it was not completed."
+        ],
+        "factsToDiscover": [
+          "what was requested",
+          "when and how it was requested",
+          "whether the request was recorded",
+          "when the guest needs the service"
+        ],
+        "authorityBoundary": [
+          "Staff can verify the request and coordinate housekeeping.",
+          "Staff should not blame another employee or promise an exact completion time without checking."
+        ],
+        "resolutionTarget": "Confirm the missed request, coordinate the service, and give a realistic update or authorised alternative."
+      }
+    },
+    {
+      "id": "PIKKU-08",
+      "industry": "Hotel & Restaurant",
+      "bucketId": "pikku",
+      "title": "Belongings are missing from the room",
+      "shortDescription": "Handle a guest situation involving belongings are missing from the room through a natural workplace conversation.",
+      "staffRole": "front desk / guest-service staff",
+      "guestRole": "Hotel or restaurant guest/customer",
+      "mission": "Handle the belongings are missing from the room situation professionally, understand the guest's need, and move toward a realistic resolution without exceeding staff authority.",
+      "guestProfile": {
+        "personality": "worried",
+        "approximateAgeGroup": "adult 25–60",
+        "communicationStyle": "careful, asks what happens next",
+        "emotionalState": "Their emotion is driven by the situation and should change in response to the learner's behaviour.",
+        "whatTheGuestCaresAboutMost": "a safe, documented search and clear updates"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "cooperative but concerned",
+          "resistance": "low; answers relevant questions and considers reasonable options",
+          "pressure": "low to moderate",
+          "guestBehaviour": "Clearly states the issue, answers focused questions, and considers a reasonable solution.",
+          "hiddenObjectives": [
+            "Identify and document the missing personal item accurately.",
+            "Determine when and where it was last seen and who may have had authorised access.",
+            "Start the hotel's lost-property/security process without accusing anyone.",
+            "Set an honest expectation and confirm the guest knows the next step."
+          ],
+          "possibleSolutions": [
+            "Record the item description and relevant timeline.",
+            "Check authorised room/access/lost-property records and responsible departments.",
+            "Escalate to security/management according to hotel procedure when appropriate."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [],
+          "successCondition": "Document the missing-room item accurately, begin the authorised investigation process, and set an appropriate expectation. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level2": {
+          "name": "MANAGE",
+          "customerMood": "frustrated and questioning",
+          "resistance": "medium; may withhold a useful detail, question the response, or reject the first option",
+          "pressure": "moderate; one realistic complication",
+          "guestBehaviour": "Shows visible frustration, gives information selectively, questions the staff member, and may reject the first solution before considering another.",
+          "hiddenObjectives": [
+            "Identify and document the missing personal item accurately.",
+            "Determine when and where it was last seen and who may have had authorised access.",
+            "Start the hotel's lost-property/security process without accusing anyone.",
+            "Set an honest expectation and confirm the guest knows the next step.",
+            "Manage the guest's frustration while keeping the conversation focused on the practical resolution."
+          ],
+          "possibleSolutions": [
+            "Record the item description and relevant timeline.",
+            "Check authorised room/access/lost-property records and responsible departments.",
+            "Escalate to security/management according to hotel procedure when appropriate."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [
+            "The guest realises the missing item may have been left near the bathroom or inside a drawer and is unsure of the exact location."
+          ],
+          "successCondition": "Document the missing-room item accurately, begin the authorised investigation process, and set an appropriate expectation. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level3": {
+          "name": "CONTROL",
+          "customerMood": "angry/demanding and high-pressure",
+          "resistance": "high; may interrupt, challenge explanations, reject the first option, or request a manager",
+          "pressure": "high; two realistic complications",
+          "guestBehaviour": "Applies pressure, challenges vague answers, may interrupt or ask for a manager, and introduces complications naturally while remaining believable.",
+          "hiddenObjectives": [
+            "Identify and document the missing personal item accurately.",
+            "Determine when and where it was last seen and who may have had authorised access.",
+            "Start the hotel's lost-property/security process without accusing anyone.",
+            "Set an honest expectation and confirm the guest knows the next step.",
+            "Remain professional under pressure and decide when escalation is appropriate without promising an unauthorised outcome."
+          ],
+          "possibleSolutions": [
+            "Record the item description and relevant timeline.",
+            "Check authorised room/access/lost-property records and responsible departments.",
+            "Escalate to security/management according to hotel procedure when appropriate."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed.",
+            "Do not promise a room upgrade, room change, or extra bed unless availability and authority have been confirmed."
+          ],
+          "curveballs": [
+            "The guest realises the missing item may have been left near the bathroom or inside a drawer and is unsure of the exact location.",
+            "The item is valuable and the guest wants the report formally documented while the room-access history is checked."
+          ],
+          "successCondition": "Document the missing-room item accurately, begin the authorised investigation process, and set an appropriate expectation. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        }
+      },
+      "scenarioContext": {
+        "startingSituation": "The guest believes a personal belonging is missing from inside the guest room.",
+        "knownFacts": [
+          "The guest noticed a personal item is missing.",
+          "The guest believes it was last in the room."
+        ],
+        "factsToDiscover": [
+          "what the item is and how it is identifiable",
+          "where and when it was last seen",
+          "whether anyone else had access to the room",
+          "whether the guest has checked likely locations"
+        ],
+        "authorityBoundary": [
+          "Staff can document the report and follow the hotel's lost-property/security process.",
+          "Staff must not accuse housekeeping or another guest, declare theft as fact, or promise recovery."
+        ],
+        "resolutionTarget": "Document the missing-room item accurately, begin the authorised investigation process, and set an appropriate expectation."
+      }
+    },
+    {
+      "id": "PIKKU-09",
+      "industry": "Hotel & Restaurant",
+      "bucketId": "pikku",
+      "title": "Guest complains about poor service",
+      "shortDescription": "Handle a guest situation involving guest complains about poor service through a natural workplace conversation.",
+      "staffRole": "guest-service / front desk staff",
+      "guestRole": "Hotel or restaurant guest/customer",
+      "mission": "Handle the guest complains about poor service situation professionally, understand the guest's need, and move toward a realistic resolution without exceeding staff authority.",
+      "guestProfile": {
+        "personality": "frustrated",
+        "approximateAgeGroup": "adult 25–60",
+        "communicationStyle": "critical but explainable",
+        "emotionalState": "Their emotion is driven by the situation and should change in response to the learner's behaviour.",
+        "whatTheGuestCaresAboutMost": "to be heard and see meaningful corrective action"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "cooperative but concerned",
+          "resistance": "low; answers relevant questions and considers reasonable options",
+          "pressure": "low to moderate",
+          "guestBehaviour": "Clearly states the issue, answers focused questions, and considers a reasonable solution.",
+          "hiddenObjectives": [
+            "Identify the specific service failure rather than accepting only a general complaint.",
+            "Understand any second unresolved issue and its impact.",
+            "Offer an immediate authorised corrective action or escalation.",
+            "Confirm whether the guest considers the next step meaningful."
+          ],
+          "possibleSolutions": [
+            "Address the concrete service failure through the responsible team.",
+            "Document and escalate when the issue exceeds staff authority.",
+            "Avoid promising compensation or disciplinary action without approval."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [],
+          "successCondition": "Understand the concrete service failure, take an authorised corrective action or escalation, and confirm the guest's next step. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level2": {
+          "name": "MANAGE",
+          "customerMood": "frustrated and questioning",
+          "resistance": "medium; may withhold a useful detail, question the response, or reject the first option",
+          "pressure": "moderate; one realistic complication",
+          "guestBehaviour": "Shows visible frustration, gives information selectively, questions the staff member, and may reject the first solution before considering another.",
+          "hiddenObjectives": [
+            "Identify the specific service failure rather than accepting only a general complaint.",
+            "Understand any second unresolved issue and its impact.",
+            "Offer an immediate authorised corrective action or escalation.",
+            "Confirm whether the guest considers the next step meaningful.",
+            "Manage the guest's frustration while keeping the conversation focused on the practical resolution."
+          ],
+          "possibleSolutions": [
+            "Address the concrete service failure through the responsible team.",
+            "Document and escalate when the issue exceeds staff authority.",
+            "Avoid promising compensation or disciplinary action without approval."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [
+            "The guest identifies a second service failure from the same stay."
+          ],
+          "successCondition": "Understand the concrete service failure, take an authorised corrective action or escalation, and confirm the guest's next step. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level3": {
+          "name": "CONTROL",
+          "customerMood": "angry/demanding and high-pressure",
+          "resistance": "high; may interrupt, challenge explanations, reject the first option, or request a manager",
+          "pressure": "high; two realistic complications",
+          "guestBehaviour": "Applies pressure, challenges vague answers, may interrupt or ask for a manager, and introduces complications naturally while remaining believable.",
+          "hiddenObjectives": [
+            "Identify the specific service failure rather than accepting only a general complaint.",
+            "Understand any second unresolved issue and its impact.",
+            "Offer an immediate authorised corrective action or escalation.",
+            "Confirm whether the guest considers the next step meaningful.",
+            "Remain professional under pressure and decide when escalation is appropriate without promising an unauthorised outcome."
+          ],
+          "possibleSolutions": [
+            "Address the concrete service failure through the responsible team.",
+            "Document and escalate when the issue exceeds staff authority.",
+            "Avoid promising compensation or disciplinary action without approval."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [
+            "The guest identifies a second service failure from the same stay.",
+            "The guest says the unresolved issues have already affected an important part of the stay and asks what can be done immediately."
+          ],
+          "successCondition": "Understand the concrete service failure, take an authorised corrective action or escalation, and confirm the guest's next step. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        }
+      },
+      "scenarioContext": {
+        "startingSituation": "The guest is dissatisfied with the service received during the stay and wants the concern taken seriously.",
+        "knownFacts": [
+          "The guest believes service quality has been poor.",
+          "The guest wants a meaningful response rather than a generic apology."
+        ],
+        "factsToDiscover": [
+          "the specific service failure",
+          "when and where it happened",
+          "whether another unresolved issue remains",
+          "what immediate corrective action is possible"
+        ],
+        "authorityBoundary": [
+          "Staff can listen, document, coordinate corrective action, and escalate when required.",
+          "Staff should not promise compensation or disciplinary action without authority."
+        ],
+        "resolutionTarget": "Understand the concrete service failure, take an authorised corrective action or escalation, and confirm the guest's next step."
+      }
+    },
+    {
+      "id": "PIKKU-10",
+      "industry": "Hotel & Restaurant",
+      "bucketId": "pikku",
+      "title": "Guest demands to speak to the manager",
+      "shortDescription": "Handle a guest situation involving guest demands to speak to the manager through a natural workplace conversation.",
+      "staffRole": "front desk / guest-service staff",
+      "guestRole": "Hotel or restaurant guest/customer",
+      "mission": "Handle the guest demands to speak to the manager situation professionally, understand the guest's need, and move toward a realistic resolution without exceeding staff authority.",
+      "guestProfile": {
+        "personality": "angry",
+        "approximateAgeGroup": "adult 30–60",
+        "communicationStyle": "firm, escalatory",
+        "emotionalState": "Their emotion is driven by the situation and should change in response to the learner's behaviour.",
+        "whatTheGuestCaresAboutMost": "a serious response and access to the appropriate senior person"
+      },
+      "levels": {
+        "level1": {
+          "name": "HANDLE",
+          "customerMood": "cooperative but concerned",
+          "resistance": "low; answers relevant questions and considers reasonable options",
+          "pressure": "low to moderate",
+          "guestBehaviour": "Clearly states the issue, answers focused questions, and considers a reasonable solution.",
+          "hiddenObjectives": [
+            "Identify the core complaint so the manager receives useful information.",
+            "Acknowledge the guest's frustration and avoid making them repeat unnecessary details.",
+            "Arrange prompt manager contact and handle any immediate authorised need.",
+            "Confirm what will happen next."
+          ],
+          "possibleSolutions": [
+            "Summarise the complaint for the manager.",
+            "Contact the authorised manager and provide the guest with the next step.",
+            "Resolve any immediate service need that is within staff authority while escalation is underway."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [],
+          "successCondition": "Capture the essential complaint, arrange appropriate escalation, and help the guest with any immediate authorised next step. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level2": {
+          "name": "MANAGE",
+          "customerMood": "frustrated and questioning",
+          "resistance": "medium; may withhold a useful detail, question the response, or reject the first option",
+          "pressure": "moderate; one realistic complication",
+          "guestBehaviour": "Shows visible frustration, gives information selectively, questions the staff member, and may reject the first solution before considering another.",
+          "hiddenObjectives": [
+            "Identify the core complaint so the manager receives useful information.",
+            "Acknowledge the guest's frustration and avoid making them repeat unnecessary details.",
+            "Arrange prompt manager contact and handle any immediate authorised need.",
+            "Confirm what will happen next.",
+            "Manage the guest's frustration while keeping the conversation focused on the practical resolution."
+          ],
+          "possibleSolutions": [
+            "Summarise the complaint for the manager.",
+            "Contact the authorised manager and provide the guest with the next step.",
+            "Resolve any immediate service need that is within staff authority while escalation is underway."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [
+            "The guest says they do not want to repeat the full complaint to multiple staff members."
+          ],
+          "successCondition": "Capture the essential complaint, arrange appropriate escalation, and help the guest with any immediate authorised next step. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        },
+        "level3": {
+          "name": "CONTROL",
+          "customerMood": "angry/demanding and high-pressure",
+          "resistance": "high; may interrupt, challenge explanations, reject the first option, or request a manager",
+          "pressure": "high; two realistic complications",
+          "guestBehaviour": "Applies pressure, challenges vague answers, may interrupt or ask for a manager, and introduces complications naturally while remaining believable.",
+          "hiddenObjectives": [
+            "Identify the core complaint so the manager receives useful information.",
+            "Acknowledge the guest's frustration and avoid making them repeat unnecessary details.",
+            "Arrange prompt manager contact and handle any immediate authorised need.",
+            "Confirm what will happen next.",
+            "Remain professional under pressure and decide when escalation is appropriate without promising an unauthorised outcome."
+          ],
+          "possibleSolutions": [
+            "Summarise the complaint for the manager.",
+            "Contact the authorised manager and provide the guest with the next step.",
+            "Resolve any immediate service need that is within staff authority while escalation is underway."
+          ],
+          "acceptableOutcomes": [
+            "CUSTOMER_HAPPY: the issue is resolved and the guest is satisfied with the handling.",
+            "CUSTOMER_ACCEPTED: the guest accepts a realistic solution or next step.",
+            "CUSTOMER_UNHAPPY: the limitation remains, but the learner handled it honestly and professionally.",
+            "ESCALATED: a manager or authorised senior person genuinely needs to take over."
+          ],
+          "unacceptablePromises": [
+            "Do not promise a result, availability, compensation, or completion time before checking.",
+            "Do not claim another department or manager has approved an action when that has not been confirmed."
+          ],
+          "curveballs": [
+            "The guest says they do not want to repeat the full complaint to multiple staff members.",
+            "The guest needs an immediate practical action while the manager is being contacted."
+          ],
+          "successCondition": "Capture the essential complaint, arrange appropriate escalation, and help the guest with any immediate authorised next step. The learner should also communicate clearly, remain professional, and reach a clear accepted next step without exceeding authority.",
+          "failureCondition": "The learner fails to establish the relevant facts, gives misleading or unsupported information, makes an unauthorised promise, behaves unprofessionally, ignores a material safety/service concern, or reaches the round limit without meaningful progress toward the resolution target."
+        }
+      },
+      "scenarioContext": {
+        "startingSituation": "The guest is demanding to speak with a manager about a hotel service problem.",
+        "knownFacts": [
+          "The guest wants senior attention.",
+          "There is an underlying complaint that should still be understood."
+        ],
+        "factsToDiscover": [
+          "the core complaint",
+          "what has already been attempted",
+          "whether there is an immediate safety/service issue",
+          "what the guest needs while the manager is contacted"
+        ],
+        "authorityBoundary": [
+          "Staff can document the complaint and contact an authorised manager.",
+          "Staff should not promise what the manager will decide."
+        ],
+        "resolutionTarget": "Capture the essential complaint, arrange appropriate escalation, and help the guest with any immediate authorised next step."
+      }
+    }
+  ]
+}

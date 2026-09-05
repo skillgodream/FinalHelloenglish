@@ -1,0 +1,1096 @@
+{
+  "version": "1.0.0",
+  "records": [
+    {
+      "id": "REF_0001",
+      "sentence": "i wake up early morning and take bath",
+      "normalizedMeaning": "I woke up early in the morning and took a bath.",
+      "category": "DAILY",
+      "activities": [
+        "wake up",
+        "bath",
+        "morning routine"
+      ],
+      "intent": "Daily Morning Routine"
+    },
+    {
+      "id": "REF_0002",
+      "sentence": "reach office on time today morning",
+      "normalizedMeaning": "I arrived at the office on time this morning.",
+      "category": "WORK",
+      "activities": [
+        "office",
+        "commute",
+        "on time"
+      ],
+      "intent": "Workplace Punctuality"
+    },
+    {
+      "id": "REF_0003",
+      "sentence": "manager gave extra work in warehouse",
+      "normalizedMeaning": "My manager assigned extra tasks in the warehouse.",
+      "category": "WORK",
+      "activities": [
+        "warehouse",
+        "manager",
+        "tasks"
+      ],
+      "intent": "Workload & Assignments"
+    },
+    {
+      "id": "REF_0004",
+      "sentence": "in evening meet friend for tea",
+      "normalizedMeaning": "In the evening, I met my friend for tea.",
+      "category": "FRIENDS",
+      "activities": [
+        "tea",
+        "friends",
+        "evening"
+      ],
+      "intent": "Socializing & Leisure"
+    },
+    {
+      "id": "REF_0005",
+      "sentence": "customer angry because order delay",
+      "normalizedMeaning": "The customer was upset due to a delayed delivery.",
+      "category": "WORK",
+      "activities": [
+        "customer",
+        "delay",
+        "order"
+      ],
+      "intent": "Customer De-escalation"
+    },
+    {
+      "id": "REF_0006",
+      "sentence": "aaj mera din acha nahi tha",
+      "normalizedMeaning": "My day was not good.",
+      "category": "DAILY",
+      "activities": [
+        "day summary",
+        "feeling down"
+      ],
+      "intent": "Daily Experience Sharing"
+    },
+    {
+      "id": "REF_0007",
+      "sentence": "maine khana kha liya",
+      "normalizedMeaning": "I have had my food.",
+      "category": "DAILY",
+      "activities": [
+        "dinner",
+        "lunch",
+        "eating"
+      ],
+      "intent": "Meal & Nutrition"
+    },
+    {
+      "id": "REF_0008",
+      "sentence": "aaj khelne nahi gaya",
+      "normalizedMeaning": "I didn't go out to play today.",
+      "category": "FRIENDS",
+      "activities": [
+        "play",
+        "sports",
+        "cricket"
+      ],
+      "intent": "Recreation & Sports"
+    },
+    {
+      "id": "REF_0009",
+      "sentence": "bahut thak gaya hoon",
+      "normalizedMeaning": "I was very tired today.",
+      "category": "DAILY",
+      "activities": [
+        "tired",
+        "rest",
+        "fatigue"
+      ],
+      "intent": "Physical Well-being"
+    },
+    {
+      "id": "REF_0010",
+      "sentence": "market gaya tha shopping ke liye",
+      "normalizedMeaning": "I went to the market for shopping.",
+      "category": "DAILY",
+      "activities": [
+        "market",
+        "shopping",
+        "groceries"
+      ],
+      "intent": "Errands & Shopping"
+    },
+    {
+      "id": "MEANING_0001",
+      "sentence": "morning_routine",
+      "normalizedMeaning": "daily morning activities",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_DAY_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0002",
+      "sentence": "food",
+      "normalizedMeaning": "eating or preparing food",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_DAY_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0003",
+      "sentence": "cooking",
+      "normalizedMeaning": "preparing a meal",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_DAY_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0004",
+      "sentence": "shopping",
+      "normalizedMeaning": "buying items from a shop or market",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_DAY_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0005",
+      "sentence": "groceries",
+      "normalizedMeaning": "buying household food items",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_DAY_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0006",
+      "sentence": "family",
+      "normalizedMeaning": "activity involving a family member",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_FAMILY_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0007",
+      "sentence": "parents",
+      "normalizedMeaning": "talking to or helping parents",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_FAMILY_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0008",
+      "sentence": "children",
+      "normalizedMeaning": "caring for or helping children",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_FAMILY_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0009",
+      "sentence": "health",
+      "normalizedMeaning": "describing health or feeling unwell",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_HEALTH_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0010",
+      "sentence": "medicine",
+      "normalizedMeaning": "taking, buying or discussing medicine",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_HEALTH_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0011",
+      "sentence": "travel",
+      "normalizedMeaning": "moving from one place to another",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_TRAVEL_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0012",
+      "sentence": "banking",
+      "normalizedMeaning": "bank or account activity",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_FINANCE_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0013",
+      "sentence": "bill_payment",
+      "normalizedMeaning": "paying a household or service bill",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_FINANCE_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0014",
+      "sentence": "finance",
+      "normalizedMeaning": "receiving, transferring or managing money",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_FINANCE_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0015",
+      "sentence": "house_cleaning",
+      "normalizedMeaning": "cleaning or arranging the home",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_HOME_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0016",
+      "sentence": "laundry",
+      "normalizedMeaning": "washing, drying or folding clothes",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_HOME_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0017",
+      "sentence": "home_repair",
+      "normalizedMeaning": "repairing or arranging repair of something at home",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_HOME_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0018",
+      "sentence": "exercise",
+      "normalizedMeaning": "walking, stretching or exercising",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_HEALTH_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0019",
+      "sentence": "hobby",
+      "normalizedMeaning": "doing a personal hobby",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_FREE_TIME_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0020",
+      "sentence": "entertainment",
+      "normalizedMeaning": "watching, listening or other entertainment",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_FREE_TIME_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0021",
+      "sentence": "visitor",
+      "normalizedMeaning": "receiving or meeting a visitor at home",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0022",
+      "sentence": "errand",
+      "normalizedMeaning": "completing a small necessary outside task",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_DAY_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0023",
+      "sentence": "problem",
+      "normalizedMeaning": "describing a daily-life problem and response",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_PROBLEM"
+    },
+    {
+      "id": "MEANING_0024",
+      "sentence": "emotion",
+      "normalizedMeaning": "describing a feeling or reaction",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_EMOTION"
+    },
+    {
+      "id": "MEANING_0025",
+      "sentence": "communication",
+      "normalizedMeaning": "calling, messaging or talking to someone",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_COMMUNICATION"
+    },
+    {
+      "id": "MEANING_0026",
+      "sentence": "documents",
+      "normalizedMeaning": "finding, carrying or organizing documents",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_DAY_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0027",
+      "sentence": "sleep",
+      "normalizedMeaning": "preparing for or going to sleep",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_DAY_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0028",
+      "sentence": "weather",
+      "normalizedMeaning": "describing weather affecting an activity",
+      "category": "DAILY",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_DAY_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0029",
+      "sentence": "meeting",
+      "normalizedMeaning": "meeting a friend or group",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0030",
+      "sentence": "call",
+      "normalizedMeaning": "calling or speaking with a friend",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0031",
+      "sentence": "visit",
+      "normalizedMeaning": "visiting a friend",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0032",
+      "sentence": "outing",
+      "normalizedMeaning": "going out with friends",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0033",
+      "sentence": "food",
+      "normalizedMeaning": "eating or having tea with friends",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0034",
+      "sentence": "sports",
+      "normalizedMeaning": "playing or discussing sport with friends",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0035",
+      "sentence": "job",
+      "normalizedMeaning": "talking about work or jobs with a friend",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_CONVERSATION"
+    },
+    {
+      "id": "MEANING_0036",
+      "sentence": "money",
+      "normalizedMeaning": "talking about money or expenses with a friend",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_CONVERSATION"
+    },
+    {
+      "id": "MEANING_0037",
+      "sentence": "travel",
+      "normalizedMeaning": "planning or discussing travel with friends",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_CONVERSATION"
+    },
+    {
+      "id": "MEANING_0038",
+      "sentence": "support",
+      "normalizedMeaning": "helping or encouraging a friend",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_SUPPORT"
+    },
+    {
+      "id": "MEANING_0039",
+      "sentence": "good_news",
+      "normalizedMeaning": "sharing or hearing positive news",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_CONVERSATION"
+    },
+    {
+      "id": "MEANING_0040",
+      "sentence": "bad_news",
+      "normalizedMeaning": "sharing or hearing difficult news",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_CONVERSATION"
+    },
+    {
+      "id": "MEANING_0041",
+      "sentence": "disagreement",
+      "normalizedMeaning": "having or resolving a disagreement",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_CONVERSATION"
+    },
+    {
+      "id": "MEANING_0042",
+      "sentence": "plan",
+      "normalizedMeaning": "making or changing a plan with friends",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_PLANNING"
+    },
+    {
+      "id": "MEANING_0043",
+      "sentence": "group_chat",
+      "normalizedMeaning": "messaging in a group",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_COMMUNICATION"
+    },
+    {
+      "id": "MEANING_0044",
+      "sentence": "celebration",
+      "normalizedMeaning": "celebrating with friends",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0045",
+      "sentence": "advice",
+      "normalizedMeaning": "giving or receiving advice",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_SUPPORT"
+    },
+    {
+      "id": "MEANING_0046",
+      "sentence": "apology",
+      "normalizedMeaning": "apologizing or resolving a misunderstanding",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_CONVERSATION"
+    },
+    {
+      "id": "MEANING_0047",
+      "sentence": "memory",
+      "normalizedMeaning": "talking about past memories",
+      "category": "FRIENDS",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_SOCIAL_CONVERSATION"
+    },
+    {
+      "id": "MEANING_0048",
+      "sentence": "commute",
+      "normalizedMeaning": "travelling to or from work",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0049",
+      "sentence": "inbound",
+      "normalizedMeaning": "receiving incoming goods",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0050",
+      "sentence": "outbound",
+      "normalizedMeaning": "preparing outgoing goods",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0051",
+      "sentence": "inventory",
+      "normalizedMeaning": "checking or updating stock",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0052",
+      "sentence": "picking",
+      "normalizedMeaning": "selecting items for an order",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0053",
+      "sentence": "packing",
+      "normalizedMeaning": "packing items for an order",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0054",
+      "sentence": "quality",
+      "normalizedMeaning": "checking product or packing quality",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_QUALITY"
+    },
+    {
+      "id": "MEANING_0055",
+      "sentence": "loading",
+      "normalizedMeaning": "loading goods into a vehicle",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0056",
+      "sentence": "unloading",
+      "normalizedMeaning": "unloading goods from a vehicle",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0057",
+      "sentence": "dispatch",
+      "normalizedMeaning": "preparing or sending shipments",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0058",
+      "sentence": "delay",
+      "normalizedMeaning": "describing a work delay",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_PROBLEM"
+    },
+    {
+      "id": "MEANING_0059",
+      "sentence": "mistake",
+      "normalizedMeaning": "describing a work mistake and correction",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_PROBLEM"
+    },
+    {
+      "id": "MEANING_0060",
+      "sentence": "target",
+      "normalizedMeaning": "describing work targets or completion",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_PERFORMANCE"
+    },
+    {
+      "id": "MEANING_0061",
+      "sentence": "meeting",
+      "normalizedMeaning": "participating in a work meeting",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_COMMUNICATION"
+    },
+    {
+      "id": "MEANING_0062",
+      "sentence": "instruction",
+      "normalizedMeaning": "receiving or giving a work instruction",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_COMMUNICATION"
+    },
+    {
+      "id": "MEANING_0063",
+      "sentence": "training",
+      "normalizedMeaning": "teaching or learning a work process",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_TRAINING"
+    },
+    {
+      "id": "MEANING_0064",
+      "sentence": "helping",
+      "normalizedMeaning": "helping a colleague",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_SUPPORT"
+    },
+    {
+      "id": "MEANING_0065",
+      "sentence": "safety",
+      "normalizedMeaning": "reporting or responding to a safety issue",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_SAFETY"
+    },
+    {
+      "id": "MEANING_0066",
+      "sentence": "equipment",
+      "normalizedMeaning": "using or reporting an equipment issue",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_PROBLEM"
+    },
+    {
+      "id": "MEANING_0067",
+      "sentence": "vendor",
+      "normalizedMeaning": "communicating about vendor goods or delivery",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_COMMUNICATION"
+    },
+    {
+      "id": "MEANING_0068",
+      "sentence": "supervisor",
+      "normalizedMeaning": "communicating with a supervisor",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_COMMUNICATION"
+    },
+    {
+      "id": "MEANING_0069",
+      "sentence": "manager",
+      "normalizedMeaning": "communicating with a manager",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_COMMUNICATION"
+    },
+    {
+      "id": "MEANING_0070",
+      "sentence": "stock",
+      "normalizedMeaning": "checking stock levels",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0071",
+      "sentence": "reporting",
+      "normalizedMeaning": "reporting work status or a problem",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_REPORTING"
+    },
+    {
+      "id": "MEANING_0072",
+      "sentence": "attendance",
+      "normalizedMeaning": "arriving, marking attendance or starting shift",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0073",
+      "sentence": "break",
+      "normalizedMeaning": "taking or returning from a work break",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0074",
+      "sentence": "pressure",
+      "normalizedMeaning": "describing work pressure",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_EMOTION"
+    },
+    {
+      "id": "MEANING_0075",
+      "sentence": "customer",
+      "normalizedMeaning": "handling a customer/order issue",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_PROBLEM"
+    },
+    {
+      "id": "MEANING_0076",
+      "sentence": "feedback",
+      "normalizedMeaning": "receiving or discussing feedback",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_COMMUNICATION"
+    },
+    {
+      "id": "MEANING_0077",
+      "sentence": "handover",
+      "normalizedMeaning": "handing over or receiving pending work",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_COMMUNICATION"
+    },
+    {
+      "id": "MEANING_0078",
+      "sentence": "cleaning",
+      "normalizedMeaning": "cleaning the work area",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_ACTIVITY"
+    },
+    {
+      "id": "MEANING_0079",
+      "sentence": "system",
+      "normalizedMeaning": "using or reporting a work-system issue",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_PROBLEM"
+    },
+    {
+      "id": "MEANING_0080",
+      "sentence": "communication",
+      "normalizedMeaning": "communicating about a work task",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_COMMUNICATION"
+    },
+    {
+      "id": "MEANING_0081",
+      "sentence": "achievement",
+      "normalizedMeaning": "describing successful work completion",
+      "category": "WORK",
+      "activities": [
+        "activities",
+        "sentence",
+        "normalizedMeaning"
+      ],
+      "intent": "REPORT_WORK_PERFORMANCE"
+    }
+  ]
+}
