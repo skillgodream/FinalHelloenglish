@@ -13,7 +13,41 @@ import {
   MessageCircle,
   HelpCircle,
 } from 'lucide-react';
-import { speakWithSarvam, stopAudio } from '../utils/audio';
+
+// Self-contained audio playback to eliminate any Rollup import/module resolution issues on Vercel
+let activeAudioElement: HTMLAudioElement | null = null;
+
+const stopAudio = () => {
+  if (activeAudioElement) {
+    try {
+      activeAudioElement.pause();
+      activeAudioElement.currentTime = 0;
+    } catch (e) {
+      // ignore
+    }
+    activeAudioElement = null;
+  }
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    try {
+      window.speechSynthesis.cancel();
+    } catch (e) {
+      // ignore
+    }
+  }
+};
+
+const speakFallbackWebSpeech = (text: string) => {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
+  try {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-IN';
+    utterance.rate = 0.94;
+    window.speechSynthesis.speak(utterance);
+  } catch (e) {
+    console.warn('Web Speech fallback error:', e);
+  }
+};
 
 interface Message {
   id: string;
@@ -135,13 +169,30 @@ export const BuddyView: React.FC = () => {
     if (ttsAudioMuted) return;
     setIsBuddySpeaking(true);
     try {
-      await speakWithSarvam(text, {
-        speaker: 'ritu',
-        pace: 0.94,
-        loudness: 1.0,
+      const res = await fetch('/api/tts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          text,
+          lang: 'en-IN',
+          speaker: 'ritu',
+          pace: 0.94,
+          loudness: 1.0,
+        }),
       });
+      const data = await res.json();
+      const audioSrc = data.audioData || (data.audioBase64 ? `data:audio/wav;base64,${data.audioBase64}` : null);
+      if (audioSrc) {
+        stopAudio();
+        const audio = new Audio(audioSrc);
+        activeAudioElement = audio;
+        await audio.play();
+      } else {
+        speakFallbackWebSpeech(text);
+      }
     } catch (err) {
       console.warn('Speech playback fallback:', err);
+      speakFallbackWebSpeech(text);
     } finally {
       setIsBuddySpeaking(false);
     }
