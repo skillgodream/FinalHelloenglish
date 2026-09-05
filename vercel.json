@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "api/tts.ts": {
-      "runtime": "nodejs24.x"
-    }
-  }
-}
