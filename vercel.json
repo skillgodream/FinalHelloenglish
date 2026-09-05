@@ -1,28 +1,21 @@
 {
   "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "source": "/api/tts",
+      "destination": "/api/tts.ts"
     },
     {
-      "src": "api/tts.ts",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/tts",
-      "dest": "api/tts.ts"
+      "source": "/api/(.*)",
+      "destination": "/server.ts"
     },
     {
-      "src": "/api/(.*)",
-      "dest": "dist/server.cjs"
+      "source": "/assets/(.*)",
+      "destination": "/dist/assets/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/dist/index.html"
     }
   ]
 }
