@@ -97,7 +97,7 @@ export const BuddyView: React.FC = () => {
           // ignore
         }
       }
-      stopSarvamSpeech();
+      stopAudio();
     };
   }, []);
 
@@ -118,7 +118,7 @@ export const BuddyView: React.FC = () => {
       setIsListening(false);
     } else {
       if (isBuddySpeaking) {
-        stopSarvamSpeech();
+        stopAudio();
         setIsBuddySpeaking(false);
       }
       if (recognitionRef.current) {
