@@ -13,7 +13,7 @@ import {
   MessageCircle,
   HelpCircle,
 } from 'lucide-react';
-import { speakWithSarvam, stopSarvamSpeech } from '../utils/audio';
+import { speakWithSarvam, stopAudio } from '../utils/audio';
 
 interface Message {
   id: string;
