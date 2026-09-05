@@ -1,21 +1,7 @@
 {
-  "version": 2,
-  "rewrites": [
-    {
-      "source": "/api/tts",
-      "destination": "/api/tts.ts"
-    },
-    {
-      "source": "/api/(.*)",
-      "destination": "/server.ts"
-    },
-    {
-      "source": "/assets/(.*)",
-      "destination": "/dist/assets/$1"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/dist/index.html"
+  "functions": {
+    "api/tts.ts": {
+      "runtime": "nodejs24.x"
     }
-  ]
+  }
 }
