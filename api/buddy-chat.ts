@@ -27,6 +27,20 @@ export default async function handler(req: any, res: any) {
         hinglishAck: "Achha, toh bohot traffic tha! 🚗",
       };
     }
+    if (lower.includes("dost") || lower.includes("friend")) {
+      return {
+        meaning: "Learner met with a friend",
+        english: lower.includes("khana") ? "I went to my friend's place and had food." : "I met my friend today.",
+        hinglishAck: "Achha, aap dost se mile! 😊",
+      };
+    }
+    if (lower.includes("khana") || lower.includes("food") || lower.includes("lunch") || lower.includes("dinner")) {
+      return {
+        meaning: "Learner ate food",
+        english: "I had some food and relaxed.",
+        hinglishAck: "Achha, aapne khana khaya! 🍲",
+      };
+    }
     if (lower.includes("boss") || lower.includes("manager") || lower.includes("daant")) {
       return {
         meaning: "Issue with boss or manager",
@@ -63,9 +77,9 @@ export default async function handler(req: any, res: any) {
       };
     }
     return {
-      meaning: "Learner is not doing well",
-      english: "I am not doing well.",
-      hinglishAck: "Achha, toh aap theek nahi ho 😊",
+      meaning: "Learner shared what they did",
+      english: "I had a busy day.",
+      hinglishAck: "Achha, main samajh gaya 😊",
     };
   };
 
@@ -101,6 +115,8 @@ export default async function handler(req: any, res: any) {
         improvement = "I am not doing well.";
       } else if (lowerMsg.includes("traffic")) {
         improvement = "There was too much traffic.";
+      } else if (lowerMsg.includes("dost") || lowerMsg.includes("friend")) {
+        improvement = "I went to my friend's house.";
       } else {
         improvement = cleanMsg.charAt(0).toUpperCase() + cleanMsg.slice(1);
         if (!improvement.endsWith(".")) improvement += ".";
@@ -157,7 +173,7 @@ export default async function handler(req: any, res: any) {
 
     const isHindi =
       /[\u0900-\u097F]/.test(cleanMsg) ||
-      /\b(nahi|acha|achha|theek|thik|hoon|hun|hai|mera|meri|aaj|din|kuch|bahut|bohot|kya|kyun|kaise|kar|raha|rahi|gaya|gayi|gaye|thi|tha|the|main|mai|bus|kharab|gaadi|traffic|office|yaar)\b/i.test(lowerMsg);
+      /\b(nahi|acha|achha|theek|thik|hoon|hun|hai|mera|meri|aaj|din|kuch|bahut|bohot|kya|kyun|kaise|kar|raha|rahi|gaya|gayi|gaye|thi|tha|the|main|mai|bus|kharab|gaadi|traffic|office|yaar|dost|khana)\b/i.test(lowerMsg);
 
     const isBrokenEnglish =
       !isHindi &&
@@ -215,6 +231,7 @@ Return ONLY valid JSON matching this schema:
     const startTime = Date.now();
     const candidateModels = ["llama-3.1-8b-instant", "llama-3.3-70b-versatile"];
     let response: any = null;
+    let lastGroqError = "";
 
     for (const model of candidateModels) {
       try {
@@ -222,7 +239,7 @@ Return ONLY valid JSON matching this schema:
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${groqKey.trim()}`,
+            Authorization: `Bearer ${groqKey.trim().replace(/^Bearer\s+/i, "")}`,
           },
           body: JSON.stringify({
             model,
@@ -241,15 +258,21 @@ Return ONLY valid JSON matching this schema:
           break;
         } else {
           const errBody = await res.text();
+          lastGroqError = `Groq ${model} status ${res.status}: ${errBody}`;
           console.warn(`[Groq ${model} Error ${res.status}]:`, errBody);
         }
-      } catch (e) {
+      } catch (e: any) {
         console.warn(`[Groq ${model} fetch failed]:`, e);
+        lastGroqError = `Fetch failed: ${e?.message || e}`;
       }
     }
 
     if (!response || !response.ok) {
-      return res.status(200).json(getLocalRuleResponse(cleanMsg, isHindi, isBrokenEnglish, exchangeCount));
+      const fallback = getLocalRuleResponse(cleanMsg, isHindi, isBrokenEnglish, exchangeCount);
+      return res.status(200).json({
+        ...fallback,
+        debugError: lastGroqError,
+      });
     }
 
     const data = await response.json();
