@@ -1,767 +1,522 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'motion/react';
-import { 
-  Mic, 
-  MicOff, 
-  Send, 
-  Volume2, 
+import {
+  Mic,
+  MicOff,
+  Send,
+  Volume2,
   VolumeX,
-  Bot, 
-  User, 
-  Sparkles, 
-  ArrowLeft, 
-  MessageSquare, 
-  CheckCircle2, 
-  Award, 
-  Target, 
+  Play,
+  Award,
+  Sparkles,
   ArrowRight,
-  RotateCcw,
   TrendingUp,
-  Check,
-  FileText,
+  MessageCircle,
+  HelpCircle,
 } from 'lucide-react';
-import { speakText, stopSpeaking, soundFx, getPreferredVoice, setPreferredVoice } from '../utils/audio';
-import { EnglishProgressScreen } from '../components/myday/EnglishProgressScreen';
+import { speakWithSarvam, stopSarvamSpeech } from '../utils/audio.ts';
 
-interface BuddyMessage {
+interface Message {
   id: string;
-  sender: 'buddy' | 'user';
+  sender: 'buddy' | 'learner';
   text: string;
-  nextQuestion?: string;
-  rephrase?: string;
-  subtleRecast?: string;
-  awaitingEnglishRetry?: boolean;
-  timestamp: number;
+  hindiSupport?: string;
+  timestamp: Date;
+  suggestedPhrasing?: string;
 }
 
-interface BuddySummary {
-  whatWeTalkedAbout: string;
-  overallScore?: number;
-  detailedScores?: {
-    overallScore: number;
-    expression: { score: number; rating: string };
-    grammar: { score: number; rating: string };
-    sentenceMaking: { score: number; rating: string };
-    details: { score: number; rating: string };
-    confidence: { score: number; rating: string };
-  };
-  ratings: {
-    speaking: 'Great' | 'Good' | 'Getting Better' | 'Needs Practice';
-    fluency: 'Great' | 'Good' | 'Getting Better' | 'Needs Practice';
-    confidence: 'Great' | 'Good' | 'Getting Better' | 'Needs Practice';
-    conversationFlow: 'Great' | 'Good' | 'Getting Better' | 'Needs Practice';
-  };
-  strengths: string[];
-  improvementAreas: string[];
-  naturalCorrections: Array<{
-    learnerSaid: string;
-    betterEnglish: string;
-    explanation: string;
-  }>;
-  nextTimeGoal: string;
-}
-
-interface BuddyViewProps {
-  onStartPractice?: () => void;
-  onBack?: () => void;
-  language?: 'en' | 'hi';
-}
-
-export const BuddyView: React.FC<BuddyViewProps> = ({ onBack }) => {
-  const [messages, setMessages] = useState<BuddyMessage[]>([
-    {
-      id: '1',
-      sender: 'buddy',
-      text: "Hello! I'm your English Buddy 😊 How are you today?",
-      timestamp: Date.now()
-    }
-  ]);
-  const [inputMessage, setInputMessage] = useState('');
-  const [isRecording, setIsRecording] = useState(false);
-  const [isThinking, setIsThinking] = useState(false);
+export const BuddyView: React.FC = () => {
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [inputText, setInputText] = useState('');
+  const [isListening, setIsListening] = useState(false);
+  const [isBuddySpeaking, setIsBuddySpeaking] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [sessionStarted, setSessionStarted] = useState(false);
   const [exchangeCount, setExchangeCount] = useState(0);
-  const [isSummaryView, setIsSummaryView] = useState(false);
-  const [summaryData, setSummaryData] = useState<BuddySummary | null>(null);
-  const [isLoadingSummary, setIsLoadingSummary] = useState(false);
-  const [isProgressScreenOpen, setIsProgressScreenOpen] = useState(false);
-  const [voiceEnabled] = useState(true);
-  const [currentVoice, setCurrentVoice] = useState(getPreferredVoice());
-  const [playingId, setPlayingId] = useState<string | null>(null);
+  const [sessionCompleted, setSessionCompleted] = useState(false);
+  const [summaryData, setSummaryData] = useState<any>(null);
+  const [awaitingRetry, setAwaitingRetry] = useState(false);
+  const [retryPrompt, setRetryPrompt] = useState('');
+  const [ttsAudioMuted, setTtsAudioMuted] = useState(false);
+  const [interimTranscript, setInterimTranscript] = useState('');
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const messagesContainerRef = useRef<HTMLDivElement>(null);
   const recognitionRef = useRef<any>(null);
-  const spokenMessageIdsRef = useRef<Set<string>>(new Set());
 
-  // Cleanup audio on unmount
+  // Initialize Speech Recognition
   useEffect(() => {
-    return () => {
-      stopSpeaking();
-    };
-  }, []);
+    if (typeof window !== 'undefined') {
+      const SpeechRecognition =
+        (window as any).SpeechRecognition ||
+        (window as any).webkitSpeechRecognition;
 
-  useEffect(() => {
-    if (messagesContainerRef.current) {
-      messagesContainerRef.current.scrollTo({
-        top: messagesContainerRef.current.scrollHeight,
-        behavior: 'smooth',
-      });
-    } else {
-      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [messages, isThinking]);
+      if (SpeechRecognition) {
+        const recognition = new SpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = true;
+        recognition.lang = 'en-IN';
 
-  // Voice synthesis for latest buddy message - strictly single execution per message
-  useEffect(() => {
-    if (!voiceEnabled || messages.length === 0 || isSummaryView) return;
-    const lastMsg = messages[messages.length - 1];
-    if (lastMsg.sender === 'buddy') {
-      // Guard against duplicate playback of the same message
-      if (spokenMessageIdsRef.current.has(lastMsg.id)) {
-        return;
-      }
-      spokenMessageIdsRef.current.add(lastMsg.id);
+        recognition.onstart = () => {
+          setIsListening(true);
+        };
 
-      setPlayingId(lastMsg.id);
-      speakText(
-        lastMsg.text,
-        'en-IN',
-        0.94,
-        () => {
-          setPlayingId(null);
-        },
-        currentVoice
-      );
-    }
-  }, [messages, voiceEnabled, isSummaryView, currentVoice]);
-
-  // Speech recognition setup
-  useEffect(() => {
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (SpeechRecognition) {
-      const recognition = new SpeechRecognition();
-      recognition.continuous = false;
-      recognition.interimResults = true;
-      recognition.lang = 'en-IN';
-
-      recognition.onstart = () => {
-        setIsRecording(true);
-        soundFx.playBubbleStart();
-      };
-
-      recognition.onresult = (event: any) => {
-        let transcript = '';
-        for (let i = event.resultIndex; i < event.results.length; ++i) {
-          transcript += event.results[i][0].transcript;
-        }
-        if (transcript) {
-          setInputMessage(transcript);
-        }
-      };
-
-      recognition.onerror = () => setIsRecording(false);
-      recognition.onend = () => setIsRecording(false);
-
-      recognitionRef.current = recognition;
-    }
-  }, []);
-
-  const toggleRecording = () => {
-    if (!recognitionRef.current) {
-      alert('Speech recognition is not supported in this browser. Please type your message below!');
-      return;
-    }
-    if (isRecording) {
-      recognitionRef.current.stop();
-      setIsRecording(false);
-    } else {
-      try {
-        recognitionRef.current.start();
-      } catch (e) {
-        console.warn(e);
-      }
-    }
-  };
-
-  const fetchSummary = async (conversationHistory: BuddyMessage[]) => {
-    setIsLoadingSummary(true);
-    try {
-      const response = await fetch('/api/buddy-chat/summary', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ history: conversationHistory })
-      });
-      if (response.ok) {
-        const data = await response.json();
-        setSummaryData(data);
-        setIsSummaryView(true);
-      } else {
-        throw new Error("Summary API failed");
-      }
-    } catch (e) {
-      console.warn("Using fallback summary payload", e);
-      const fallbackSummary: BuddySummary = {
-        whatWeTalkedAbout: "Daily activities, routine management, and expressing completion states.",
-        overallScore: 84,
-        detailedScores: {
-          overallScore: 84,
-          expression: { score: 85, rating: "Good" },
-          grammar: { score: 80, rating: "Getting Better" },
-          sentenceMaking: { score: 85, rating: "Good" },
-          details: { score: 85, rating: "Good" },
-          confidence: { score: 90, rating: "Great" }
-        },
-        ratings: {
-          speaking: 'Good',
-          fluency: 'Getting Better',
-          confidence: 'Great',
-          conversationFlow: 'Good'
-        },
-        strengths: ["Strong voice clarity during imitation retries", "Excellent response initiative"],
-        improvementAreas: ["Tense agreement when stating past actions"],
-        naturalCorrections: [
-          {
-            learnerSaid: "My brother buy phone.",
-            betterEnglish: "My brother bought a phone.",
-            explanation: "Past events use past tense 'bought' instead of root verb 'buy'."
+        recognition.onresult = (event: any) => {
+          let current = '';
+          for (let i = event.resultIndex; i < event.results.length; ++i) {
+            if (event.results[i].isFinal) {
+              const transcript = event.results[i][0].transcript;
+              setInputText(transcript);
+              setInterimTranscript('');
+              handleSendMessage(transcript);
+            } else {
+              current += event.results[i][0].transcript;
+              setInterimTranscript(current);
+            }
           }
-        ],
-        nextTimeGoal: "Consolidate simple past tense sentences containing action verbs explicitly."
-      };
-      setSummaryData(fallbackSummary);
-      setIsSummaryView(true);
-    } finally {
-      setIsLoadingSummary(false);
+        };
+
+        recognition.onerror = (event: any) => {
+          console.warn('[Speech Recognition Event]', event.error);
+          setIsListening(false);
+          setInterimTranscript('');
+        };
+
+        recognition.onend = () => {
+          setIsListening(false);
+          setInterimTranscript('');
+        };
+
+        recognitionRef.current = recognition;
+      }
+    }
+
+    return () => {
+      if (recognitionRef.current) {
+        try {
+          recognitionRef.current.abort();
+        } catch (e) {
+          // ignore
+        }
+      }
+      stopSarvamSpeech();
+    };
+  }, []);
+
+  // Auto-scroll messages
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages, interimTranscript, isLoading]);
+
+  const toggleListening = () => {
+    if (isListening) {
+      if (recognitionRef.current) {
+        try {
+          recognitionRef.current.stop();
+        } catch (e) {
+          // ignore
+        }
+      }
+      setIsListening(false);
+    } else {
+      if (isBuddySpeaking) {
+        stopSarvamSpeech();
+        setIsBuddySpeaking(false);
+      }
+      if (recognitionRef.current) {
+        try {
+          recognitionRef.current.start();
+        } catch (e) {
+          console.warn('Speech recognition restart notice:', e);
+        }
+      }
     }
   };
 
-  const handleSend = async (textToSend?: string) => {
-    const text = textToSend || inputMessage;
-    if (!text.trim() || isThinking) return;
-
-    if (isRecording && recognitionRef.current) {
-      try {
-        recognitionRef.current.stop();
-      } catch (_) {}
-      setIsRecording(false);
+  const playVoice = async (text: string) => {
+    if (ttsAudioMuted) return;
+    setIsBuddySpeaking(true);
+    try {
+      await speakWithSarvam(text, {
+        speaker: 'ritu',
+        pace: 0.94,
+        loudness: 1.0,
+      });
+    } catch (err) {
+      console.warn('Speech playback fallback:', err);
+    } finally {
+      setIsBuddySpeaking(false);
     }
+  };
 
-    const newExchanges = exchangeCount + 1;
-    setExchangeCount(newExchanges);
-    setInputMessage('');
+  const startConversation = async () => {
+    setSessionStarted(true);
+    setSessionCompleted(false);
+    setSummaryData(null);
+    setExchangeCount(0);
+    setAwaitingRetry(false);
+    setRetryPrompt('');
 
-    const userMsg: BuddyMessage = {
-      id: Date.now().toString(),
-      sender: 'user',
-      text: text.trim(),
-      timestamp: Date.now()
+    const initialGreeting =
+      "Hello! I'm your English Buddy 😊 How are you today?";
+    const initialMessage: Message = {
+      id: 'msg-0',
+      sender: 'buddy',
+      text: initialGreeting,
+      timestamp: new Date(),
     };
 
-    const updatedMessages = [...messages, userMsg];
-    setMessages(updatedMessages);
-    setIsThinking(true);
+    setMessages([initialMessage]);
+    playVoice(initialGreeting);
+  };
+
+  const handleSendMessage = async (textToSend?: string) => {
+    const text = (textToSend || inputText).trim();
+    if (!text || isLoading) return;
+
+    setInputText('');
+    setInterimTranscript('');
+
+    const userMessage: Message = {
+      id: `msg-${Date.now()}-user`,
+      sender: 'learner',
+      text,
+      timestamp: new Date(),
+    };
+
+    const updatedHistory = [...messages, userMessage];
+    setMessages(updatedHistory);
+    setIsLoading(true);
 
     try {
-      const lastBuddyMessage = [...messages].reverse().find(m => m.sender === 'buddy');
-      const wasAwaitingRetry = Boolean(lastBuddyMessage?.awaitingEnglishRetry);
+      const currentAwaitingRetry = awaitingRetry;
+      setRetryPrompt('');
 
-      const response = await fetch('/api/buddy-chat', {
+      const res = await fetch('/api/buddy-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          history: updatedMessages.map(m => ({ sender: m.sender, text: m.text })),
-          learnerMessage: text.trim(),
-          exchangeCount: newExchanges,
-          wasAwaitingEnglishRetry: wasAwaitingRetry,
-        })
+          learnerMessage: text,
+          history: updatedHistory,
+          exchangeCount: exchangeCount + 1,
+          wasAwaitingEnglishRetry: currentAwaitingRetry,
+        }),
       });
 
-      const data = await response.json();
-
-      const isAwaitingRetry = Boolean(data.awaitingEnglishRetry);
-      let fullText = (data.naturalResponse || "I'm listening and understand you 😊").trim();
-
-      // STOP & WAIT: If awaiting retry, never concatenate nextQuestion
-      if (!isAwaitingRetry && data.nextQuestion && data.nextQuestion.trim() && !fullText.includes(data.nextQuestion.trim())) {
-        fullText = `${fullText} ${data.nextQuestion.trim()}`;
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}`);
       }
 
-      const buddyMsg: BuddyMessage = {
-        id: (Date.now() + 1).toString(),
+      const data = await res.json();
+      const buddyReplyText = [data.naturalResponse, data.nextQuestion]
+        .filter(Boolean)
+        .join(' ')
+        .trim();
+
+      const buddyMsg: Message = {
+        id: `msg-${Date.now()}-buddy`,
         sender: 'buddy',
-        text: fullText,
-        nextQuestion: isAwaitingRetry ? '' : (data.nextQuestion ? data.nextQuestion.trim() : ''),
-        subtleRecast: data.subtleRecast || '',
-        awaitingEnglishRetry: isAwaitingRetry,
-        timestamp: Date.now()
+        text: buddyReplyText || "I'm listening! Tell me more.",
+        timestamp: new Date(),
+        suggestedPhrasing: data.subtleRecast || data.englishModel,
       };
 
-      setMessages(prev => [...prev, buddyMsg]);
-      setIsThinking(false);
+      setMessages((prev) => [...prev, buddyMsg]);
+      setExchangeCount((prev) => prev + 1);
 
-      if (data.shouldEnd || newExchanges >= 13) {
-        setTimeout(() => {
-          fetchSummary([...updatedMessages, buddyMsg]);
-        }, 1500);
+      const isWaitingRetry = Boolean(data.awaitingEnglishRetry);
+      setAwaitingRetry(isWaitingRetry && Boolean(data.subtleRecast || data.englishModel));
+      if (isWaitingRetry && (data.subtleRecast || data.englishModel)) {
+        setRetryPrompt(data.subtleRecast || data.englishModel);
+      } else {
+        setRetryPrompt('');
+      }
+
+      playVoice(buddyReplyText);
+
+      // Trigger summary debrief after 8 exchanges or if goal met
+      if ((exchangeCount + 1 >= 8 || data.shouldEnd) && !sessionCompleted) {
+        triggerSummaryDebrief(updatedHistory);
       }
     } catch (err) {
-      console.error("Buddy chat error:", err);
-      setIsThinking(false);
-      
-      const errorMsg: BuddyMessage = {
-        id: (Date.now() + 1).toString(),
+      console.error('Failed to communicate with Buddy:', err);
+      const fallbackBuddyMsg: Message = {
+        id: `msg-${Date.now()}-buddy-err`,
         sender: 'buddy',
-        text: "Main samajh gaya! Kya aap isse English mein bolne ki koshish karenge? Main sun raha hoon. 😊",
-        nextQuestion: '',
-        subtleRecast: '',
-        awaitingEnglishRetry: true,
-        timestamp: Date.now()
+        text: "I heard you! Let's keep going. What else did you do today?",
+        timestamp: new Date(),
       };
-      setMessages(prev => [...prev, errorMsg]);
+      setMessages((prev) => [...prev, fallbackBuddyMsg]);
+      playVoice(fallbackBuddyMsg.text);
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  const handleRestart = () => {
-    stopSpeaking();
-    spokenMessageIdsRef.current.clear();
-    setMessages([
-      {
-        id: Date.now().toString(),
-        sender: 'buddy',
-        text: "Hello! I'm your English Buddy 😊 How are you today?",
-        timestamp: Date.now()
+  const triggerSummaryDebrief = async (history: Message[]) => {
+    try {
+      const res = await fetch('/api/buddy-chat/summary', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ history }),
+      });
+
+      if (res.ok) {
+        const summary = await res.json();
+        setSummaryData(summary);
+        setSessionCompleted(true);
       }
-    ]);
-    setExchangeCount(0);
-    setIsSummaryView(false);
-    setSummaryData(null);
+    } catch (e) {
+      console.warn('Summary fetch failed:', e);
+    }
   };
 
-  if (isSummaryView && summaryData) {
-    return (
-      <motion.div 
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="w-full min-h-screen bg-slate-50 text-zinc-900 pb-16 pt-4 px-4 sm:px-6 flex flex-col max-w-xl mx-auto font-sans"
-      >
-        {/* Header */}
-        <div className="flex items-center justify-between mb-5 px-1">
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => onBack ? onBack() : handleRestart()}
-              className="w-10 h-10 rounded-2xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-700 hover:text-zinc-950 hover:bg-zinc-100 transition-colors cursor-pointer shadow-xs"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-            <div>
-              <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-[11px] font-bold mb-0.5">
-                <Sparkles className="w-3 h-3" />
-                <span>Session Complete</span>
-              </div>
-              <h1 className="text-xl font-black tracking-tight text-zinc-950">Buddy Chat Summary</h1>
-            </div>
-          </div>
-          <button
-            onClick={handleRestart}
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-2xl bg-sky-600 text-white font-semibold text-xs hover:bg-sky-700 transition-colors shadow-sm cursor-pointer"
-          >
-            <RotateCcw className="w-4 h-4" />
-            <span>Practice Again</span>
-          </button>
-        </div>
-
-        {/* Large Overall Confidence Hero Banner */}
-        {summaryData.detailedScores && (
-          <div 
-            onClick={() => setIsProgressScreenOpen(true)}
-            className="mb-5 bg-gradient-to-br from-zinc-900 via-zinc-950 to-zinc-900 border border-zinc-800 hover:border-amber-500/50 rounded-3xl p-6 text-white shadow-xl relative overflow-hidden cursor-pointer active:scale-[0.99] transition-all group"
-            title="Click to view 30-Day Confidence History"
-          >
-            <div className="absolute top-0 right-0 w-36 h-36 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-36 h-36 bg-blue-500/10 rounded-full blur-2xl pointer-events-none" />
-
-            <div className="relative z-10 flex items-center justify-between">
-              <div className="flex flex-col">
-                <div className="flex items-center gap-2 mb-1.5">
-                  <Award className="w-4 h-4 text-emerald-400" />
-                  <span className="text-[11px] font-bold text-zinc-300 uppercase tracking-wider">
-                    Overall English Confidence
-                  </span>
-                </div>
-                <div className="text-xs text-zinc-400 font-medium">
-                  {summaryData.detailedScores.overallScore >= 85 ? 'High Confidence & Fluency' :
-                   summaryData.detailedScores.overallScore >= 70 ? 'Clear & Capable Speaking' : 'Steady Progress & Building'}
-                </div>
-                <div className="mt-3 flex items-center gap-2">
-                  <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2.5 py-1 rounded-full w-fit">
-                    <TrendingUp className="w-3 h-3" />
-                    <span>Rating: {summaryData.detailedScores.overallScore >= 85 ? 'Great' : summaryData.detailedScores.overallScore >= 70 ? 'Good' : 'Getting Better'}</span>
-                  </div>
-                  <span className="text-[11px] text-zinc-400 group-hover:text-amber-400 flex items-center gap-1 font-semibold transition-colors">
-                    View 30-Day Graph <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-end">
-                <div className="text-5xl font-black text-white tracking-tight flex items-baseline">
-                  <span>{summaryData.detailedScores.overallScore}</span>
-                  <span className="text-lg font-bold text-zinc-400 ml-0.5">%</span>
-                </div>
-                <span className="text-[10px] text-zinc-400 font-medium uppercase tracking-wider mt-1">
-                  Calculated Score
-                </span>
-              </div>
-            </div>
-          </div>
-        )}
-
-        <div className="space-y-4">
-          {/* 1. What We Talked About */}
-          <section className="bg-white border border-zinc-200/90 rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-            <h2 className="text-sm font-bold text-zinc-900 tracking-tight mb-2 flex items-center gap-2">
-              <MessageSquare className="w-4 h-4 text-sky-600" />
-              <span>1. What We Talked About</span>
-            </h2>
-            <p className="text-sm text-zinc-700 leading-relaxed font-normal">
-              {summaryData.whatWeTalkedAbout}
-            </p>
-          </section>
-
-          {/* 2. My English Today */}
-          {summaryData.detailedScores && (
-            <section className="bg-white border border-zinc-200/90 rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-              <div className="mb-3.5">
-                <h2 className="text-sm font-bold text-zinc-900 tracking-tight flex items-center gap-2">
-                  <Award className="w-4 h-4 text-purple-600" />
-                  <span>2. My English Today</span>
-                </h2>
-                <p className="text-[11px] text-zinc-500 mt-0.5">
-                  Evaluated strictly from your conversational turns and grammar structure.
-                </p>
-              </div>
-
-              <div className="divide-y divide-zinc-100">
-                {Object.entries(summaryData.detailedScores)
-                  .filter(([k]) => k !== 'overallScore')
-                  .map(([key, item]: [string, any]) => (
-                    <div key={key} className="py-2.5 flex items-center justify-between first:pt-0 last:pb-0">
-                      <div className="flex items-center gap-2">
-                        <span className="text-xs font-medium text-zinc-700 capitalize">{key.replace(/([A-Z])/g, ' $1')}</span>
-                        <span className="text-[11px] text-zinc-400 font-normal">({item.score}%)</span>
-                      </div>
-                      <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full border ${
-                        item.rating === 'Great' ? 'bg-emerald-50 border-emerald-200 text-emerald-800' :
-                        item.rating === 'Good' ? 'bg-sky-50 border-sky-200 text-sky-800' :
-                        item.rating === 'Getting Better' ? 'bg-amber-50 border-amber-200 text-amber-800' :
-                        'bg-rose-50 border-rose-200 text-rose-800'
-                      }`}>
-                        {item.rating}
-                      </span>
-                    </div>
-                  ))}
-              </div>
-            </section>
-          )}
-
-          {/* 3. I Did Well */}
-          <section className="bg-white border border-zinc-200/90 rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-            <h2 className="text-sm font-bold text-zinc-900 tracking-tight mb-3 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <span>3. I Did Well</span>
-            </h2>
-
-            <div className="space-y-2.5">
-              {summaryData.strengths.map((str, idx) => (
-                <div key={idx} className="flex items-start gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                    <Check className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <p className="text-xs text-zinc-700 leading-relaxed font-normal">{str}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* 4. Practice Next */}
-          <section className="bg-white border border-zinc-200/90 rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-            <h2 className="text-sm font-bold text-zinc-900 tracking-tight mb-3 flex items-center gap-2">
-              <Target className="w-4 h-4 text-amber-600" />
-              <span>4. Practice Next</span>
-            </h2>
-
-            <div className="space-y-2.5">
-              {summaryData.improvementAreas.map((area, idx) => (
-                <div key={idx} className="flex items-start gap-2.5">
-                  <div className="w-4 h-4 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 mt-0.5">
-                    <ArrowRight className="w-2.5 h-2.5 stroke-[3]" />
-                  </div>
-                  <p className="text-xs text-zinc-700 leading-relaxed font-normal">{area}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* 5. My Natural English */}
-          {summaryData.naturalCorrections && summaryData.naturalCorrections.length > 0 && (
-            <section className="bg-white border border-zinc-200/90 rounded-2xl p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-              <h2 className="text-sm font-bold text-zinc-900 tracking-tight mb-3 flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-indigo-600" />
-                <span>5. My Natural English</span>
-              </h2>
-              <div className="space-y-3">
-                {summaryData.naturalCorrections.map((corr, idx) => (
-                  <div key={idx} className="p-3.5 bg-zinc-50 rounded-xl border border-zinc-200 space-y-1.5 text-xs">
-                    <div className="flex flex-wrap items-center gap-1.5">
-                      <span className="text-zinc-500 font-medium">You said:</span>
-                      <span className="text-rose-600 line-through font-semibold">"{corr.learnerSaid}"</span>
-                      <span className="text-zinc-500 font-medium ml-2">Better:</span>
-                      <span className="text-emerald-700 font-bold">"{corr.betterEnglish}"</span>
-                    </div>
-                    {corr.explanation && (
-                      <p className="text-zinc-600 text-[11px] italic pl-2 border-l-2 border-indigo-400">
-                        {corr.explanation}
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* Next Time Goal */}
-          <div className="bg-gradient-to-r from-sky-50 to-indigo-50 border border-sky-200 rounded-2xl p-5 shadow-xs flex items-center gap-4">
-            <div className="w-10 h-10 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">
-              <Target className="w-5 h-5" />
-            </div>
-            <div>
-              <span className="text-[11px] font-bold text-sky-800 uppercase tracking-wider block mb-0.5">Next Time Goal</span>
-              <p className="text-xs sm:text-sm text-zinc-900 font-semibold">{summaryData.nextTimeGoal}</p>
-            </div>
-          </div>
-        </div>
-
-        {/* 30-Day Confidence History Modal */}
-        <EnglishProgressScreen
-          isOpen={isProgressScreenOpen}
-          onClose={() => setIsProgressScreenOpen(false)}
-          initialTab={0}
-        />
-      </motion.div>
-    );
-  }
-
   return (
-    <div className="w-full h-full min-h-screen sm:min-h-0 flex-1 flex flex-col bg-slate-950 text-white pb-6 pt-4 px-4 sm:px-6 max-w-2xl mx-auto overflow-hidden">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-4 pb-3 border-b border-zinc-800 shrink-0">
+    <div className="flex flex-col h-[calc(100vh-4rem)] max-w-4xl mx-auto px-4 py-3">
+      {/* Top Session Header */}
+      <div className="flex items-center justify-between pb-3 border-b border-gray-100 dark:border-gray-800">
         <div className="flex items-center gap-3">
-          {onBack && (
-            <button
-              onClick={onBack}
-              className="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors cursor-pointer shrink-0"
-              title="Go Back"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-          )}
-          <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-sky-500/25 shrink-0">
-            <Bot className="w-6 h-6 text-white" />
+          <div className="w-10 h-10 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-lg border border-emerald-500/20">
+            B
           </div>
           <div>
-            <h1 className="text-lg font-black tracking-tight">Buddy Chat</h1>
+            <div className="flex items-center gap-2">
+              <h2 className="font-semibold text-gray-900 dark:text-gray-100">
+                English Buddy
+              </h2>
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400">
+              Adaptive Spoken English Partner (Voice: Ritu)
+            </p>
           </div>
         </div>
 
-        {/* Action Controls: Voice Selector, Chat Number & Summary Report Icon */}
         <div className="flex items-center gap-2">
-          {/* Voice Selector */}
-          <div className="relative">
-            <select
-              value={currentVoice}
-              onChange={(e) => {
-                const newVoice = e.target.value;
-                stopSpeaking();
-                setPlayingId(null);
-                setCurrentVoice(newVoice);
-                setPreferredVoice(newVoice);
-              }}
-              className="h-9 pl-2.5 pr-7 rounded-xl bg-zinc-900 border border-zinc-800 text-xs font-semibold text-zinc-300 hover:text-white hover:border-zinc-700 transition-colors cursor-pointer appearance-none shadow-xs focus:outline-hidden focus:ring-1 focus:ring-sky-500"
-              title="Select Buddy's speaking voice"
-            >
-              <option value="ritu">Ritu (Locked Default)</option>
-              <option value="kavya">Kavya (Calm & Professional)</option>
-              <option value="priya">Priya (Soft Companion)</option>
-              <option value="browser">Browser Native Voice</option>
-            </select>
-            <div className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-zinc-500">
-              <Volume2 className="w-3.5 h-3.5" />
-            </div>
-          </div>
-
-          {/* Chat Numbers (eg 0/15) */}
-          <div 
-            className="px-3 py-1.5 rounded-xl bg-zinc-900/90 border border-zinc-800 text-xs font-bold text-sky-400 flex items-center gap-1.5 shadow-xs"
-            title={`Completed Exchanges: ${exchangeCount} of 15`}
-          >
-            <MessageSquare className="w-3.5 h-3.5 text-sky-400" />
-            <span>{exchangeCount}/15</span>
-          </div>
-
-          {/* Icon for summary report */}
           <button
-            onClick={() => fetchSummary(messages)}
-            disabled={isLoadingSummary || messages.length === 0}
-            className="h-9 px-3 rounded-xl bg-sky-600/20 hover:bg-sky-600/30 border border-sky-500/50 hover:border-sky-400 flex items-center gap-1.5 text-sky-300 hover:text-white transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed active:scale-95 shadow-xs"
-            title="Open Summary Report"
-            aria-label="Summary Report"
+            onClick={() => setTtsAudioMuted(!ttsAudioMuted)}
+            className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+            title={ttsAudioMuted ? 'Unmute voice' : 'Mute voice'}
           >
-            {isLoadingSummary ? (
-              <div className="w-3.5 h-3.5 border-2 border-sky-400 border-t-transparent rounded-full animate-spin" />
+            {ttsAudioMuted ? (
+              <VolumeX className="w-5 h-5 text-red-500" />
             ) : (
-              <FileText className="w-4 h-4 text-sky-400" />
+              <Volume2 className="w-5 h-5" />
             )}
-            <span className="text-xs font-bold hidden sm:inline">Report</span>
           </button>
+          {!sessionStarted && (
+            <button
+              onClick={startConversation}
+              className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-xl shadow-sm transition flex items-center gap-2"
+            >
+              <Play className="w-4 h-4 fill-current" />
+              Start Conversation
+            </button>
+          )}
         </div>
       </div>
 
-      {/* Chat Messages */}
-      <div 
-        ref={messagesContainerRef}
-        className="flex-1 space-y-4 mb-4 overflow-y-auto overscroll-contain pr-1 touch-pan-y"
-      >
-        {messages.map((msg) => (
-          <motion.div
-            key={msg.id}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className={`flex items-start gap-3 ${msg.sender === 'user' ? 'flex-row-reverse' : ''}`}
-          >
-            <div className={`w-9 h-9 rounded-2xl flex items-center justify-center shrink-0 ${
-              msg.sender === 'user' 
-                ? 'bg-gradient-to-tr from-purple-600 to-pink-600 text-white shadow-md' 
-                : 'bg-gradient-to-tr from-sky-500 to-indigo-600 text-white shadow-md'
-            }`}>
-              {msg.sender === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
+      {/* Main Conversation Screen */}
+      <div className="flex-1 overflow-y-auto py-4 space-y-4 pr-1">
+        {!sessionStarted ? (
+          <div className="h-full flex flex-col items-center justify-center text-center p-6 space-y-4">
+            <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center mb-2">
+              <MessageCircle className="w-8 h-8" />
             </div>
-
-            <div className={`max-w-[84%] rounded-2xl p-4 shadow-lg ${
-              msg.sender === 'user'
-                ? 'bg-purple-600 text-white rounded-tr-xs'
-                : 'bg-zinc-900 border border-zinc-800 text-zinc-100 rounded-tl-xs'
-            }`}>
-              <div className="flex items-start justify-between gap-2.5">
-                <p className="text-sm sm:text-base leading-relaxed text-zinc-100 font-medium whitespace-pre-wrap">{msg.text}</p>
-                {msg.sender === 'buddy' && (
-                  <button
-                    onClick={() => {
-                      if (playingId === msg.id) {
-                        stopSpeaking();
-                        setPlayingId(null);
-                      } else {
-                        setPlayingId(msg.id);
-                        speakText(msg.text, 'en-IN', 0.94, () => setPlayingId(null), currentVoice);
-                      }
-                    }}
-                    className="shrink-0 p-1.5 text-zinc-400 hover:text-sky-300 hover:bg-zinc-800/80 rounded-lg transition-colors cursor-pointer"
-                    title={playingId === msg.id ? "Stop voice" : "Listen to Buddy"}
-                  >
-                    {playingId === msg.id ? (
-                      <VolumeX className="w-4 h-4 text-sky-400 animate-pulse" />
-                    ) : (
-                      <Volume2 className="w-4 h-4" />
-                    )}
-                  </button>
-                )}
+            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+              Practice English Naturally with Buddy
+            </h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400 max-w-md leading-relaxed">
+              Buddy adapts to your level. You can speak freely in English, Hindi,
+              or Hinglish. Buddy gently helps you turn thoughts into clear,
+              natural English.
+            </p>
+            <button
+              onClick={startConversation}
+              className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-xl shadow-md transition flex items-center gap-2"
+            >
+              <Sparkles className="w-5 h-5" />
+              Start Conversation
+            </button>
+          </div>
+        ) : (
+          messages.map((m) => (
+            <div
+              key={m.id}
+              className={`flex flex-col ${
+                m.sender === 'learner' ? 'items-end' : 'items-start'
+              }`}
+            >
+              <div
+                className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm ${
+                  m.sender === 'learner'
+                    ? 'bg-emerald-600 text-white rounded-tr-none'
+                    : 'bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-700 rounded-tl-none'
+                }`}
+              >
+                {m.text}
               </div>
 
-              {msg.sender === 'buddy' && msg.awaitingEnglishRetry && msg.subtleRecast && (
-                <div className="mt-3 pt-2.5 border-t border-zinc-800/80 flex items-center justify-between gap-2">
-                  <div className="text-xs text-sky-400 font-semibold flex items-center gap-1.5 flex-wrap">
-                    <span>Try saying:</span>
-                    <span className="text-white italic bg-sky-950/60 px-2 py-0.5 rounded-md border border-sky-800/60 font-medium">"{msg.subtleRecast}"</span>
-                  </div>
-                  <button
-                    onClick={() => setInputMessage(msg.subtleRecast || '')}
-                    className="text-[11px] text-zinc-400 hover:text-sky-300 underline font-semibold cursor-pointer shrink-0"
-                  >
-                    Tap to use
-                  </button>
-                </div>
+              {m.sender === 'buddy' && (
+                <button
+                  onClick={() => playVoice(m.text)}
+                  className="mt-1 flex items-center gap-1 text-[11px] text-gray-400 hover:text-emerald-600 px-1"
+                >
+                  <Volume2 className="w-3 h-3" />
+                  Listen again
+                </button>
               )}
             </div>
-          </motion.div>
-        ))}
+          ))
+        )}
 
-        {isThinking && (
-          <div className="flex items-start gap-3">
-            <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white shadow-md">
-              <Bot className="w-4 h-4" />
-            </div>
-            <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 text-zinc-400 text-sm flex items-center gap-2">
-              <motion.div 
-                className="w-2 h-2 bg-sky-400 rounded-full"
-                animate={{ scale: [1, 1.5, 1] }}
-                transition={{ repeat: Infinity, duration: 0.8 }}
-              />
-              <motion.div 
-                className="w-2 h-2 bg-indigo-400 rounded-full"
-                animate={{ scale: [1, 1.5, 1] }}
-                transition={{ repeat: Infinity, duration: 0.8, delay: 0.2 }}
-              />
-              <motion.div 
-                className="w-2 h-2 bg-purple-400 rounded-full"
-                animate={{ scale: [1, 1.5, 1] }}
-                transition={{ repeat: Infinity, duration: 0.8, delay: 0.4 }}
-              />
-              <span className="ml-1 text-xs font-medium text-zinc-400">Buddy is thinking...</span>
+        {interimTranscript && (
+          <div className="flex justify-end">
+            <div className="max-w-[85%] rounded-2xl px-4 py-2.5 text-sm bg-emerald-500/20 text-emerald-800 dark:text-emerald-200 border border-emerald-500/30 rounded-tr-none italic animate-pulse">
+              {interimTranscript}...
             </div>
           </div>
         )}
+
+        {isLoading && (
+          <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500 p-2">
+            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-bounce" />
+            <div
+              className="w-2 h-2 rounded-full bg-emerald-500 animate-bounce"
+              style={{ animationDelay: '0.15s' }}
+            />
+            <div
+              className="w-2 h-2 rounded-full bg-emerald-500 animate-bounce"
+              style={{ animationDelay: '0.3s' }}
+            />
+            <span>Buddy is thinking...</span>
+          </div>
+        )}
+
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input Bar */}
-      <div className="sticky bottom-0 bg-zinc-950/95 backdrop-blur-md pt-3 pb-4 z-30 mt-auto space-y-2">
-        <div className="flex items-center gap-2 bg-zinc-900 border border-zinc-800 rounded-2xl p-2 shadow-2xl">
+      {/* Suggested English Retry Prompt Chip */}
+      {retryPrompt && (
+        <div className="mb-2 p-2.5 bg-amber-50 dark:bg-amber-950/40 border border-amber-200/70 dark:border-amber-800/40 rounded-xl flex items-center justify-between text-xs text-amber-800 dark:text-amber-200">
+          <div className="flex items-center gap-2">
+            <HelpCircle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+            <span>
+              Try saying:{' '}
+              <strong className="underline decoration-amber-400 font-semibold">
+                "{retryPrompt}"
+              </strong>
+            </span>
+          </div>
           <button
-            onClick={toggleRecording}
-            className={`p-3 rounded-xl transition-colors cursor-pointer ${
-              isRecording 
-                ? 'bg-rose-600 text-white animate-pulse shadow-lg shadow-rose-500/30' 
-                : 'bg-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-700'
-            }`}
-            title="Voice input"
+            onClick={() => {
+              setInputText(retryPrompt);
+            }}
+            className="px-2.5 py-1 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-[11px] font-medium transition"
           >
-            {isRecording ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
-          </button>
-
-          <input
-            type="text"
-            value={inputMessage}
-            onChange={(e) => setInputMessage(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-            placeholder={isRecording ? "Listening..." : "Type your message or speak naturally..."}
-            className="flex-1 bg-transparent border-none outline-none text-sm text-white placeholder-zinc-500 px-2"
-          />
-
-          <button
-            onClick={() => handleSend()}
-            disabled={!inputMessage.trim() || isThinking}
-            className="p-3 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 text-white font-bold disabled:opacity-40 disabled:cursor-not-allowed hover:opacity-90 transition-opacity cursor-pointer shadow-md"
-          >
-            <Send className="w-4 h-4" />
+            Tap to use
           </button>
         </div>
-      </div>
+      )}
 
-      {/* 30-Day Confidence History Modal */}
-      <EnglishProgressScreen
-        isOpen={isProgressScreenOpen}
-        onClose={() => setIsProgressScreenOpen(false)}
-        initialTab={0}
-      />
+      {/* Input Bar */}
+      {sessionStarted && !sessionCompleted && (
+        <div className="pt-2 border-t border-gray-100 dark:border-gray-800">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSendMessage();
+            }}
+            className="flex items-center gap-2"
+          >
+            <button
+              type="button"
+              onClick={toggleListening}
+              className={`p-3 rounded-xl transition shadow-sm ${
+                isListening
+                  ? 'bg-red-500 text-white animate-pulse'
+                  : 'bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
+              }`}
+              title={isListening ? 'Stop listening' : 'Speak'}
+            >
+              {isListening ? (
+                <MicOff className="w-5 h-5" />
+              ) : (
+                <Mic className="w-5 h-5" />
+              )}
+            </button>
+
+            <input
+              type="text"
+              value={inputText}
+              onChange={(e) => setInputText(e.target.value)}
+              placeholder={
+                isListening
+                  ? 'Listening to you speak...'
+                  : 'Type in English or Hindi / Hinglish...'
+              }
+              className="flex-1 px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 text-gray-900 dark:text-gray-100"
+            />
+
+            <button
+              type="submit"
+              disabled={!inputText.trim() || isLoading}
+              className="p-3 bg-emerald-600 hover:bg-emerald-700 disabled:opacity-40 text-white rounded-xl shadow-sm transition"
+            >
+              <Send className="w-5 h-5" />
+            </button>
+          </form>
+        </div>
+      )}
+
+      {/* Summary Scorecard Modal */}
+      {sessionCompleted && summaryData && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+          <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-xl">
+            <div className="flex items-center justify-between border-b pb-3 border-gray-100 dark:border-gray-800">
+              <div className="flex items-center gap-2 text-emerald-600 font-bold">
+                <Award className="w-6 h-6" />
+                <span>Conversation Progress Debrief</span>
+              </div>
+              <span className="text-xs px-2 py-1 bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 rounded-full font-semibold">
+                Score: {summaryData.overallScore || 82}%
+              </span>
+            </div>
+
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              {summaryData.whatWeTalkedAbout}
+            </p>
+
+            {summaryData.strengths && (
+              <div className="space-y-1">
+                <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                  What You Did Well
+                </h4>
+                <ul className="text-xs text-emerald-700 dark:text-emerald-400 list-disc list-inside space-y-0.5">
+                  {summaryData.strengths.map((s: string, idx: number) => (
+                    <li key={idx}>{s}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {summaryData.nextTimeGoal && (
+              <div className="p-3 bg-blue-50 dark:bg-blue-950/40 rounded-xl text-xs text-blue-800 dark:text-blue-300">
+                <strong>Next Step Goal:</strong> {summaryData.nextTimeGoal}
+              </div>
+            )}
+
+            <button
+              onClick={() => {
+                setSessionCompleted(false);
+                startConversation();
+              }}
+              className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-sm font-medium transition flex items-center justify-center gap-2"
+            >
+              Start New Practice
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
