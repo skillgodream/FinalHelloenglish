@@ -704,7 +704,7 @@ export const MyDayView: React.FC<MyDayViewProps> = ({
 
         {/* PAGE 6: Day Story Session Report (Engine 1 Learner-facing Report) */}
         {step === '6_SESSION_SUMMARY' && (
-          <div className="w-full min-h-screen bg-[#fbfbfd] text-zinc-900 flex flex-col">
+          <div className="w-full min-h-full bg-[#fbfbfd] text-zinc-900 flex flex-col">
             <DayStorySessionReport
               dayMap={dayMap}
               turns={turns}

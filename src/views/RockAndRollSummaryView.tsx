@@ -162,7 +162,7 @@ export const RockAndRollSummaryView: React.FC<{ challenge: any; summary?: any; o
     .join(' ');
 
   return (
-    <div className="relative w-full min-h-screen bg-[#07080a] text-zinc-100 p-4 pt-7 pb-16 flex flex-col items-center overflow-hidden font-sans">
+    <div className="relative w-full min-h-full bg-[#07080a] text-zinc-100 p-4 pt-7 pb-28 flex flex-col items-center overflow-x-hidden font-sans">
       {/* Dark Monochrome Dotted Wave Background */}
       <DottedWaveBackground variant="monochrome" intensity={0.9} />
 

@@ -13,7 +13,12 @@ import {
   findSheekoRephraseTemplate,
   getSheekoReferences
 } from "./server/services/sheekoServerEngine.ts";
-import { orchestrateConversationTurn, getProviderHealthStatus } from "./server/services/conversationOrchestrator.ts";
+import {
+  orchestrateConversationTurn,
+  orchestrateDayStoryTurn,
+  orchestrateRockAndRollTurn,
+  getProviderHealthStatus,
+} from "./server/services/conversationOrchestrator.ts";
 import { callLlamaConversationStep } from "./server/services/llamaService.ts";
 import { analyzeDrillFeedbackWithLlama } from "./server/services/llamaDrillService.ts";
 import { generateGeminiContent } from "./server/services/geminiService.ts";
@@ -317,122 +322,25 @@ Return ONLY a valid JSON object with this exact schema:
   }
 });
 
-// Endpoint: Engine 4 Rock & Roll Chat
+// Endpoint: Engine 4 Rock & Roll Chat (Powered by ONE Conversation Engine)
 app.post("/api/rock-and-roll/chat", async (req, res) => {
   try {
     const { challenge, history, learnerMessage, turnCount } = req.body;
-    const cleanMsg = (learnerMessage || "").trim();
-    const currentTurn = typeof turnCount === 'number' ? turnCount : 1;
-
-    const groqKey = process.env.GROQ_API_KEY;
-    const geminiKey = process.env.GEMINI_API_KEY;
-
-    const systemPrompt = `You are an AI customer or workplace stakeholder in a professional workplace roleplay scenario for Indian professionals practicing workplace English.
-Scenario: ${challenge?.title || 'Workplace Challenge'}
-Mission: ${challenge?.mission || ''}
-Current Turn: ${currentTurn}
-
-Rules:
-- Understand Indian/broken English and intent.
-- Stay strictly in character for the situation.
-- Respond naturally according to the role/situation.
-- Ask one relevant question or give the next situation response.
-- Target 6-10 exchanges before concluding or resolving.
-- If learner gives short/incomplete answers, probe naturally.
-- Return ONLY a valid JSON object with this exact schema:
-{
-  "customerReply": "string - customer response in character",
-  "customerMood": "angry" | "frustrated" | "neutral" | "satisfied" | "happy",
-  "coachingFeedback": {
-    "type": "positive" | "warning" | "tip",
-    "message": "string"
-  },
-  "resolutionReached": boolean
-}`;
-
-    const userPayload = JSON.stringify({
+    const result = await orchestrateRockAndRollTurn({
+      challenge,
       history: history || [],
-      latestLearnerMessage: cleanMsg,
-      turnCount: currentTurn,
+      learnerMessage: learnerMessage || "",
+      turnCount: typeof turnCount === 'number' ? turnCount : 1,
     });
-
-    const parseJSONSafely = (text: string) => {
-      try {
-        return JSON.parse(text);
-      } catch (e) {
-        const match = text.match(/\{[\s\S]*\}/);
-        if (match) {
-          try {
-            return JSON.parse(match[0]);
-          } catch (err) {
-            return null;
-          }
-        }
-        return null;
-      }
-    };
-
-    let result = null;
-    if (groqKey && groqKey.trim()) {
-      try {
-        const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${groqKey.trim()}`,
-          },
-          body: JSON.stringify({
-            model: "llama-3.1-8b-instant",
-            messages: [
-              { role: "system", content: systemPrompt },
-              { role: "user", content: userPayload },
-            ],
-            temperature: 0.6,
-            max_tokens: 600,
-            response_format: { type: "json_object" },
-          }),
-        });
-        if (response.ok) {
-          const data = await response.json();
-          const content = data?.choices?.[0]?.message?.content;
-          if (content) {
-            result = parseJSONSafely(content);
-          }
-        }
-      } catch (e) {
-        console.warn("Groq Rock&Roll chat error:", e);
-      }
-    }
-
-    if (!result && geminiKey && geminiKey.trim()) {
-      try {
-        const text = await generateGeminiContent({
-          apiKey: geminiKey,
-          contents: `${systemPrompt}\n\nContext:\n${userPayload}`,
-          responseMimeType: "application/json",
-          temperature: 0.6,
-        });
-        if (text) {
-          result = parseJSONSafely(text);
-        }
-      } catch (e) {
-        console.warn("Gemini Rock&Roll chat error:", e);
-      }
-    }
-
-    if (!result) {
-      result = {
-        customerReply: "I understand. Let's make sure this is sorted out right away. What are the next steps?",
-        customerMood: "neutral",
-        coachingFeedback: { type: "positive", message: "Good engagement. Keep it professional." },
-        resolutionReached: currentTurn >= 6,
-      };
-    }
-
     return res.json(result);
   } catch (err) {
     console.error("Rock & Roll chat API error:", err);
-    return res.status(500).json({ error: "Failed to generate customer reply" });
+    return res.json({
+      customerReply: "I understand what you mean. What can we do next to fix this?",
+      customerMood: "neutral",
+      coachingFeedback: { type: "positive", message: "Keep explaining your solution clearly." },
+      resolutionReached: false,
+    });
   }
 });
 
@@ -990,132 +898,11 @@ CRITICAL RULES:
   return JSON.parse(cleanContent);
 }
 
-// Endpoint: Conversational Multi-Turn Engine (Llama 3.1 8B via Groq with Sarvam & deterministic fallback)
+// Endpoint: Conversational Multi-Turn Engine (Powered by ONE Conversation Engine)
 app.post("/api/conversation-step", async (req, res) => {
   try {
-    const { latestLearnerAnswer, isFirstTurnOfTopic, dayMap, selectedTopic } = req.body;
-    const cleanAnswer = typeof latestLearnerAnswer === "string" ? latestLearnerAnswer.trim() : "";
-    const turnCount = selectedTopic?.turnCount || 0;
-
-    // Primary: Llama / Gemini Conversational Intelligence Engine
-    try {
-      const llamaResult = await callLlamaConversationStep(req.body);
-      if (llamaResult) {
-          let updatedDayMap = { ...dayMap };
-          const newFacts: string[] = [];
-
-          if (cleanAnswer && !updatedDayMap.knownFacts?.includes(`Learner shared: "${cleanAnswer}"`)) {
-            newFacts.push(`Learner shared: "${cleanAnswer}"`);
-          }
-
-          if (llamaResult.extractedFacts && llamaResult.extractedFacts.length > 0) {
-            newFacts.push(...llamaResult.extractedFacts);
-          }
-
-          if (newFacts.length > 0) {
-            updatedDayMap.knownFacts = Array.from(new Set([...(updatedDayMap.knownFacts || []), ...newFacts]));
-          }
-
-          if (llamaResult.rephrase && !updatedDayMap.activities?.includes(llamaResult.rephrase)) {
-            // If topic complete or substantive, track activity
-            if (llamaResult.topicCompleted && !updatedDayMap.activities?.includes(llamaResult.rephrase)) {
-              updatedDayMap.activities = [...(updatedDayMap.activities || []), llamaResult.rephrase];
-            }
-          }
-
-          // Update complete accumulated Natural English Story
-          updatedDayMap.naturalEnglishStory = llamaResult.naturalStory || synthesizeNaturalEnglishStory({
-            rawStatement: updatedDayMap.rawStatement,
-            activities: updatedDayMap.activities,
-            emotions: updatedDayMap.emotions,
-            knownFacts: updatedDayMap.knownFacts,
-            learnerAnswers: cleanAnswer ? [cleanAnswer] : [],
-          });
-
-          const isCompleted = (llamaResult.topicCompleted && turnCount >= 5) || turnCount >= 5;
-
-          return res.json({
-            rephrase: llamaResult.rephrase,
-            probeQuestion: llamaResult.probeQuestion,
-            probeDirection: llamaResult.probeDirection,
-            topicIsCompleted: isCompleted,
-            completionSummary: isCompleted
-              ? `Wonderful job sharing "${selectedTopic?.pointer || 'your day'}"! You completed all 5 conversational practice turns with great dedication.`
-              : undefined,
-            updatedDayMap,
-            deepAnalysis: {
-              mainMeaning: llamaResult.meaning,
-              intent: llamaResult.intent || "Narrating daily experience",
-              sentiment: "Constructive & Engaged",
-              fluencyScore: Math.round((llamaResult.confidence || 0.88) * 100),
-              clarityScore: Math.round(Math.min(98, 85 + (llamaResult.confidence || 0.85) * 12)),
-              detectedPatterns: ["Llama 3.1 8B Language Intelligence", "Natural Indian English Rephrasing"],
-              keyInsights: [llamaResult.meaning],
-              recommendedPhrases: ["After that", "As a result", "Next"],
-            },
-            understoodMeaning: llamaResult.meaning,
-            response: llamaResult.rephrase,
-            conversationalResponse: llamaResult.rephrase,
-          });
-        }
-    } catch (llamaErr) {
-      console.warn("[Llama / LLM API] conversation-step call encountered an issue, trying fallback:", llamaErr);
-    }
-
-    // Secondary Fallback: Sarvam LLM (if configured and learner answered)
-    if (!isFirstTurnOfTopic && cleanAnswer && process.env.SARVAM_API_KEY) {
-      try {
-        const sarvamResult = await callSarvamConversationLLM(req.body);
-        if (sarvamResult) {
-          let updatedDayMap = { ...dayMap };
-          if (cleanAnswer && !updatedDayMap.knownFacts?.includes(`Learner shared: "${cleanAnswer}"`)) {
-            updatedDayMap.knownFacts = [...(updatedDayMap.knownFacts || []), `Learner shared: "${cleanAnswer}"`];
-          }
-          if (sarvamResult.naturalEnglish && !updatedDayMap.activities?.includes(sarvamResult.naturalEnglish)) {
-            updatedDayMap.activities = [...(updatedDayMap.activities || []), sarvamResult.naturalEnglish];
-          }
-
-          // Update complete accumulated Natural English Story
-          updatedDayMap.naturalEnglishStory = synthesizeNaturalEnglishStory({
-            rawStatement: updatedDayMap.rawStatement,
-            activities: updatedDayMap.activities,
-            emotions: updatedDayMap.emotions,
-            knownFacts: updatedDayMap.knownFacts,
-            learnerAnswers: cleanAnswer ? [cleanAnswer] : [],
-          });
-
-          const isCompleted = sarvamResult.topicIsCompleted ? (turnCount >= 5) : (turnCount >= 5);
-
-          return res.json({
-            rephrase: sarvamResult.naturalEnglish || sarvamResult.response,
-            probeQuestion: sarvamResult.probeQuestion || "What happened after that?",
-            probeDirection: sarvamResult.probeDirection || "RESULT",
-            topicIsCompleted: isCompleted,
-            completionSummary: isCompleted ? (sarvamResult.completionSummary || `Great job exploring "${selectedTopic?.pointer}"!`) : undefined,
-            updatedDayMap,
-            deepAnalysis: sarvamResult.deepAnalysis || {
-              mainMeaning: sarvamResult.understoodMeaning || cleanAnswer,
-              intent: "Narrating daily events",
-              sentiment: "Engaged",
-              fluencyScore: sarvamResult.confidenceScore || 88,
-              clarityScore: 90,
-              detectedPatterns: ["Semantic understanding", "Natural rephrasing"],
-              keyInsights: [sarvamResult.understoodMeaning || "Clear communication"],
-              recommendedPhrases: ["After that", "As a result"],
-            },
-            understoodMeaning: sarvamResult.understoodMeaning,
-            response: sarvamResult.response,
-            conversationalResponse: sarvamResult.response,
-          });
-        }
-      } catch (sarvamErr) {
-        console.warn("[Sarvam LLM] conversation-step fallback failed:", sarvamErr);
-      }
-    }
-
-    // Tertiary Fallback: Deterministic local conversation engine (instant zero-lag, no API needed)
-    const stepResult = buildLocalConversationStep(req.body);
-    return res.json(stepResult);
+    const result = await orchestrateDayStoryTurn(req.body);
+    return res.json(result);
   } catch (err) {
     console.error("Error in /api/conversation-step:", err);
     const stepResult = buildLocalConversationStep(req.body);

@@ -127,7 +127,7 @@ export const DailyEnglishReportView: React.FC<DailyEnglishReportViewProps> = ({
   }, [report.level]);
 
   return (
-    <div className="min-h-screen bg-[#0B0C10] text-zinc-100 pb-36 pt-4 px-4 font-sans select-none max-w-[440px] mx-auto">
+    <div className="w-full min-h-full bg-[#0B0C10] text-zinc-100 pb-36 pt-4 px-4 font-sans select-none max-w-[440px] mx-auto">
       {/* Top Header Navigation */}
       <header className="flex items-center justify-between mb-4 pb-2 border-b border-zinc-900">
         <button

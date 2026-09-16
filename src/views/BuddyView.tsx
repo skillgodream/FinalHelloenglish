@@ -56,7 +56,13 @@ interface Message {
   suggestedPhrasing?: string;
 }
 
-export const BuddyView: React.FC = () => {
+export interface BuddyViewProps {
+  onStartPractice?: () => void;
+  onBack?: () => void;
+  language?: 'hi' | 'en' | string;
+}
+
+export const BuddyView: React.FC<BuddyViewProps> = ({ onStartPractice, onBack, language }) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState('');
   const [isListening, setIsListening] = useState(false);
@@ -516,7 +522,7 @@ export const BuddyView: React.FC = () => {
       {/* Summary Scorecard Modal */}
       {sessionCompleted && summaryData && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-          <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-xl">
+          <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-xl max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between border-b pb-3 border-gray-100 dark:border-gray-800">
               <div className="flex items-center gap-2 text-emerald-600 font-bold">
                 <Award className="w-6 h-6" />

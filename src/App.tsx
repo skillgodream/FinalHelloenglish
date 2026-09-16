@@ -311,7 +311,7 @@ export default function App() {
     !isStartMyDayOrSubScreen;
 
   return (
-    <main className="w-full min-h-screen bg-[#090d16] text-slate-100 flex justify-center selection:bg-cyan-500/30 selection:text-cyan-200">
+    <main className="w-full h-[100dvh] bg-[#090d16] text-slate-100 flex justify-center overflow-hidden selection:bg-cyan-500/30 selection:text-cyan-200">
       <AnimatePresence>
         {showSplash && (
           <SplashScreen
@@ -387,10 +387,10 @@ export default function App() {
       </AnimatePresence>
 
       {/* Mobile Frame Container (Constrained on Desktop as requested) */}
-      <div className="w-full max-w-[440px] min-h-screen bg-[#090d16] shadow-2xl relative flex flex-col justify-between overflow-x-hidden border-x border-slate-800/80">
+      <div className="w-full max-w-[440px] h-full bg-[#090d16] shadow-2xl relative flex flex-col justify-between overflow-hidden border-x border-slate-800/80">
         
         {/* VIEW ROUTING */}
-        <div className={`flex-1 ${activeTab === 'buddy' ? 'flex flex-col min-h-0 overflow-hidden' : 'overflow-y-auto overscroll-contain'}`}>
+        <div className={`flex-1 min-h-0 ${activeTab === 'buddy' ? 'flex flex-col overflow-hidden' : 'overflow-y-auto overscroll-contain'}`}>
           <ErrorBoundary
             isSubView
             fallbackTitle="Screen Load Issue"
